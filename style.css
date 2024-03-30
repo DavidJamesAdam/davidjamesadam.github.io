@@ -10,3 +10,12 @@
     min-height: 100vh;
     padding: 10px;
 }
+
+.intro{
+    text-align: center;
+}
+
+.intro img{
+    border-radius: 10px;
+    width: 25%;
+}
