@@ -27,10 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          dangerouslySetInnerHTML={{
-            __html: `
-    (function () {
+        <Script id="TrulyBadgeScript">
+          {" "}
+          {`(function () {
         var script = document.createElement('script');
 
         script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=93a7a8b1-0c21-47be-9ee0-17dc2fb238bc';
@@ -38,9 +37,8 @@ export default function RootLayout({
 
         var entry = document.getElementsByTagName('script')[0];
         entry.parentNode.insertBefore(script, entry);
-    })();`,
-}}
-        />
+    })();`}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
