@@ -27,8 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
         <Script id="TrulyBadgeScript">
-          {" "}
           {`(function () {
         var script = document.createElement('script');
 
