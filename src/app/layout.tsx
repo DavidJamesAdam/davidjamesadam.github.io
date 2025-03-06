@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
         <Script id="TrulyBadgeScript">
-          {`(function () {
+          {/* {`(function () {
         var script = document.createElement('script');
 
         script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=93a7a8b1-0c21-47be-9ee0-17dc2fb238bc';
@@ -37,8 +37,8 @@ export default function RootLayout({
 
         var entry = document.getElementsByTagName('script')[0];
         entry.parentNode.insertBefore(script, entry);
-    })();`}
-          {/* {`(function () { 
+    })();`} */}
+          {`(function () { 
           var script = document.createElement('script'); 
           
           script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=a3466eb0-fcb7-4d3a-a1ff-4b52260241ad'; 
@@ -46,7 +46,7 @@ export default function RootLayout({
           
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
-          })();`} */}
+          })();`}
         </Script>
       </head>
       <body
