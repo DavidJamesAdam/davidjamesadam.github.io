@@ -38,7 +38,8 @@ export default function RootLayout({
         var entry = document.getElementsByTagName('script')[0];
         entry.parentNode.insertBefore(script, entry);
     })();`} */}
-          {/* {`(function () { 
+          {/*Prod Badges*/}
+          {`(function () { 
           var script = document.createElement('script'); 
           
           script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=a3466eb0-fcb7-4d3a-a1ff-4b52260241ad'; 
@@ -46,16 +47,16 @@ export default function RootLayout({
           
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
-          })();`} */}
+          })();`}
           {/*Dev Badges*/}
-          {`(function () { 
+          {/* {`(function () { 
           var script = document.createElement('script'); 
           
           script.src = 'https://tmmdkra163.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=5e2d9c59-3aef-498f-8436-5134a8762509'; 
           script.async = true; 
           
           var entry = document.getElementsByTagName('script')[0]; 
-          entry.parentNode.insertBefore(script, entry); })();`}
+          entry.parentNode.insertBefore(script, entry); })();`} */}
         </Script>
       </head>
       <body
