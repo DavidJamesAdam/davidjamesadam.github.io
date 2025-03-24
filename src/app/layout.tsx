@@ -29,15 +29,15 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
         <Script id="TrulyBadgeScript">
-          {`(function () {
-        var script = document.createElement('script');
+          {`(function () { 
+          var script = document.createElement('script'); 
 
-        script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=93a7a8b1-0c21-47be-9ee0-17dc2fb238bc';
-        script.async = true;
+          script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=67049c5c-d069-4669-ab2b-2c1ba25573f3'; 
+          script.async = true; 
 
-        var entry = document.getElementsByTagName('script')[0];
-        entry.parentNode.insertBefore(script, entry);
-    })();`}
+          var entry = document.getElementsByTagName('script')[0]; 
+          entry.parentNode.insertBefore(script, entry); 
+          })();`}
           {/*Prod Badges*/}
           {/* {`(function () { 
           var script = document.createElement('script'); 
