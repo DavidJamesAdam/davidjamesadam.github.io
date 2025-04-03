@@ -42,7 +42,7 @@ export default function RootLayout({
           {`(function () { 
           var script = document.createElement('script'); 
           
-          script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=a3466eb0-fcb7-4d3a-a1ff-4b52260241ad'; 
+          script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=cb9987fb-e274-42a5-b4e1-8bb8b3236883'; 
           script.async = true; 
           
           var entry = document.getElementsByTagName('script')[0]; 
