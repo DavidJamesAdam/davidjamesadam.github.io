@@ -39,7 +39,7 @@ export default function RootLayout({
           entry.parentNode.insertBefore(script, entry); 
           })();`} */}
           {/*Prod Badges*/}
-          {`(function () { 
+          {/* {`(function () { 
           var script = document.createElement('script'); 
           
           script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=cb9987fb-e274-42a5-b4e1-8bb8b3236883'; 
@@ -47,6 +47,16 @@ export default function RootLayout({
           
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
+          })();`} */}
+          {/*QA 24hr notification Badges*/}
+          {`(function () {
+          var script = document.createElement('script');
+
+          script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=0685c3d6-24eb-4d28-b323-09a4f0d46cf1';
+          script.async = true;
+
+          var entry = document.getElementsByTagName('script')[0];
+          entry.parentNode.insertBefore(script, entry);
           })();`}
           {/*Dev Badges*/}
           {/* {`(function () { 
