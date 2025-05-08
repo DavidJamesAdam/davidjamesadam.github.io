@@ -29,7 +29,8 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
         <Script id="TrulyBadgeScript">
-          {/* {`(function () { 
+          {/*QA Badges*/}
+          {`(function () { 
           var script = document.createElement('script'); 
 
           script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=67049c5c-d069-4669-ab2b-2c1ba25573f3'; 
@@ -37,9 +38,9 @@ export default function RootLayout({
 
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
-          })();`} */}
+          })();`}
           {/*Prod Badges*/}
-          {`(function () { 
+          {/* {`(function () { 
           var script = document.createElement('script'); 
           
           script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=a3466eb0-fcb7-4d3a-a1ff-4b52260241ad'; 
@@ -47,16 +48,6 @@ export default function RootLayout({
           
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
-          })();`}
-          {/*QA 24hr notification Badges*/}
-          {/* {`(function () {
-          var script = document.createElement('script');
-
-          script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=0685c3d6-24eb-4d28-b323-09a4f0d46cf1';
-          script.async = true;
-
-          var entry = document.getElementsByTagName('script')[0];
-          entry.parentNode.insertBefore(script, entry);
           })();`} */}
           {/*Dev Badges*/}
           {/* {`(function () { 
