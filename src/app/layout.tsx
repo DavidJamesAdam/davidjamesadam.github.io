@@ -29,27 +29,8 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
         <Script id="TrulyBadgeScript">
-          {`(function () { 
-          var script = document.createElement('script'); 
-          
-          script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=7f52f8b9-2412-4444-bf5a-6151486d22a3'; 
-          script.async = true; 
-          
-          var entry = document.getElementsByTagName('script')[0]; 
-          entry.parentNode.insertBefore(script, entry); 
-          })();`}
-          {/*QA TLP-1596 Badges*/}
-          {/* {`(function () { 
-          var script = document.createElement('script'); 
-          
-          script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=05afab0b-28ba-495d-a33f-4e7712c19c19'; 
-          script.async = true; 
-          
-          var entry = document.getElementsByTagName('script')[0]; 
-          entry.parentNode.insertBefore(script, entry); 
-          })(); `} */}
           {/*QA Badges*/}
-          {/* {`(function () { 
+          {`(function () { 
           var script = document.createElement('script'); 
 
           script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=67049c5c-d069-4669-ab2b-2c1ba25573f3'; 
@@ -57,7 +38,7 @@ export default function RootLayout({
 
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
-          })();`} */}
+          })();`}
           {/*Prod Badges*/}
           {/* {`(function () { 
           var script = document.createElement('script'); 
