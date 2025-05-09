@@ -29,7 +29,7 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
         <Script id="TrulyBadgeScript">
-          {/* {`(function () { 
+          {`(function () { 
           var script = document.createElement('script'); 
           
           script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=7f52f8b9-2412-4444-bf5a-6151486d22a3'; 
@@ -37,7 +37,7 @@ export default function RootLayout({
           
           var entry = document.getElementsByTagName('script')[0]; 
           entry.parentNode.insertBefore(script, entry); 
-          })();`} */}
+          })();`}
           {/*QA TLP-1596 Badges*/}
           {/* {`(function () { 
           var script = document.createElement('script'); 
