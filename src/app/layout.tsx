@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navBar";
-import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,37 +27,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
-        <Script id="TrulyBadgeScript">
-          {/*QA Badges*/}
-          {/* {`(function () { 
-          var script = document.createElement('script'); 
-
-          script.src = 'https://kmgu6d1qxk.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=67049c5c-d069-4669-ab2b-2c1ba25573f3'; 
-          script.async = true; 
-
-          var entry = document.getElementsByTagName('script')[0]; 
-          entry.parentNode.insertBefore(script, entry); 
-          })();`} */}
-          {/* Prod Badges*/}
-          {`(function () { 
-          var script = document.createElement('script'); 
-          
-          script.src = 'https://badge.trulylegit.com/api/tlv1?siteId=04907e9e-943c-43a7-bf3a-4967039266c3'; 
-          script.async = true; 
-          
-          var entry = document.getElementsByTagName('script')[0]; 
-          entry.parentNode.insertBefore(script, entry); 
-          })();`}
-          {/*Dev Badges*/}
-          {/* {`(function () { 
-          var script = document.createElement('script'); 
-          
-          script.src = 'https://tmmdkra163.execute-api.us-east-2.amazonaws.com/test/api/tlv1?siteId=5e2d9c59-3aef-498f-8436-5134a8762509'; 
-          script.async = true; 
-          
-          var entry = document.getElementsByTagName('script')[0]; 
-          entry.parentNode.insertBefore(script, entry); })();`} */}
-        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
