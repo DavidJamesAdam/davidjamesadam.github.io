@@ -1,3 +1,7 @@
 export default function Page() {
-  return <p>Project Page</p>;
+  return (
+    <div className="text-center">
+      <p>Projects</p>
+    </div>
+  );
 }
