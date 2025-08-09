@@ -9,18 +9,12 @@ const Navbar = () => {
           <Link className="navbar-brand text-light font-bold" href="/">
             Home
           </Link>
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link href="/projects" className="nav-item nav-link text-light">
-                Projects
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/contact" className="nav-item nav-link text-light">
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <Link href="/projects" className="nav-item nav-link text-light">
+            Projects
+          </Link>
+          <Link href="/contact" className="nav-item nav-link text-light">
+            Contact
+          </Link>
         </div>
       </nav>
     </div>
