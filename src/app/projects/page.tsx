@@ -9,6 +9,7 @@ export default function Page() {
         <Link href="https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion">HIC - Hikers Information Companion</Link><br/>
         <Link href="https://github.com/DavidJamesAdam/CalgaryHacks-24">CSUS Calgary Hacks 2024 Hackathon</Link><br/>
         <Link href="https://github.com/DavidJamesAdam/myFirstServer">Personal Backend Server (CRUD) project</Link>
+        <Link href="https://github.com/DavidJamesAdam/family-history">Family History website</Link>
       </div>
     </div>
   );
