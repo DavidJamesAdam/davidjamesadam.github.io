@@ -11,6 +11,9 @@ const Navbar = () => {
         <Link href="/projects" className="text-light text-lg">
           Projects
         </Link>
+        <Link href="/cpsc-581" className="text-light text-lg">
+          CPSC 581
+        </Link>
         <Link href="/contact" className="text-light text-lg">
           Contact
         </Link>
