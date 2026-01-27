@@ -1,7 +1,8 @@
 // import Card from "@mui/material/Card";
-import { Link } from "@mui/material";
+import Link from "next/link";
 
 // const cardStyle = {
+
 //   width: "50%",
 //   height: "50%",
 // };
@@ -19,37 +20,37 @@ export default function Page() {
         }}
       >
         {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/cpsc513-term-project-puppli">
+          <Link href="https://github.com/DavidJamesAdam/cpsc513-term-project-puppli" target="_blank">
             Puppli - Dog picture voting webapp
           </Link>
         {/* </Card> */}
 
         {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-">
+          <Link href="https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-" target="_blank">
             RED - Retro Entertainment Device
           </Link>
         {/* </Card> */}
 
         {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion">
+          <Link href="https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion" target="_blank">
             HIC - Hikers Information Companion
           </Link>
         {/* </Card> */}
 
         {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/CalgaryHacks-24">
+          <Link href="https://github.com/DavidJamesAdam/CalgaryHacks-24" target="_blank">
             CSUS Calgary Hacks 2024 Hackathon
           </Link>
         {/* </Card> */}
 
         {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/myFirstServer">
+          <Link href="https://github.com/DavidJamesAdam/myFirstServer" target="_blank">
             Personal Backend Server (CRUD) project
           </Link>
         {/* </Card> */}
 
         {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/family-history">
+          <Link href="https://github.com/DavidJamesAdam/family-history" target="_blank">
             Family History website
           </Link>
         {/* </Card> */}
