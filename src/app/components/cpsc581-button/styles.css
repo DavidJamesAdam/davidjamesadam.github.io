@@ -1,0 +1,63 @@
+.david-btn {
+  position: relative;
+  overflow: visible;
+}
+
+.sparkles {
+  position: absolute;
+  inset: 0;
+}
+
+.sparkle {
+  --size: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--size);
+  line-height: 1;
+  animation: sparkle 2200ms forwards;
+  animation-delay: var(--delay, 100ms);
+  z-index: 20;
+}
+
+.sparkle::before {
+  content: attr(data-sparkle);
+  display: block;
+  transform-origin: center;
+}
+
+.music-note {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  30% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
