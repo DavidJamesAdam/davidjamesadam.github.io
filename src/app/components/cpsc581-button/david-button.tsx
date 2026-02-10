@@ -3,18 +3,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { Button, Box } from "@mui/material";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
-import { keyframes } from "@mui/system";
+// Use CSS class for spin to keep server/client markup stable
 import useSound from "use-sound";
 import "./styles.css";
 
-const spin = keyframes`
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-`;
 
 export default function DavidButton({
   children,
@@ -42,20 +34,11 @@ export default function DavidButton({
     if (isPlaying) {
       stop();
       setIsPlaying(false);
-      window.dispatchEvent(new Event("animate-image"));
-      window.dispatchEvent(new Event("animate-book"));
-      window.dispatchEvent(new Event("animate-game-boy"));
-      window.dispatchEvent(new Event("animate-logo"));
       return;
     }
 
     setIsPlaying(true);
     play();
-    window.dispatchEvent(new Event("animate-image"));
-    window.dispatchEvent(new Event("animate-book"));
-    window.dispatchEvent(new Event("animate-game-boy"));
-
-    window.dispatchEvent(new Event("animate-logo"));
   });
 
   // Manage intervals: continuous sparkles and notes only when playing
@@ -134,13 +117,8 @@ export default function DavidButton({
       <Button
         disableRipple
         onClick={playRecord}
-        className="david-btn"
-        sx={{
-          padding: 0,
-          zIndex: 10,
-          animation: isPlaying ? `${spin} 1s linear infinite` : `none`,
-          width: "auto",
-        }}
+        className={`david-btn ${isPlaying ? "spinning" : ""}`}
+        sx={{ padding: 0, zIndex: 10, width: "auto" }}
       >
         <Image
           src="/blind-guardian-vinyl-record-svgrepo-com.svg"
@@ -149,7 +127,7 @@ export default function DavidButton({
           alt="svg of record"
         />
         {children}
-        <span className="sparkles" aria-hidden>
+        <span className="sparkles" aria-hidden suppressHydrationWarning>
           {sparkles.map((s: Sparkle) => (
             <i
               key={s.id}
@@ -161,7 +139,12 @@ export default function DavidButton({
         </span>
       </Button>
       {notes.map((note) => (
-        <span key={note.id} className="music-note" style={{ left: note.left }}>
+        <span
+          key={note.id}
+          className="music-note"
+          style={{ left: note.left }}
+          suppressHydrationWarning
+        >
           ♫
         </span>
       ))}
