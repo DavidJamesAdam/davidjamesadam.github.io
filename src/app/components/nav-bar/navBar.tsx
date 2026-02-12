@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="w-screen bg-dark bg-opacity-75 text-light py-4">
-      <div className="flex justify-center items-center gap-16">
+    <nav className="w-full py-4">
+      <div className="flex justify-center gap-16">
         <Link href="/" className="text-light font-bold text-lg">
           Home
         </Link>
