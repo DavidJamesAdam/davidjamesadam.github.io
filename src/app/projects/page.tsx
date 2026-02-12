@@ -1,59 +1,66 @@
-// import Card from "@mui/material/Card";
+"use client";
+
+import Card from "@mui/material/Card";
 import Link from "next/link";
-
-// const cardStyle = {
-
-//   width: "50%",
-//   height: "50%",
-// };
 
 export default function Page() {
   return (
-    <div className="text-center">
+    <div className="text-center w-full justify-items-center">
       <h1>Projects</h1>
-      <div
-        className="projects"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyItems: "center",
-        }}
-      >
-        {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/cpsc513-term-project-puppli" target="_blank">
+      <div className="projects flex flex-col justify-items-center">
+        <Card className="p-5 m-5" variant="outlined">
+          <Link
+            href="https://github.com/DavidJamesAdam/cpsc513-term-project-puppli"
+            target="_blank"
+          >
             Puppli - Dog picture voting webapp
           </Link>
-        {/* </Card> */}
+        </Card>
 
-        {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-" target="_blank">
+        <Card className="p-5 m-5" variant="outlined">
+          <Link
+            href="https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-"
+            target="_blank"
+          >
             RED - Retro Entertainment Device
           </Link>
-        {/* </Card> */}
+        </Card>
 
-        {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion" target="_blank">
+        <Card className="p-5 m-5" variant="outlined">
+          <Link
+            href="https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion"
+            target="_blank"
+          >
             HIC - Hikers Information Companion
           </Link>
-        {/* </Card> */}
+        </Card>
 
-        {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/CalgaryHacks-24" target="_blank">
+        <Card className="p-5 m-5" variant="outlined">
+          <Link
+            href="https://github.com/DavidJamesAdam/CalgaryHacks-24"
+            target="_blank"
+          >
             CSUS Calgary Hacks 2024 Hackathon
           </Link>
-        {/* </Card> */}
+        </Card>
 
-        {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/myFirstServer" target="_blank">
+        <Card className="p-5 m-5" variant="outlined">
+          <Link
+            href="https://github.com/DavidJamesAdam/myFirstServer"
+            target="_blank"
+          >
             Personal Backend Server (CRUD) project
           </Link>
-        {/* </Card> */}
+        </Card>
 
-        {/* <Card variant="outlined" sx={cardStyle}> */}
-          <Link href="https://github.com/DavidJamesAdam/family-history" target="_blank">
+        <Card className="p-5 m-5" variant="outlined">
+          <Link
+            href="https://github.com/DavidJamesAdam/family-history"
+            target="_blank"
+          >
             Family History website
           </Link>
-        {/* </Card> */}
+        </Card>
       </div>
     </div>
   );
