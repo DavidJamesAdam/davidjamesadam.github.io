@@ -1,6 +1,5 @@
-"use client";
 import Image from "next/image";
-import { Card, CardContent } from "@mui/material";
+import { Card } from "@mui/material";
 import DavidButton from "../components/cpsc581-button/david-button";
 import "./styles.css";
 
