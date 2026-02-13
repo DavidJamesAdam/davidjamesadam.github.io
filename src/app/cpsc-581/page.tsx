@@ -15,12 +15,12 @@ export default function Page() {
           height={38}
         />
       </div>
-      <div className="mb-[100] relative w-full h-auto p-5">
-        <Card
+      <div className="mb-[100] relative w-full h-auto p-5 bg-[var(--foreground)]">
+        {/* <Card
           variant="outlined"
           className="p-5"
           sx={{ backgroundColor: "var(--foreground)" }}
-        >
+        > */}
           <div className="flex-1">
             <p className="splash-regular text-5xl mb-[20] flex-1">
               Initial Portfolio page design
@@ -54,14 +54,14 @@ export default function Page() {
               <p>Paragraph for a short descirption</p>
             </div>
           </div>
-        </Card>
+        {/* </Card> */}
       </div>
-      <div className="relative w-full h-auto p-5">
-        <Card
+      <div className="relative w-full h-auto p-5 bg-[var(--foreground)] justify-items-end">
+        {/* <Card
           variant="outlined"
           className="p-5 justify-items-end"
           sx={{ backgroundColor: "var(--foreground)" }}
-        >
+        > */}
           <div className="flex-1">
             <p className="splash-regular text-5xl mb-[20]">Group Project 1</p>
           </div>
@@ -87,7 +87,7 @@ export default function Page() {
               <DavidButton />
             </div>
           </div>
-        </Card>
+        {/* </Card> */}
       </div>
     </div>
   );
