@@ -7,7 +7,7 @@ import "./styles.css";
 export default function Page() {
   return (
     <div className="bg-[var(--background)] w-full h-auto">
-      <div className="justify-items-center mb-[10]">
+      <div className="justify-items-center mb-2">
         <Image
           className="object-cover rounded-xl"
           src="/welcome.svg"
@@ -16,14 +16,14 @@ export default function Page() {
           height={38}
         />
       </div>
-      <div className="mb-[100] relative w-full h-auto p-5 bg-[var(--foreground)]">
+      <div className="mb-24 relative w-full h-auto p-5 bg-[var(--foreground)]">
         {/* <Card
           variant="outlined"
           className="p-5"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
         <div className="flex-1">
-          <p className="splash-regular text-5xl mb-[20] flex-1">
+          <p className="splash-regular text-5xl mb-5 flex-1">
             Initial Portfolio page design
           </p>
         </div>
@@ -57,22 +57,22 @@ export default function Page() {
         </div>
         {/* </Card> */}
       </div>
-      <div className="relative w-full h-auto p-5 mb-[100] bg-[var(--foreground)] justify-items-end">
+      <div className="relative w-full h-auto p-5 mb-24 bg-[var(--foreground)] justify-items-end">
         {/* <Card
           variant="outlined"
           className="p-5 justify-items-end"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
         <div className="flex-1">
-          <p className="splash-regular text-5xl mb-[20]">Group Project 1</p>
+          <p className="splash-regular text-5xl mb-5">Group Project 1</p>
         </div>
         <div className="flex flex-row w-auto h-auto p-3">
           <div className="p-3">
             <p>Paragraph for a short descirption</p>
           </div>
-          <div className="flex relative w-1/3 h-auto flex-1">
+          <div className="flex-1 relative">
             <Image
-              className="rounded-xl object-cover w-full h-auto"
+              className="rounded-xl object-cover"
               src="/Group_project_1.png"
               alt="Screenshot of Group Project 1"
               width={800}
@@ -98,11 +98,11 @@ export default function Page() {
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
         <div className="flex-1">
-          <p className="splash-regular text-5xl mb-[20] flex-1">
+          <p className="splash-regular text-5xl mb-5 flex-1">
             Group Project 2
           </p>
         </div>
-        <div className="flex flex-row w-fit h-auto p-3">
+        <div className="flex flex-row w-full h-auto p-3">
           <div>
             <div className="relative w-[800px] h-auto">
               <Image
