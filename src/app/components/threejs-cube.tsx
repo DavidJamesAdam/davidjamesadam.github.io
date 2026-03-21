@@ -7,7 +7,6 @@
 import React from "react";
 // // import { initHandDetection } from './handDetection.js';
 
-
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { TransformControls } from "three/examples/jsm/controls/TransformControls.js";
@@ -25,36 +24,36 @@ const ThreeScene: React.FC = () => {
       75,
       window.innerWidth / window.innerHeight,
       0.1,
-      1000
+      1000,
     );
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Remove any existing child canvases to avoid duplicate scenes (React strict-mode remounts)
-      if (containerRef.current) {
-        while (containerRef.current.firstChild) {
-          containerRef.current.removeChild(containerRef.current.firstChild);
-        }
-        containerRef.current.appendChild(renderer.domElement);
-
-        const setSizeToContainer = () => {
-          const el = containerRef.current;
-          if (!el) return;
-          const width = el.clientWidth || window.innerWidth;
-          const height = el.clientHeight || window.innerHeight;
-          camera.aspect = width / height;
-          camera.updateProjectionMatrix();
-          renderer.setSize(width, height);
-          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-        };
-
-        // initial size
-        setSizeToContainer();
-
-        // observe container size changes
-        const ro = new ResizeObserver(setSizeToContainer);
-        if (containerRef.current) ro.observe(containerRef.current);
+    if (containerRef.current) {
+      while (containerRef.current.firstChild) {
+        containerRef.current.removeChild(containerRef.current.firstChild);
       }
+      containerRef.current.appendChild(renderer.domElement);
+
+      const setSizeToContainer = () => {
+        const el = containerRef.current;
+        if (!el) return;
+        const width = el.clientWidth || window.innerWidth;
+        const height = el.clientHeight || window.innerHeight;
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      };
+
+      // initial size
+      setSizeToContainer();
+
+      // observe container size changes
+      const ro = new ResizeObserver(setSizeToContainer);
+      if (containerRef.current) ro.observe(containerRef.current);
+    }
 
     camera.position.z = 5;
 
@@ -78,12 +77,15 @@ const ThreeScene: React.FC = () => {
       params.depth,
       params.widthSegments,
       params.heightSegments,
-      params.depthSegments
+      params.depthSegments,
     );
     const cubeGroup = new THREE.Group();
     const solidMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
     const solidMesh = new THREE.Mesh(geometry, solidMaterial);
-    const wireframeMaterial = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true });
+    const wireframeMaterial = new THREE.MeshBasicMaterial({
+      color: 0x000000,
+      wireframe: true,
+    });
     const wireframeMesh = new THREE.Mesh(geometry, wireframeMaterial);
     solidMesh.userData.parent = cubeGroup;
     wireframeMesh.userData.parent = cubeGroup;
@@ -96,14 +98,18 @@ const ThreeScene: React.FC = () => {
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
 
-    const transformControls = new TransformControls(camera, renderer.domElement);
+    const transformControls = new TransformControls(
+      camera,
+      renderer.domElement,
+    );
     scene.add(transformControls.getHelper());
 
     // Disable OrbitControls while dragging with TransformControls
-    const onDraggingChanged = (event: any) => {
-      controls.enabled = !event.value;
-    };
-    transformControls.addEventListener("dragging-changed", onDraggingChanged);
+    transformControls.addEventListener("dragging-changed", (event) => {
+      if (typeof event.value === "boolean") {
+        controls.enabled = !event.value;
+      }
+    });
 
     // --- Animation loop ---
     let animationId: number | null = null;
@@ -118,20 +124,48 @@ const ThreeScene: React.FC = () => {
     scene.background = new THREE.Color("#c28e8e");
 
     // --- Selection logic ---
-    function selectObject(object: THREE.Group) {
-      if (selectedObject === object) return;
-      deselectObject();
-      selectedObject = object;
-      // Highlight the solid mesh
-      (object.children[0] as THREE.Mesh).material.color.set(0xff0000);
-      transformControls.attach(object);
+function selectObject(object: THREE.Group) {
+  if (selectedObject === object) return;
+
+  deselectObject();
+  selectedObject = object;
+
+  const mesh = object.children[0];
+
+  if (mesh instanceof THREE.Mesh) {
+    const material = mesh.material;
+
+    if (
+      material instanceof THREE.MeshBasicMaterial ||
+      material instanceof THREE.MeshStandardMaterial ||
+      material instanceof THREE.MeshPhongMaterial
+    ) {
+      material.color.set(0xff0000);
     }
-    function deselectObject() {
-      if (!selectedObject) return;
-      (selectedObject.children[0] as THREE.Mesh).material.color.set(0x00ff00);
-      transformControls.detach();
-      selectedObject = null;
+  }
+
+  transformControls.attach(object);
+}
+function deselectObject() {
+  if (!selectedObject) return;
+
+  const mesh = selectedObject.children[0];
+
+  if (mesh instanceof THREE.Mesh) {
+    const material = mesh.material;
+
+    if (
+      material instanceof THREE.MeshBasicMaterial ||
+      material instanceof THREE.MeshStandardMaterial ||
+      material instanceof THREE.MeshPhongMaterial
+    ) {
+      material.color.set(0x00ff00);
     }
+  }
+
+  transformControls.detach();
+  selectedObject = null;
+}
     function onMouseClick(event: MouseEvent) {
       // Use container-relative mouse coordinates
       const el = containerRef.current;
@@ -183,10 +217,16 @@ const ThreeScene: React.FC = () => {
       window.removeEventListener("click", onMouseClick);
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("resize", handleResize);
-      transformControls.removeEventListener("dragging-changed", onDraggingChanged);
+      // transformControls.removeEventListener(
+      //   "dragging-changed",
+      //   onDraggingChanged,
+      // );
 
       // Remove renderer canvas
-      if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
+      if (
+        containerRef.current &&
+        renderer.domElement.parentNode === containerRef.current
+      ) {
         containerRef.current.removeChild(renderer.domElement);
       }
     };
