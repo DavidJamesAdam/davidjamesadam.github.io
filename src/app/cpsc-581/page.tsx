@@ -1,6 +1,7 @@
 import Image from "next/image";
 // import { Card } from "@mui/material";
 import DavidButton from "../components/cpsc581-button/david-button";
+import ThreeScene from "../components/threejs-cube";
 import "./styles.css";
 
 export default function Page() {
@@ -21,72 +22,128 @@ export default function Page() {
           className="p-5"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
-          <div className="flex-1">
-            <p className="splash-regular text-5xl mb-[20] flex-1">
-              Initial Portfolio page design
-            </p>
+        <div className="flex-1">
+          <p className="splash-regular text-5xl mb-[20] flex-1">
+            Initial Portfolio page design
+          </p>
+        </div>
+        <div className="flex flex-row w-full h-auto p-3">
+          <div className="relative w-1/3 h-auto">
+            <Image
+              className="rounded-xl object-cover w-full h-auto"
+              src="/font_activity.jpg"
+              alt="Results of the font activity"
+              width={800}
+              height={400}
+            />
           </div>
-          <div className="flex flex-row w-full h-auto p-3">
-            <div className="relative w-1/3 h-auto">
-              <Image
-                className="rounded-xl object-cover w-full h-auto"
-                src="/font_activity.jpg"
-                alt="Results of the font activity"
-                width={800}
-                height={400}
-              />
-            </div>
-            <div className="p-3">
-              <p>Paragraph for a short descirption</p>
-            </div>
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
           </div>
-          <div className="flex flex-row w-auto h-auto p-3">
-            <div className="relative w-1/3 h-auto">
-              <Image
-                className="rounded-xl object-cover w-full h-auto"
-                src="/portfolio_activity.jpg"
-                alt="Results of portfolio design activity"
-                width={800}
-                height={200}
-              />
-            </div>
-            <div className="p-3">
-              <p>Paragraph for a short descirption</p>
-            </div>
+        </div>
+        <div className="flex flex-row w-auto h-auto p-3">
+          <div className="relative w-1/3 h-auto">
+            <Image
+              className="rounded-xl object-cover w-full h-auto"
+              src="/portfolio_activity.jpg"
+              alt="Results of portfolio design activity"
+              width={800}
+              height={200}
+            />
           </div>
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
+          </div>
+        </div>
         {/* </Card> */}
       </div>
-      <div className="relative w-full h-auto p-5 bg-[var(--foreground)] justify-items-end">
+      <div className="relative w-full h-auto p-5 mb-[100] bg-[var(--foreground)] justify-items-end">
         {/* <Card
           variant="outlined"
           className="p-5 justify-items-end"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
-          <div className="flex-1">
-            <p className="splash-regular text-5xl mb-[20]">Group Project 1</p>
+        <div className="flex-1">
+          <p className="splash-regular text-5xl mb-[20]">Group Project 1</p>
+        </div>
+        <div className="flex flex-row w-auto h-auto p-3">
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
           </div>
-          <div className="flex flex-row w-auto h-auto p-3">
-            <div className="p-3">
-              <p>Paragraph for a short descirption</p>
-            </div>
-            <div className="flex relative w-1/3 h-auto flex-1">
+          <div className="flex relative w-1/3 h-auto flex-1">
+            <Image
+              className="rounded-xl object-cover w-full h-auto"
+              src="/Group_project_1.png"
+              alt="Screenshot of Group Project 1"
+              width={800}
+              height={200}
+            />
+          </div>
+        </div>
+        <div className="flex flex-row w-auto h-auto p-3">
+          <div className="p-3 flex-1">
+            <p>Paragraph for a short descirption</p>
+          </div>
+          <div>
+            <DavidButton />
+          </div>
+        </div>
+        {/* </Card> */}
+      </div>
+
+      <div className="relative w-full h-auto p-5 bg-[var(--foreground)]">
+        {/* <Card
+          variant="outlined"
+          className="p-5"
+          sx={{ backgroundColor: "var(--foreground)" }}
+        > */}
+        <div className="flex-1">
+          <p className="splash-regular text-5xl mb-[20] flex-1">
+            Group Project 2
+          </p>
+        </div>
+        <div className="flex flex-row w-fit h-auto p-3">
+          <div>
+            <div className="relative w-[800px] h-auto">
               <Image
                 className="rounded-xl object-cover w-full h-auto"
-                src="/Group_project_1.png"
-                alt="Screenshot of Group Project 1"
+                src="/P2_Select.png"
+                alt="Results of portfolio design activity"
+                width={800}
+                height={200}
+              />
+            </div>
+            <div className="relative w-[800px] h-auto">
+              <Image
+                className="rounded-xl object-cover w-full h-auto"
+                src="/P2_Translate.png"
+                alt="Results of portfolio design activity"
+                width={800}
+                height={200}
+              />
+            </div>
+            <div className="relative w-[800px] h-auto">
+              <Image
+                className="rounded-xl object-cover w-full h-auto"
+                src="/P2_X_Axis.png"
+                alt="Results of portfolio design activity"
                 width={800}
                 height={200}
               />
             </div>
           </div>
-          <div className="flex flex-row w-auto h-auto p-3">
-            <div className="p-3 flex-1">
-              <p>Paragraph for a short descirption</p>
-            </div>
-            <div>
-              <DavidButton />
-            </div>
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
           </div>
+        </div>
+        <div className="flex flex-row w-full h-auto p-3">
+          <div className="relative w-1/3 h-auto">
+            <ThreeScene />
+          </div>
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
+          </div>
+        </div>
         {/* </Card> */}
       </div>
     </div>
