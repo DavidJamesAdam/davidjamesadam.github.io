@@ -28,7 +28,7 @@ export default function Page() {
           </p>
         </div>
         <div className="flex flex-row w-full h-auto p-3">
-          <div className="relative w-1/3 h-auto">
+          <div className="relative w-1/3 h-auto flex-shrink-0">
             <Image
               className="rounded-xl object-cover w-full h-auto"
               src="/font_activity.jpg"
@@ -38,11 +38,25 @@ export default function Page() {
             />
           </div>
           <div className="p-3">
-            <p>Paragraph for a short descirption</p>
+            <p>
+              Our very first activity was to pick a font that I felt resembled
+              me. I totally understood the idea behind it, but I was also
+              completely baffled. How on earth does a <i>font</i> represent a
+              person. I started to think of what I was interested in, and I
+              figured that was the best place to start. At the time, I had just
+              seen Guillermo del Toro&apos;s <i>Frankenstein</i>, so I was in a
+              bit of a classic horror headspace. So after some searching, I came
+              across the SPlash font. Not only did it remind me of a mad
+              scientist&apos;s writing, but it also reminded me of how fantasy
+              character&apos;s would write, in say, something like THe Lord of
+              the Rings. Due to the time constraint of the activity, I figured
+              this was the best, (and my most favourite style-wise) font to
+              choose.
+            </p>
           </div>
         </div>
         <div className="flex flex-row w-auto h-auto p-3">
-          <div className="relative w-1/3 h-auto">
+          <div className="relative w-1/3 h-auto flex-shrink-0">
             <Image
               className="rounded-xl object-cover w-full h-auto"
               src="/portfolio_activity.jpg"
@@ -52,7 +66,16 @@ export default function Page() {
             />
           </div>
           <div className="p-3">
-            <p>Paragraph for a short descirption</p>
+            <p>
+              I foudn this next activity to be quite a bit easier. I have a
+              decent amount of experience with front-end webpage design, and
+              have developed simple landing pages in the past. For the palette,
+              I searched for a palette that would comple my love of pine forests
+              and mountains, and lucky for me, there were plenty to choose from,
+              so I chose one that had a good mix of earty colours. For the
+              layouts, since these were just sketches, I thought back to landing
+              pages I&apos;ve done before, and created variations of some.
+            </p>
           </div>
         </div>
         {/* </Card> */}
@@ -82,7 +105,7 @@ export default function Page() {
         </div>
         <div className="flex flex-row w-auto h-auto p-3">
           <div className="p-3 flex-1">
-            <p>Paragraph for a short descirption</p>
+            <p>This is my button for Project 1. Click it to see it animate and hear a (midi) version of The Bard Song by Blind Guardian play.</p>
           </div>
           <div>
             <DavidButton />
@@ -98,9 +121,7 @@ export default function Page() {
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
         <div className="flex-1">
-          <p className="splash-regular text-5xl mb-5 flex-1">
-            Group Project 2
-          </p>
+          <p className="splash-regular text-5xl mb-5 flex-1">Group Project 2</p>
         </div>
         <div className="flex flex-row w-full h-auto p-3">
           <div>
@@ -141,7 +162,15 @@ export default function Page() {
             <ThreeScene />
           </div>
           <div className="p-3">
-            <p>Paragraph for a short descirption</p>
+            <p>
+              Click the cube to select. Click outside the cube to deselect.
+              Click and drag outside the cube to rotate the cube. Once cube is
+              selected, press W on the keyboard to select the translate option,
+              E to select the rotate option, and R to select the scale option.
+              There is a small bug that if you select one of the handles to
+              manipulate the cube where the selection happens off the cube, the
+              cube will be deselected.
+            </p>
           </div>
         </div>
         {/* </Card> */}
