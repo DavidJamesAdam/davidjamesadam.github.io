@@ -16,7 +16,7 @@ export default function Page() {
           height={38}
         />
       </div>
-      <div className="mb-24 relative w-full h-auto p-5 bg-[var(--foreground)]">
+      <div className="mb-24 relative w-full h-auto p-5 bg-[var(--foreground)] rounded-3xl">
         {/* <Card
           variant="outlined"
           className="p-5"
@@ -80,7 +80,7 @@ export default function Page() {
         </div>
         {/* </Card> */}
       </div>
-      <div className="relative w-full h-auto p-5 mb-24 bg-[var(--foreground)] justify-items-end">
+      <div className="relative w-full h-auto p-5 mb-24 bg-[var(--foreground)] justify-items-end rounded-3xl">
         {/* <Card
           variant="outlined"
           className="p-5 justify-items-end"
@@ -105,7 +105,10 @@ export default function Page() {
         </div>
         <div className="flex flex-row w-auto h-auto p-3">
           <div className="p-3 flex-1">
-            <p>This is my button for Project 1. Click it to see it animate and hear a (midi) version of The Bard Song by Blind Guardian play.</p>
+            <p>
+              This is my button for Project 1. Click it to see it animate and
+              hear a (midi) version of The Bard Song by Blind Guardian play.
+            </p>
           </div>
           <div>
             <DavidButton />
@@ -114,7 +117,7 @@ export default function Page() {
         {/* </Card> */}
       </div>
 
-      <div className="relative w-full h-auto p-5 bg-[var(--foreground)]">
+      <div className="relative w-full h-auto p-5 mb-24 bg-[var(--foreground)] rounded-3xl">
         {/* <Card
           variant="outlined"
           className="p-5"
@@ -171,6 +174,89 @@ export default function Page() {
               manipulate the cube where the selection happens off the cube, the
               cube will be deselected.
             </p>
+          </div>
+        </div>
+        {/* </Card> */}
+      </div>
+
+      <div className="relative w-full h-auto p-5 bg-[var(--foreground)] justify-items-end rounded-3xl">
+        {/* <Card
+          variant="outlined"
+          className="p-5 justify-items-end"
+          sx={{ backgroundColor: "var(--foreground)" }}
+        > */}
+        <div className="flex-1">
+          <p className="splash-regular text-5xl mb-5">Group Project 3</p>
+        </div>
+        <div className="flex flex-row w-auto h-auto p-3">
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
+          </div>
+          <div className="flex-1 relative">
+            <Image
+              className="rounded-xl object-cover"
+              src="/CAD_design.png"
+              alt="Screenshot of Group Project 1"
+              width={800}
+              height={200}
+            />
+          </div>
+        </div>
+        <div className="flex flex-row w-auto h-auto p-3">
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
+          </div>
+          <div className="flex-1 relative">
+            <Image
+              className="rounded-xl object-cover"
+              src="/OLED.png"
+              alt="Screenshot of Group Project 1"
+              width={800}
+              height={200}
+            />
+          </div>
+        </div>
+        <div className="flex flex-row w-auto h-auto p-3">
+          <div className="p-3">
+            <p>Paragraph for a short descirption</p>
+          </div>
+          <div>
+            <div className="flex-1 relative">
+              <Image
+                className="rounded-xl object-cover"
+                src="/LED.png"
+                alt="Screenshot of Group Project 1"
+                width={800}
+                height={200}
+              />
+            </div>
+            <div className="flex-1 relative">
+              <Image
+                className="rounded-xl object-cover"
+                src="/LED_BLUE.png"
+                alt="Screenshot of Group Project 1"
+                width={800}
+                height={200}
+              />
+            </div>
+            <div className="flex-1 relative">
+              <Image
+                className="rounded-xl object-cover"
+                src="/LED_GREEN.png"
+                alt="Screenshot of Group Project 1"
+                width={800}
+                height={200}
+              />
+            </div>
+            <div className="flex-1 relative">
+              <Image
+                className="rounded-xl object-cover"
+                src="/LED_RED.png"
+                alt="Screenshot of Group Project 1"
+                width={800}
+                height={200}
+              />
+            </div>
           </div>
         </div>
         {/* </Card> */}
