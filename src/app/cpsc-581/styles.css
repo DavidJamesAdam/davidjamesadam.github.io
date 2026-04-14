@@ -5,25 +5,40 @@
   font-style: normal;
 }
 
-.paragraph{
-  @apply px-5
+.splash-sub-header {
+  @apply text-2xl mt-5 mx-5;
+  font-family: "Splash", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.paragraph {
+  @apply px-5;
 }
 
 .nav-link {
-  @apply shadow-md rounded-lg hover:text-[var(--foreground)] px-3 py-1 bg-[#2D2620] hover:bg-[#413126] text-[#5E833C];
+  @apply shadow-md rounded-lg hover:text-[var(--foreground)] px-3 mx-3 py-1 bg-[#2D2620] hover:bg-[#413126] text-[#5E833C];
 }
 
-.card{
-  @apply mb-24 relative w-full h-auto p-5 bg-[var(--foreground)] rounded-3xl shadow-xl
+.card {
+  @apply mb-24 relative w-full h-auto p-5 bg-[var(--foreground)] rounded-3xl shadow-xl;
 }
-.card-section{
-  @apply items-start flex flex-row w-auto h-auto p-3 mt-3 mb-3
-}
-
-.image-wrapper{
-  @apply relative w-2/5 h-auto flex-shrink-0 shadow-lg overflow-hidden rounded-xl
+.card-section {
+  @apply items-start flex flex-row w-auto h-auto p-3 mt-3 mb-3;
 }
 
-.img{
-  @apply object-cover w-full h-auto
+/* .image-wrapper {
+  @apply relative w-2/5 h-auto flex-shrink-0 shadow-lg overflow-hidden rounded-xl;
+} */
+
+.image-wrapper {
+  @apply relative h-auto flex-shrink-0 shadow-lg overflow-hidden rounded-xl;
+}
+
+.image-wrapper-fixed {
+  @apply image-wrapper w-2/5;
+}
+
+.img {
+  @apply object-cover w-full h-auto;
 }
