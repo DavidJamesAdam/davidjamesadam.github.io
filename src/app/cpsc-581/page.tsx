@@ -36,10 +36,8 @@ export default function Page() {
           className="p-5"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
-        <div className="flex-1">
-          <p className="splash-regular text-5xl mb-5 flex-1">
-            Initial Portfolio page design
-          </p>
+        <div className="flex-1 rounded-xl bg-gradient-to-r from-[#4D744A] to-transparent">
+          <p className="splash-regular">Initial Portfolio page design</p>
         </div>
         <div className="card-section">
           <div className="image-wrapper">
@@ -76,9 +74,9 @@ export default function Page() {
               &emsp;I found this next activity to be quite a bit easier. I have
               a decent amount of experience with front-end webpage design, and
               have developed simple landing pages in the past. For the palette,
-              I searched for a palette that would comple my love of pine forests
+              I searched for a palette that would complement my love of forests
               and mountains, and lucky for me, there were plenty to choose from,
-              so I chose one that had a good mix of earty colours. For the
+              so I chose one that had a good mix of earthy colours. For the
               layouts, since these were just sketches, I thought back to landing
               pages I&apos;ve done before, and created variations of some.
             </p>
@@ -107,33 +105,33 @@ export default function Page() {
           className="p-5 justify-items-end"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
-        <div className="flex-1 text-right">
-          <p className="splash-regular text-5xl mb-5">Group Project 1</p>
+        <div className="flex-1 rounded-xl text-right bg-gradient-to-l from-[#4D744A] to-transparent">
+          <p className="splash-regular">Group Project 1</p>
         </div>
         <div className="card-section">
           <div className="paragraph ">
             <p>
               &emsp;For our first group project, we were tasked with designing a
-              button that respresented us, and later, how our buttons would
-              interact with each group member&apos;s buttons. We learnt a
-              technique in class called the &quot;10+10&quot; method. This
-              method would involve sketching 10 ideas, picking one (or more) and
-              creating 10 iteration sketches based on what you picked. This
-              really helped to give me a good starting point and allowed me to
-              implement some actual design processes that I&apos;ve never used
-              before.
+              button that respresented ourselves, and later, how our buttons
+              would interact with each group member&apos;s buttons based on hor
+              the group interacted. We learnt a technique in class called the
+              &quot;10+10&quot; method. This method would involve sketching 10
+              ideas, picking one (or more) and creating 10 iteration sketches
+              based on what you picked. This really helped to give me a good
+              starting point and allowed me to implement some actual design
+              processes that I&apos;ve never used before.
             </p>
             <p>
               &emsp;When ever I&apos;ve made something, I&apos;ve always had a
               vision of what I wanted and then I just implemented that vision.
-              There was no foresight so to speak before hand. Through this
-              implementation, I would discover what I would need to change
-              (which later on, we learnt even this was a design process).
+              There was no sketching or writing down ideas before hand. And
+              through this implementation, I would discover what I would need to
+              change (which later on, we learnt even this was a design process).
             </p>
             <p>
               &emsp;I was inspired by a classmate who was designing their button
               around a paint palette. I thought it was a pretty clever design,
-              taking an object that represents a big part of you and design a
+              taking an object that represents a big part of you and designing a
               button around it. Thanks to this inspiration, I gravitated towards
               a record idea. Music has always been a part of my life and it
               seemed like an appropriate object to choose to create a button out
@@ -164,17 +162,40 @@ export default function Page() {
           <div className="paragraph">
             <p>
               &emsp;When deciding on how we wanted to display our buttons, we
-              figured using a bedroom as our background made sense. This idea
-              sort of naturally came from each of our buttons depicted as
-              objects that represented specific interests of ours (records,
-              video games, snowboarding
+              were partially inspired by another groups design where they used a
+              house as their background, and figured using a bedroom as our
+              background naturally fit with our button concepts. This idea came
+              from each of our buttons depicted as objects that represented
+              specific interests of ours (records, video games, snowboarding,
+              etc) and most of these objects would naturally be found in
+              someone&apos;s bedroom.
+            </p>
+            <p>
+              &emsp;Instead of drawing the bedrorom ourselves, we searched for
+              some (royalty free) images we coule use. We eventually came across
+              an image of a bedroom with the perspective looking directly into
+              the bedroom, which made positioning and figuring out what
+              interactions to include pretty easy. I did a sketch of the image
+              we found and started jotting down some ideas with how our buttons
+              could interact. Continuing with the &quot;interest/object&quot;
+              idea, we thought of some interests that we had in common. These
+              interests would be depicted as objects in the bedroom, and
+              whenever someone&apos;s button was clicked, the shared interest
+              would do a little animation.
             </p>
           </div>
         </div>
         <hr className="border-black" />
         <div className="card-section">
           <div className="paragraph">
-            <p>Paragraph for a short descirption</p>
+            <p>
+              &emsp;This is a screenshot of our completed webpage. Since we had
+              3 group members, there are 3 buttons that were clickable; the
+              record (my button, as seen below), a closet that would reveal one
+              group member&apos;s interests, and a TV that would turn on to
+              represent another group member&apos;s interest in technology and
+              videogames.
+            </p>
           </div>
           <div className="image-wrapper">
             <Image
@@ -193,8 +214,22 @@ export default function Page() {
           </div>
           <div className="paragraph flex-1">
             <p>
-              This is my button for Project 1. Click it to see it animate and
-              hear a (midi) version of The Bard Song by Blind Guardian play.
+              &emsp;This is my button. As mentioned earlier, I chose a record based on
+              inspiration from another classmate. To distinguish which objects
+              were clickable, we decided to add emojis that represented an
+              aspect of us that would &quot;sparkle&quot;. In addition, since my
+              button was represented by a record, having the button play music
+              and animate when clicked felt very appropriate. When clicked, the
+              record spins, plays a song, and little music notes float up from
+              the record. One small detail I really liked was the image included
+              on the record. The song I chose was The Bard&apos;s Song by Blind
+              Guardian (a midi version to avoid any copywrite issues). This song
+              means a lot to me for many reasons, including the fact that it
+              draws from The Lord of the Rings. The detail I added to the record
+              was a cropped version of the album The Bard&apos;s Song comes
+              from. Unfortuantely, it&apos;s a little small to see, but I
+              thought it was a cute addition. Click the record to see it animate
+              and listen to The Bard&apos;s Song by Blind Guardian.
             </p>
           </div>
         </div>
@@ -212,11 +247,10 @@ export default function Page() {
           className="p-5"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
-        <div className="flex-1">
-          <p className="splash-regular text-5xl mb-5 flex-1">Group Project 2</p>
+        <div className="flex-1 rounded-xl bg-gradient-to-r from-[#4D744A] to-transparent">
+          <p className="splash-regular">Group Project 2</p>
         </div>
         <div className="card-section">
-          <div>
             <div className="image-wrapper">
               <Image
                 className="img"
@@ -226,7 +260,7 @@ export default function Page() {
                 height={200}
               />
             </div>
-          </div>
+
           <div className="paragraph">
             <p>Paragraph for a short descirption</p>
           </div>
@@ -323,8 +357,8 @@ export default function Page() {
           className="p-5 justify-items-end"
           sx={{ backgroundColor: "var(--foreground)" }}
         > */}
-        <div className="flex-1 text-right">
-          <p className="splash-regular text-5xl mb-5">Group Project 3</p>
+        <div className="flex-1 rounded-xl text-right bg-gradient-to-l from-[#4D744A] to-transparent">
+          <p className="splash-regular">Group Project 3</p>
         </div>
         <div className="card-section">
           <div className="paragraph">
@@ -334,7 +368,7 @@ export default function Page() {
             <Image
               className="img"
               src="/Group_Project_3_initial_concepts.png"
-              alt="Screenshot of Group Project 1"
+              alt="Screenshot of Group Project 3 initial concepts"
               width={800}
               height={200}
             />
@@ -345,38 +379,8 @@ export default function Page() {
           <div className="image-wrapper">
             <Image
               className="img"
-              src="/Group_Project_3_prompt_cup_sketch.png"
-              alt="Screenshot of Group Project 1"
-              width={800}
-              height={200}
-            />
-          </div>
-          <div className="paragraph">
-            <p>Paragraph for a short descirption</p>
-          </div>
-        </div>
-        <hr className="border-black" />
-        <div className="card-section">
-          <div className="paragraph">
-            <p>Paragraph for a short descirption</p>
-          </div>
-          <div className="image-wrapper">
-            <Image
-              className="img"
-              src="/Group_Project_3_initial_concepts.png"
-              alt="Screenshot of Group Project 1"
-              width={800}
-              height={200}
-            />
-          </div>
-        </div>
-        <hr className="border-black" />
-        <div className="card-section">
-          <div className="image-wrapper">
-            <Image
-              className="img"
-              src="/Group_Project_3_prompt_cup_sketch.png"
-              alt="Screenshot of Group Project 1"
+              src="/Group_Project_3_Prompt_cup_sketch.png"
+              alt="Screenshot of Group Project  Prompt Cup sketch"
               width={800}
               height={200}
             />
@@ -393,8 +397,38 @@ export default function Page() {
           <div className="image-wrapper">
             <Image
               className="img"
-              src="/Group_Project_3_initial_concepts.png"
-              alt="Screenshot of Group Project 1"
+              src="/Group_Project_3_pop_dish_sketch.png"
+              alt="Screenshot of Group Project 3 Popular Dish sketch"
+              width={800}
+              height={200}
+            />
+          </div>
+        </div>
+        <hr className="border-black" />
+        <div className="card-section">
+          <div className="image-wrapper">
+            <Image
+              className="img"
+              src="/Group_Project_3_cheers_indicator_sketch.png"
+              alt="Screenshot of Group Project 3 Cheers Indicator Sketch"
+              width={800}
+              height={200}
+            />
+          </div>
+          <div className="paragraph">
+            <p>Paragraph for a short descirption</p>
+          </div>
+        </div>
+        <hr className="border-black" />
+        <div className="card-section">
+          <div className="paragraph">
+            <p>Paragraph for a short descirption</p>
+          </div>
+          <div className="image-wrapper">
+            <Image
+              className="img"
+              src="/Group_Project_3_prompt_cup_iterations.png"
+              alt="Screenshot of Group Project 3 Prompt Cup Iterations"
               width={800}
               height={200}
             />
@@ -406,7 +440,7 @@ export default function Page() {
             <Image
               className="img"
               src="/CAD_design.png"
-              alt="Screenshot of Group Project 1"
+              alt="Screenshot of Group Project 3 CAD Design"
               width={800}
               height={200}
             />
@@ -424,7 +458,7 @@ export default function Page() {
             <Image
               className="img"
               src="/OLED.png"
-              alt="Screenshot of Group Project 1"
+              alt="Screenshot of Group Project 3 OLED screen"
               width={800}
               height={200}
             />
@@ -437,34 +471,34 @@ export default function Page() {
               <Image
                 className="img"
                 src="/LED.png"
-                alt="Screenshot of Group Project 1"
+                alt="Screenshot of Group Project 3 LED at the bottom of the cup"
                 width={800}
                 height={200}
               />
             </div>
-            <div className="flex-1 image-wrapper mb-3">
+            <div className="image-wrapper mb-3">
               <Image
                 className="img"
                 src="/LED_BLUE.png"
-                alt="Screenshot of Group Project 1"
+                alt="Screenshot of Group Project 3 Blue LED"
                 width={800}
                 height={200}
               />
             </div>
-            <div className="flex-1 image-wrapper mb-3">
+            <div className="image-wrapper mb-3">
               <Image
                 className="img"
                 src="/LED_GREEN.png"
-                alt="Screenshot of Group Project 1"
+                alt="Screenshot of Group Project 3 Green LED"
                 width={800}
                 height={200}
               />
             </div>
-            <div className="flex-1 image-wrapper mb-3">
+            <div className="image-wrapper mb-3">
               <Image
                 className="img"
                 src="/LED_RED.png"
-                alt="Screenshot of Group Project 1"
+                alt="Screenshot of Group Project 3 Red LED"
                 width={800}
                 height={200}
               />
