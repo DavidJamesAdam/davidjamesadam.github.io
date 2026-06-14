@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full py-4 flex justify-items-start gap-16 weathered-text">
+    <nav className="w-full py-4 flex justify-items-start gap-16 weathered-effect">
       <div className="link-wrapper">
         <Link href="/about" className={`link-styles ${isActive("/about") ? "active-link" : ""}`}>
           // About

@@ -10,7 +10,6 @@ function useTypewriter(texts: string[], period = 2000) {
   const [text, setText] = useState("");
   const textRef = useRef("");
   const loopNum = useRef(0);
-  const isDeleting = useRef(false);
 
   useEffect(() => {
     let timeoutId: number;
@@ -20,9 +19,7 @@ function useTypewriter(texts: string[], period = 2000) {
       const fullText = texts[i];
       const currentText = textRef.current;
 
-      const updatedText = isDeleting.current
-        ? fullText.substring(0, currentText.length - 1)
-        : fullText.substring(0, currentText.length + 1);
+      const updatedText = fullText.substring(0, currentText.length + 1);
 
       textRef.current = updatedText;
       setText(updatedText);
@@ -43,7 +40,7 @@ export default function Page() {
   const typedText = useTypewriter(words, 2000);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center weathered-text">
+    <div className="w-full min-h-screen flex items-center justify-center weathered-effect">
       <a href="/about" className="typewriter inline-block text-4xl">
         <span className="wrap">{typedText}</span>
       </a>

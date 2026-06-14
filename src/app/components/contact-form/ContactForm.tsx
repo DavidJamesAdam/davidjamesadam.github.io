@@ -1,106 +1,84 @@
 "use client";
 
-import { useState } from "react";
+import Form from "next/form";
+import { sendDiscordMessage } from "../../actions";
+import { useActionState, useEffect } from "react";
+import { toast } from "sonner";
 
 export default function ContactForm() {
-  const [fullname, setFullname] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(false);
+  const [formState, formAction, isPending] = useActionState(
+    sendDiscordMessage,
+    null,
+  );
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (!formState) return; // wait for first result
 
-    console.log("Full name: ", fullname);
-    console.log("Email: ", email);
-    console.log("Message: ", message);
-
-    const res = await fetch("api/contact", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({
-        fullname,
-        email,
-        message,
-      }),
-    });
-
-    const { msg, success } = await res.json();
-    setError(msg);
-    setSuccess(success);
-
-    if (success) {
-      setFullname("");
-      setEmail("");
-      setMessage("");
+    if (formState.success) {
+      toast.success(formState.message, {
+        style: {
+          background: "#000000",
+          border: "#44494ed7",
+          color: "#894fad",
+        },
+      });
+    } else {
+      toast.error(formState.message, {
+        style: {
+          background: "#000000",
+          border: "#44494ed7",
+          color: "#960000",
+        },
+      });
     }
-};
+  }, [formState]);
 
   return (
     <>
-      <form
-        onSubmit={handleSubmit}
-        className="py-4 mt-4 flex flex-col gap-5"
+      <Form
+        className="flex flex-col items-center py-4 mt-4 gap-5"
+        action={formAction}
       >
-        <div className="weathered-text">
+        <div className="weathered-effect w-full">
           <label htmlFor="fullname">Full Name</label>
           <input
-            onChange={(e) => setFullname(e.target.value)}
-            value={fullname}
             type="text"
-            id="fullname"
-            placeholder="John Doe"
+            name="username"
+            placeholder="Your name"
             className="border-[#44494ed7] border-2 p-3"
+            required
           />
         </div>
 
-        <div className="weathered-text">
+        <div className="weathered-effect w-full">
           <label htmlFor="email">Email</label>
           <input
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            type="text"
-            id="email"
-            placeholder="john@gmail.com"
+            type="email"
+            name="email"
+            placeholder="email@example.com"
             className="border-[#44494ed7] border-2 p-3"
+            required
           />
         </div>
 
-        <div className="weathered-text">
+        <div className="weathered-effect w-full">
           <label htmlFor="message">Your Message</label>
           <textarea
-            onChange={(e) => setMessage(e.target.value)}
-            value={message}
             className="h-32 p-3 border-[#565d639a] border-2"
-            id="message"
+            name="message"
             placeholder="Type your message here..."
-          ></textarea>
+            required
+          />
         </div>
-        <div className="weathered-text">
-
+        <div className="weathered-effect">
           <button
-            className="bg-black p-3 border-[#3b2648] border-2 text-[#3b2648] font-bold"
+            className="bg-black p-3 border-[#3b2648] border-2 text-[#3b2648] font-bold w-auto"
             type="submit"
           >
-            &gt; Send
+            {isPending ? "Sending..." : "> Send"}
           </button>
         </div>
-      </form>
-
-      <div className="bg-slate-100 flex flex-col">
-        {error && (
-          <div
-            className={`${
-              success ? "text-green-800" : "text-red-600"
-            } px-5 py-2`}
-          >
-            {error}
-          </div>
-        )}
-      </div>
+      </Form>
     </>
   );
 }

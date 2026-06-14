@@ -53,22 +53,11 @@ label{
   @apply text-[#894fad]
 }
 
-/* .weathered-text {
-  font-size: 10vh;
-  background-image: url('/free-vector-distressed-texture-10.png');
-  background-size: 100px;
-  background-position: 0 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-} */
-
-.weathered-text {
+.weathered-effect {
   position: relative;
 }
 
-.weathered-text::after {
+.weathered-effect::after {
   content: '';
   position: absolute;
   top: 0;
