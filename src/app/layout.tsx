@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
       </head>
-      <body className="flex flex-row w-fit h-fit">
+      <body className="flex flex-row w-full h-screen overflow-hidden">
         {shouldHideLayout ? (
           children
         ) : (

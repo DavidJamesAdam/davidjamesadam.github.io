@@ -36,7 +36,7 @@ export default function ContactForm() {
   return (
     <>
       <Form
-        className="flex flex-col items-center py-4 mt-4 gap-5"
+        className="flex flex-col items-center py-4 mt-4 gap-5 w-1/5"
         action={formAction}
       >
         <div className="weathered-effect w-full">

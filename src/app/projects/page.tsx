@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="text-center w-full justify-items-center">
-      <h1>Projects</h1>
-      <div className="projects flex flex-col justify-items-center">
-        <Card className="p-5 m-5" variant="outlined">
+    <div className="flex flex-col h-screen overflow-hidden justify-around">
+      <h1 className="weathered-effect text-8xl">Recent<br/>Conjurations</h1>
+      <div className="projects flex flex-row justify-items-center ">
+        <Card className="p-5 m-5 h-full" variant="outlined">
           <Link
             href="https://github.com/DavidJamesAdam/cpsc513-project-puppli"
             target="_blank"
@@ -46,15 +46,6 @@ export default function Page() {
 
         <Card className="p-5 m-5" variant="outlined">
           <Link
-            href="https://github.com/DavidJamesAdam/CalgaryHacks-24"
-            target="_blank"
-          >
-            CSUS Calgary Hacks 2024 Hackathon
-          </Link>
-        </Card>
-
-        <Card className="p-5 m-5" variant="outlined">
-          <Link
             href="https://github.com/DavidJamesAdam/myFirstServer"
             target="_blank"
           >
@@ -70,6 +61,9 @@ export default function Page() {
             Family History website
           </Link>
         </Card> */}
+      </div>
+      <div className="text-[#894fad] weathered-effect">
+        <a href="https://github.com/DavidJamesAdam">&gt; VIEW ALL PROJECTS</a>
       </div>
     </div>
   );
