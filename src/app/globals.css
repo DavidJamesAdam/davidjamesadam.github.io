@@ -1,21 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #4D744A;
-  --foreground: #8DA779;
+  --background-color: #000000;
+  --foreground: #ededed;
+  --primary-text: #9046a4;
+  --secondary-text: #101214
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background-color: #0a0a0a;
     --foreground: #ededed;
   }
 }
 
-/* @layer components {
-  .container {
-    @apply
+html,
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--foreground);
+}
+
+@layer base {
+  h1 {
+    font-family: 'Big Shoulders Display', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-weight: 700;
+    /* line-height: 1.2; */
+    color: #928a91;
   }
+}
+
+form>div {
+    @apply flex flex-col gap-2;
+}
+
+input,
+textarea {
+    @apply px-6 py-2 bg-black border-gray-500;
+}
+
+label{
+  @apply text-[#894fad]
+}
+
+/* .weathered-text {
+  font-size: 10vh;
+  background-image: url('/free-vector-distressed-texture-10.png');
+  background-size: 100px;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 } */
+
+.weathered-text {
+  position: relative;
+}
+
+.weathered-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/Scratches-Transparent-Free-PNG.png');
+  background-size: 150px;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  opacity: .9;
+}
+
+.typewriter a {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #928a91; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 30% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #928a91; }
+}

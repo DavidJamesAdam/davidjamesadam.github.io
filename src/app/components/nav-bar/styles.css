@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-styles{
+  @apply font-space-grotesk hover:text-[#7b5d82];
+}
+
+.active-link {
+  @apply text-[#7b5d82];
+}
