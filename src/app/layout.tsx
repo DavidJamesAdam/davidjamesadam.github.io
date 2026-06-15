@@ -20,7 +20,7 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
       </head>
-      <body className="flex flex-row w-full h-screen overflow-hidden">
+      <body className="flex w-full h-screen">
         {shouldHideLayout ? (
           children
         ) : (
@@ -28,7 +28,7 @@ export default function RootLayout({
             {/* <div className="flex flex-col border-r border-gray-500 weathered-effect">
             <p className="w-20">A</p>
           </div> */}
-            <div className="px-5 w-full min-h-screen">
+            <div className="flex flex-col px-5 min-h-screen w-full">
               <Navbar />
               {children}
               <Toaster />

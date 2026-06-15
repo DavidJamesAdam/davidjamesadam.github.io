@@ -20,7 +20,7 @@
   }
 }
 
-html,
+/* html,
 body {
   height: 100%;
   margin: 0;
@@ -29,7 +29,7 @@ body {
 
 html {
   height: 100vh;
-}
+} */
 
 body {
   background-color: var(--background-color);
@@ -56,6 +56,17 @@ textarea {
 
 label{
   @apply text-[#894fad]
+}
+
+.card{
+  padding: .5rem;
+  margin: 1rem;
+  height: 100%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%
 }
 
 .weathered-effect {

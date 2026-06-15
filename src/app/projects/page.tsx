@@ -1,68 +1,59 @@
 "use client";
-
-import Card from "@mui/material/Card";
-import Link from "next/link";
+import Card from "../components/card/Card";
 
 export default function Page() {
+  const projectInfo = [
+    {
+      picture: "/Placeholder.svg",
+      title: "Puppli - Dog picture voting webapp",
+      link: "https://github.com/DavidJamesAdam/cpsc513-project-puppli",
+      description: "Project",
+    },
+    {
+      picture: "/Placeholder.svg",
+      title: "SmartPantry - Recipe, home inventory, and grocery tracker",
+      link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
+      description: "Project",
+    },
+    {
+      picture: "/Placeholder.svg",
+      title: "RED - Retro Entertainment Device",
+      link: "https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-",
+      description: "Project",
+    },
+    {
+      picture: "/Placeholder.svg",
+      title: "HIC - Hikers Information Companion",
+      link: "https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion",
+      description: "Project",
+    },
+    {
+      picture: "/Placeholder.svg",
+      title: "Personal Backend Server (CRUD) project",
+      link: "https://github.com/DavidJamesAdam/myFirstServer",
+      description: "Project",
+    },
+    // {title: "Family History website", link: "https://github.com/DavidJamesAdam/family-history", description: "Project"},
+  ];
   return (
-    <div className="flex flex-col h-screen overflow-hidden justify-around">
-      <h1 className="weathered-effect text-8xl">Recent<br/>Conjurations</h1>
-      <div className="projects flex flex-row justify-items-center ">
-        <Card className="p-5 m-5 h-full" variant="outlined">
-          <Link
-            href="https://github.com/DavidJamesAdam/cpsc513-project-puppli"
-            target="_blank"
-          >
-            Puppli - Dog picture voting webapp
-          </Link>
-        </Card>
-
-        <Card className="p-5 m-5" variant="outlined">
-          <Link
-            href="https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry"
-            target="_blank"
-          >
-            SmartPantry - Recipe, home inventory, and grocery tracker
-          </Link>
-        </Card>
-
-        <Card className="p-5 m-5" variant="outlined">
-          <Link
-            href="https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-"
-            target="_blank"
-          >
-            RED - Retro Entertainment Device
-          </Link>
-        </Card>
-
-        <Card className="p-5 m-5" variant="outlined">
-          <Link
-            href="https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion"
-            target="_blank"
-          >
-            HIC - Hikers Information Companion
-          </Link>
-        </Card>
-
-        <Card className="p-5 m-5" variant="outlined">
-          <Link
-            href="https://github.com/DavidJamesAdam/myFirstServer"
-            target="_blank"
-          >
-            Personal Backend Server (CRUD) project
-          </Link>
-        </Card>
-
-        {/* <Card className="p-5 m-5" variant="outlined">
-          <Link
-            href="https://github.com/DavidJamesAdam/family-history"
-            target="_blank"
-          >
-            Family History website
-          </Link>
-        </Card> */}
+    <div className="flex flex-col flex-1">
+      <h1 className="weathered-effect text-8xl m-5">
+        Recent
+        <br />
+        Conjurations
+      </h1>
+      <div className="flex md:flex-row flex-col justify-items-center weathered-effect flex-1 justify-between">
+        {projectInfo.map((project, index) => (
+          <Card
+            key={index}
+            picture={project.picture}
+            title={project.title}
+            link={project.link}
+            description={project.description}
+          />
+        ))}
       </div>
-      <div className="text-[#894fad] weathered-effect">
+      <div className="text-[#894fad] weathered-effect m-5 p-5">
         <a href="https://github.com/DavidJamesAdam">&gt; VIEW ALL PROJECTS</a>
       </div>
     </div>
