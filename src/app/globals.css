@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Space+Grotesk:wght@300..700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
   --background-color: #000000;
   --foreground: #ededed;
   --primary-text: #9046a4;
-  --secondary-text: #101214
+  --secondary-text: #101214;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,28 +38,39 @@ body {
 
 @layer base {
   h1 {
-    font-family: 'Big Shoulders Display', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    font-family:
+      "Big Shoulders Display",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      "Liberation Sans",
+      sans-serif;
     font-weight: 700;
     /* line-height: 1.2; */
     color: #928a91;
   }
 }
 
-form>div {
-    @apply flex flex-col gap-2;
+form > div {
+  @apply flex flex-col gap-2;
 }
 
 input,
 textarea {
-    @apply px-6 py-2 bg-black border-gray-500;
+  @apply px-6 py-2 bg-black border-gray-500;
 }
 
-label{
-  @apply text-[#894fad]
+label {
+  @apply text-[#894fad];
 }
 
-.card{
-  padding: .5rem;
+.card {
+  padding: 0.5rem;
   margin: 1rem;
   border: 1px solid white;
   display: flex;
@@ -73,17 +84,17 @@ label{
 }
 
 .weathered-effect::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/Scratches-Transparent-Free-PNG.png');
+  background-image: url("/Scratches-Transparent-Free-PNG.png");
   background-size: 150px;
   mix-blend-mode: multiply;
   pointer-events: none;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .typewriter {
@@ -94,10 +105,25 @@ label{
 
 .typewriter .wrap {
   border-right: 0.08em solid #fff;
-  animation: blink-caret .75s step-end infinite;
+  animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #928a91; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #928a91;
+  }
+}
+
+.blinking-text {
+    animation: blink-animation 1s steps(1, start) infinite;
+}
+
+@keyframes blink-animation {
+    50% {
+        visibility: hidden;
+    }
 }

@@ -38,9 +38,9 @@ export default function Page() {
   return (
     <div className="flex flex-col flex-1">
       <h1 className="weathered-effect text-8xl my-5">
-        Recent
+        SOME RECENT
         <br />
-        Conjurations
+        <span className="text-[#52f83c]">CONJURATIONS</span>
       </h1>
       <div className="flex md:flex-row flex-col justify-items-center weathered-effect flex-1 justify-between">
         {projectInfo.map((project, index) => (
