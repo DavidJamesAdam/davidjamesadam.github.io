@@ -5,15 +5,15 @@ export default function Page() {
   const projectInfo = [
     {
       picture: "/Placeholder.svg",
-      title: "Puppli - Dog picture voting webapp",
+      title: "Puppli",
       link: "https://github.com/DavidJamesAdam/cpsc513-project-puppli",
-      description: "Project",
+      description: "Dog picture voting webapp",
     },
     {
       picture: "/Placeholder.svg",
-      title: "SmartPantry - Recipe, home inventory, and grocery tracker",
+      title: "SmartPantry",
       link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
-      description: "Project",
+      description: "Recipe, home inventory, and grocery tracker",
     },
     {
       picture: "/Placeholder.svg",
@@ -37,7 +37,7 @@ export default function Page() {
   ];
   return (
     <div className="flex flex-col flex-1">
-      <h1 className="weathered-effect text-8xl m-5">
+      <h1 className="weathered-effect text-8xl my-5">
         Recent
         <br />
         Conjurations

@@ -11,12 +11,13 @@ interface CardProps {
 export default function Card({ picture, title, link, description }: CardProps) {
   return (
     <div className="card">
-      <div className="w-full h-full relative">
+      <div className="flex flex-1">
         <Image
           src={picture}
           alt={`Preview of ${title}`}
-          layout="fill"
-          objectFit="contain"
+          width={800}
+          height={450}
+          className="relative w-full min-h-[220px]"
         />
       </div>
       <div className="border-t-2">
