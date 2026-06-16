@@ -5,11 +5,14 @@ import { useRef, useState, useEffect } from "react";
 
 export default function TerminalWindow() {
   const nodeRef = useRef(null);
-  const [coordinates, setCoordinates] = useState({
+  const [coordinates, setCoordinates] = useState<{
+    latitude: number | null;
+    longitude: number | null;
+  }>({
     latitude: null,
     longitude: null,
   });
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleGetLocation = () => {
