@@ -42,9 +42,8 @@ export default function TerminalWindow() {
   }, []);
 
   return (
-
       <Draggable nodeRef={nodeRef}>
-        <div ref={nodeRef} className="h-auto w-auto border bg-black/80">
+        <div ref={nodeRef} className="h-auto w-auto border bg-black/80 hover:cursor-move">
           <div className="m-5">
             <p className="my-1">SYSTEM STATUS</p>
             <p>CONNECTION: <span className="blinking-text">STABLE</span></p>
@@ -58,6 +57,5 @@ export default function TerminalWindow() {
           </div>
         </div>
       </Draggable>
-
   );
 }

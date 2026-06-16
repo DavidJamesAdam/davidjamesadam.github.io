@@ -36,7 +36,7 @@ export default function ContactForm() {
   return (
     <>
       <Form
-        className="flex flex-col items-center py-4 mt-4 gap-5 md:w-1/5"
+        className="flex flex-col py-4 mt-4 gap-5 md:w-1/5"
         action={formAction}
       >
         <div className="weathered-effect w-full">
@@ -72,7 +72,7 @@ export default function ContactForm() {
         </div>
         <div className="weathered-effect">
           <button
-            className="bg-black p-3 border-[#3b2648] border-2 text-[#3b2648] font-bold w-auto"
+            className="bg-black p-3 border-[#894fad] border-2 text-[#894fad] font-bold w-auto hover:border-[#bc77e7] hover:text-[#bc77e7]"
             type="submit"
           >
             {isPending ? "Sending..." : "> Send"}
