@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 .link-styles{
-  @apply font-space-grotesk hover:text-[#7b5d82];
+  @apply font-space-grotesk hover:text-[#7b5d82] text-xl;
 }
 
 .active-link {
   @apply text-[#7b5d82];
+}
+
+.purple{
+  filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg) brightness(94%) contrast(86%);
 }

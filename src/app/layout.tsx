@@ -4,6 +4,7 @@ import Navbar from "./components/nav-bar/navBar";
 import ThemeRegistry from "./ThemeRegistry";
 import { usePathname } from "next/navigation";
 import { Toaster } from "sonner";
+import SideBar from "./components/side-bar/SideBar";
 
 export default function RootLayout({
   children,
@@ -29,7 +30,10 @@ export default function RootLayout({
             <p className="w-20">A</p>
           </div> */}
             <div className="flex flex-col px-5 min-h-screen w-full">
-              <Navbar />
+              <div className="flex flex-row weathered-effect">
+                <img src="/The_Watcher.svg" className="purple w-24 py-5" />
+                <Navbar />
+              </div>
               {children}
               <Toaster />
             </div>

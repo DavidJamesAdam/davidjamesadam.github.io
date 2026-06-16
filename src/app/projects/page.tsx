@@ -53,7 +53,7 @@ export default function Page() {
           />
         ))}
       </div>
-      <div className="text-[#894fad] weathered-effect m-5 p-5">
+      <div className="text-[#894fad] weathered-effect m-5 pt-5">
         <a href="https://github.com/DavidJamesAdam">&gt; VIEW ALL PROJECTS</a>
       </div>
     </div>

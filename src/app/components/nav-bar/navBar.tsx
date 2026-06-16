@@ -14,22 +14,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full py-4 flex justify-items-start gap-16 weathered-effect">
-      <div className="link-wrapper">
-        <Link href="/about" className={`link-styles ${isActive("/about") ? "active-link" : ""}`}>
+    <nav className="w-full py-4 flex gap-16 items-center px-5">
+        <Link
+          href="/about"
+          className={`link-styles ${isActive("/about") ? "active-link" : ""}`}
+        >
           // About
         </Link>
-      </div>
-      <div className="link-wrapper">
-        <Link href="/projects" className={`link-styles ${isActive("/projects") ? "active-link" : ""}`}>
+
+        <Link
+          href="/projects"
+          className={`link-styles ${isActive("/projects") ? "active-link" : ""}`}
+        >
           // Projects
         </Link>
-      </div>
-      <div className="link-wrapper">
-        <Link href="/contact" className={`link-styles ${isActive("/contact") ? "active-link" : ""}`}>
+
+        <Link
+          href="/contact"
+          className={`link-styles ${isActive("/contact") ? "active-link" : ""}`}
+        >
           // Contact
         </Link>
-      </div>
     </nav>
   );
 };
