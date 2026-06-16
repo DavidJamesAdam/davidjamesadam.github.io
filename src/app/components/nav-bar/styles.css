@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .link-styles{
-  @apply font-space-grotesk hover:text-[#7b5d82] text-xl;
+  @apply font-space-grotesk hover:text-[#7b5d82] whitespace-nowrap text-sm md:text-base lg:text-lg xl:text-xl;
 }
 
 .active-link {

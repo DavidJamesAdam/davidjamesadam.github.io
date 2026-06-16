@@ -14,27 +14,29 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full py-4 flex gap-16 items-center px-5">
+    <nav className="flex-1 py-4 flex gap-16 items-center px-5">
+      <div className="w-auto">
         <Link
           href="/about"
           className={`link-styles ${isActive("/about") ? "active-link" : ""}`}
         >
           // About
         </Link>
+      </div>
 
-        <Link
-          href="/projects"
-          className={`link-styles ${isActive("/projects") ? "active-link" : ""}`}
-        >
-          // Projects
-        </Link>
+      <Link
+        href="/projects"
+        className={`link-styles ${isActive("/projects") ? "active-link" : ""}`}
+      >
+        // Projects
+      </Link>
 
-        <Link
-          href="/contact"
-          className={`link-styles ${isActive("/contact") ? "active-link" : ""}`}
-        >
-          // Contact
-        </Link>
+      <Link
+        href="/contact"
+        className={`link-styles ${isActive("/contact") ? "active-link" : ""}`}
+      >
+        // Contact
+      </Link>
     </nav>
   );
 };
