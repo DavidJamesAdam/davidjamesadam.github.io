@@ -37,7 +37,7 @@ export default function Page() {
   ];
   return (
     <div className="flex flex-col flex-1">
-      <h1 className="weathered-effect text-8xl my-5">
+      <h1 className="weathered-effect text-6xl md:text-8xl my-5">
         SOME RECENT
         <br />
         <span className="text-[#52f83c]">CONJURATIONS</span>

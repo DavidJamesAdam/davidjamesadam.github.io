@@ -55,7 +55,7 @@ export default function TerminalWindow() {
         className="h-auto min-w-52 max-w-52 bg-black/80"
       >
         <div className="px-5 py-2 border flex flex-row justify-between hover:cursor-move">
-          <p className="my-1">SYSTEM STATUS</p>
+          <p className="my-1 indent-0">SYSTEM STATUS</p>
           <button onClick={handleMinimize}>
             <Image
               src="/minimize.svg"
@@ -68,17 +68,17 @@ export default function TerminalWindow() {
         </div>
         <div className={minimize ? "h-0 overflow-hidden" : "h-auto border p-5"}>
 
-          <p>
+          <p className="indent-0">
             CONNECTION: <span className="blinking-text">STABLE</span>
           </p>
-          <p>
+          <p className="indent-0">
             {/* LOCATION:{" "}
             {coordinates.latitude && coordinates.longitude
               ? `${coordinates.latitude}, ${coordinates.longitude}`
               : "Not available"} */}
               Location: Unknown
           </p>
-          <p>TIME: </p>
+          <p className="indent-0">TIME: </p>
         </div>
       </div>
     </Draggable>

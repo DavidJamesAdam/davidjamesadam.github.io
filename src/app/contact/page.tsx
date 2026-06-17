@@ -4,7 +4,7 @@ import ContactForm from "../components/contact-form/ContactForm";
 export default function Page() {
   return (
     <div className="flex flex-col overflow-hidden my-5">
-      <h1 className="weathered-effect text-8xl">
+      <h1 className="weathered-effect text-6xl md:text-8xl">
         SUMMON <br /> A <span className="text-[#0cbffa]">DIALOGUE</span>
       </h1>
       <ContactForm />
