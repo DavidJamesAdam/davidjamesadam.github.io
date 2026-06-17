@@ -1,51 +1,52 @@
 "use client";
 
 import Draggable from "react-draggable";
-import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
+import { useRef, useState } from "react";
 import "./styles.css";
 
 export default function TerminalWindow() {
   const nodeRef = useRef(null);
-  const [coordinates, setCoordinates] = useState<{
-    latitude: number | null;
-    longitude: number | null;
-  }>({
-    latitude: null,
-    longitude: null,
-  });
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  // const [coordinates, setCoordinates] = useState<{
+  //   latitude: number | null;
+  //   longitude: number | null;
+  // }>({
+  //   latitude: null,
+  //   longitude: null,
+  // });
+  // const [error, setError] = useState<string | null>(null);
+  // const [loading, setLoading] = useState(false);
   const [minimize, setMinimize] = useState(false);
 
   const handleMinimize = () => {
     setMinimize(!minimize);
   };
 
-  const handleGetLocation = () => {
-    if (!navigator.geolocation) {
-      setError("Geolocation is not supported by your browser.");
-      return;
-    }
-    setLoading(true);
-    setError(null);
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setCoordinates({
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-        });
-        setLoading(false);
-      },
-      (err) => {
-        setError(err.message);
-        setLoading(false);
-      },
-    );
-  };
+  // const handleGetLocation = () => {
+  //   if (!navigator.geolocation) {
+  //     setError("Geolocation is not supported by your browser.");
+  //     return;
+  //   }
+  //   setLoading(true);
+  //   setError(null);
+  //   navigator.geolocation.getCurrentPosition(
+  //     (position) => {
+  //       setCoordinates({
+  //         latitude: position.coords.latitude,
+  //         longitude: position.coords.longitude,
+  //       });
+  //       setLoading(false);
+  //     },
+  //     (err) => {
+  //       setError(err.message);
+  //       setLoading(false);
+  //     },
+  //   );
+  // };
 
-  useEffect(() => {
-    handleGetLocation();
-  }, []);
+  // useEffect(() => {
+  //   handleGetLocation();
+  // }, []);
 
   return (
     <Draggable nodeRef={nodeRef}>
@@ -56,10 +57,12 @@ export default function TerminalWindow() {
         <div className="px-5 py-2 border flex flex-row justify-between hover:cursor-move">
           <p className="my-1">SYSTEM STATUS</p>
           <button onClick={handleMinimize}>
-            <img
+            <Image
               src="/minimize.svg"
               alt="Minimise button"
               className="white w-5"
+              width={10}
+              height={10}
             />
           </button>
         </div>

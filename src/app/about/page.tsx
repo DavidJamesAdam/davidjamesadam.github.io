@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import TerminalWindow from "../components/terminal-window/TerminalWindow";
 import SideBar from "../components/side-bar/SideBar";
 import { useState } from "react";
