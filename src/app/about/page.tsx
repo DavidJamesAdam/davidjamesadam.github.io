@@ -24,15 +24,17 @@ export default function Page() {
           <br />
           OF THE <span className="text-[#faf60c]">UNKNOWN</span>
         </h1>
-        <TerminalWindow />
+        <div className="py-5">
+          <TerminalWindow />
+        </div>
       </div>
       <main className="flex flex-col gap-8 flex-1 justify-between">
         <div>
           {activeSection === 0 && <AboutMe />}
-          {activeSection === 1 && <Education/>}
-          {activeSection === 2 && <Interests/>}
+          {activeSection === 1 && <Education />}
+          {activeSection === 2 && <Interests />}
         </div>
-        <div className="pl-5 flex flex-row justify-around">
+        <div className="pl-5 py-5 flex flex-row justify-around">
           {Symbols.map((symbol, index) => (
             <SideBar
               key={index}

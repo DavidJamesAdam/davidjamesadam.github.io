@@ -97,13 +97,34 @@ label {
   opacity: 0.9;
 }
 
-.typewriter {
+/* .typewriter {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
 }
 
 .typewriter .wrap {
+  border-right: 0.08em solid #fff;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #928a91;
+  }
+} */
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.typewriter .wrap {
+  display: inline-block;
   border-right: 0.08em solid #fff;
   animation: blink-caret 0.75s step-end infinite;
 }
@@ -130,4 +151,8 @@ label {
 
 .purple{
   filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg) brightness(94%) contrast(86%);
+}
+
+.eldritch-font {
+  font-family: var(--font-eldritch);
 }

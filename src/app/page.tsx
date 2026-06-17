@@ -2,9 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const words = [
-  "Enter the Dreamquest",
-];
+const words = ["Enter the Dreamquest"];
 
 function useTypewriter(texts: string[], period = 2000) {
   const [text, setText] = useState("");
@@ -38,11 +36,111 @@ function useTypewriter(texts: string[], period = 2000) {
 
 export default function Page() {
   const typedText = useTypewriter(words, 2000);
+  const [converted, setConverted] = useState<boolean[]>([]);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isTypingDone = typedText.length === words[0].length;
+  const isMobileRef = useRef(false);
+  const prevLength = useRef(0);
+
+  const stopAnimation = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  };
+
+  const startEnterAnimation = () => {
+    stopAnimation();
+
+    const snapshot = [...converted];
+    const remaining = snapshot
+      .map((value, index) => (!value ? index : null))
+      .filter((v): v is number => v !== null);
+
+    intervalRef.current = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * remaining.length);
+      const charIndex = remaining.splice(randomIndex, 1)[0];
+
+      setConverted((prev) => {
+        const next = [...prev];
+        next[charIndex] = true;
+
+        return next;
+      });
+    }, 75);
+  };
+
+  const startLeaveAnimation = () => {
+    stopAnimation();
+
+    const snapshot = [...converted];
+    const remaining = snapshot
+      .map((value, index) => (value ? index : null))
+      .filter((v): v is number => v !== null);
+
+    intervalRef.current = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * remaining.length);
+      const charIndex = remaining.splice(randomIndex, 1)[0];
+
+      setConverted((prev) => {
+        const next = [...prev];
+        next[charIndex] = false;
+
+        return next;
+      });
+    }, 75);
+  };
+
+  useEffect(() => {
+    isMobileRef.current = window.matchMedia("(pointer: coarse)").matches;
+  }, []);
+
+  useEffect(() => {
+    if (typedText.length > prevLength.current) {
+      setConverted((prev) => [
+        ...prev,
+        ...Array(typedText.length - prev.length).fill(false),
+      ]);
+
+      prevLength.current = typedText.length;
+    }
+  }, [typedText]);
+
+  useEffect(() => {
+    if (!isTypingDone || !isMobileRef.current) return;
+
+    const timeout = setTimeout(() => {
+      startEnterAnimation();
+    }, 2000);
+
+    return () => clearTimeout(timeout);
+  });
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center weathered-effect">
-      <a href="/about" className="typewriter inline-block text-4xl">
-        <span className="wrap">{typedText}</span>
+    <div className="w-full min-h-screen flex items-center justify-center weathered-effect typewriter">
+      <a
+        href="/about"
+        onClick={(e) => {
+          if (!isTypingDone) {
+            e.preventDefault();
+          }
+        }}
+        onMouseEnter={startEnterAnimation}
+        onMouseLeave={startLeaveAnimation}
+        className={
+          !isTypingDone
+            ? "pointer-events-none inline-block text-4xl wrap"
+            : "inline-block text-4xl wrap"
+        }
+      >
+        {typedText.split("").map((char, index) => (
+          <span
+            key={index}
+            className={converted[index] ? "normal-font" : "eldritch-font"}
+          >
+            {char}
+          </span>
+        ))}
       </a>
     </div>
   );

@@ -1,10 +1,17 @@
 "use client";
 import "./globals.css";
+// import 'tailwindcss/tailwind.css'
 import Navbar from "./components/nav-bar/navBar";
 import ThemeRegistry from "./ThemeRegistry";
 import { usePathname } from "next/navigation";
 import { Toaster } from "sonner";
+import localFont from 'next/font/local';
 import SideBar from "./components/side-bar/SideBar";
+
+const eldritch = localFont({
+  src: './fonts/Eldritch_font-Regular.ttf',
+  variable: "--font-eldritch",
+})
 
 export default function RootLayout({
   children,
@@ -21,7 +28,7 @@ export default function RootLayout({
       <head>
         {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
       </head>
-      <body className="flex w-full h-screen">
+      <body className={`${eldritch.variable} flex w-full h-screen`}>
         {shouldHideLayout ? (
           children
         ) : (
