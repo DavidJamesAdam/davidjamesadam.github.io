@@ -23,7 +23,7 @@ export default function Card({ picture, title, link, description }: CardProps) {
       <div className="border-t-2">
         <div>{title}</div>
         <div>{description}</div>
-        <div className="weathered-effect flex flex-row text-[#52f83c] justify-between">
+        <div className="flex flex-row text-[#52f83c] justify-between">
           <Link href={link} target="_blank">
             Repo
           </Link>

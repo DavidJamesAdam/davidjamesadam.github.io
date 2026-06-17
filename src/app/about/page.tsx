@@ -17,7 +17,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex flex-row flex-1 my-5">
+    <div className="flex md:flex-row flex-col flex-1 my-5">
       <div className="flex flex-col w-1/2">
         <h1 className="weathered-effect text-8xl pb-5">
           EXPLORING THE INTERFACE
@@ -27,17 +27,6 @@ export default function Page() {
         <TerminalWindow />
       </div>
       <main className="flex flex-col gap-8 flex-1 justify-between">
-        {/* <Image
-          src="/profilePicture.jpg"
-          alt="Profile Picture"
-          style={{
-            objectFit: "cover",
-            borderRadius: "100px",
-          }}
-          width={500}
-          height={38}
-          priority
-        /> */}
         <div>
           {activeSection === 0 && <AboutMe />}
           {activeSection === 1 && <Education/>}
