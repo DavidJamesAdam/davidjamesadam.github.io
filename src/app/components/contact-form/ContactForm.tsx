@@ -1,6 +1,7 @@
 "use client";
 
 import Form from "next/form";
+import Image from "next/image";
 import { sendDiscordMessage } from "../../actions";
 import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
@@ -36,7 +37,7 @@ export default function ContactForm() {
   return (
     <>
       <Form
-        className="flex flex-col py-4 mt-4 gap-5 md:w-1/5"
+        className="flex flex-col py-4 mt-4 gap-5 md:w-1/2"
         action={formAction}
       >
         <div className="weathered-effect w-full">
@@ -80,10 +81,12 @@ export default function ContactForm() {
             ) : (
               <>
                 Send
-                <img
+                <Image
                   src="/Banishing.svg"
                   alt="Send"
                   className="purple w-8"
+                  width={10}
+                  height={10}
                 />
               </>
             )}

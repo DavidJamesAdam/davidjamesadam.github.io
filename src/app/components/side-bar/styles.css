@@ -1,3 +1,7 @@
 .purple{
   filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg) brightness(94%) contrast(86%);
 }
+
+.light-purple{
+  filter: invert(68%) sepia(63%) saturate(4126%) hue-rotate(229deg) brightness(97%) contrast(86%);
+}
