@@ -1,7 +1,10 @@
 "use client";
+import { useState } from "react";
 import Card from "../components/card/Card";
+import SideBar from "../components/side-bar/SideBar";
 
 export default function Page() {
+  const [activeSection, setActiveSection] = useState(0);
   const projectInfo = [
     {
       picture: "/Placeholder.svg",
@@ -35,26 +38,42 @@ export default function Page() {
     },
     // {title: "Family History website", link: "https://github.com/DavidJamesAdam/family-history", description: "Project"},
   ];
+
+  const activeProject = projectInfo[activeSection];
+
+  const Symbols = [
+    { symbol: "/PUPPLI.svg", section: "PUPPLI" },
+    { symbol: "/SmartPantry.svg", section: "SmartPantry" },
+    { symbol: "/RED.svg", section: "RED" },
+    { symbol: "/HIC.svg", section: "HIC" },
+    { symbol: "/SERVER.svg", section: "Express API" },
+  ];
+
   return (
     <div className="flex flex-col flex-1">
       <h1 className="weathered-effect text-6xl md:text-8xl my-5">
-        SOME RECENT
-        <br />
-        <span className="text-[#52f83c]">CONJURATIONS</span>
+        SOME RECENT <span className="text-[#52f83c]">CONJURATIONS</span>
       </h1>
-      <div className="flex md:flex-row flex-col justify-items-center weathered-effect flex-1 justify-between">
-        {projectInfo.map((project, index) => (
+      <div className="flex flex-col weathered-effect flex-1 gap-6">
+        <div className="flex-1 flex items-center justify-center">
           <Card
-            key={index}
-            picture={project.picture}
-            title={project.title}
-            link={project.link}
-            description={project.description}
+            key={activeSection}
+            picture={activeProject.picture}
+            title={activeProject.title}
+            link={activeProject.link}
+            description={activeProject.description}
           />
-        ))}
-      </div>
-      <div className="text-[#894fad] weathered-effect m-5 pt-5">
-        <a href="https://github.com/DavidJamesAdam">&gt; VIEW ALL PROJECTS</a>
+        </div>
+        <div className="flex flex-row py-5 justify-around md:shrink-0">
+          {Symbols.map((symbol, index) => (
+            <SideBar
+              key={index}
+              symbol={symbol.symbol}
+              onClick={() => setActiveSection(index)}
+              section={symbol.section}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

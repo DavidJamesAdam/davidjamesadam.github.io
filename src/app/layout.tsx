@@ -33,11 +33,8 @@ export default function RootLayout({
           children
         ) : (
           <ThemeRegistry>
-            {/* <div className="flex flex-col border-r border-gray-500 weathered-effect">
-            <p className="w-20">A</p>
-          </div> */}
             <div className="flex flex-col px-5 h-full w-full md:overflow-hidden">
-              <div className="flex flex-row weathered-effect shrink-0">
+              <div className="flex flex-row shrink-0">
                 <Image
                   src="/The_Watcher.svg"
                   className="purple w-24 py-5"

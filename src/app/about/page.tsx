@@ -9,9 +9,9 @@ import Interests from "../components/about-sections/Interests";
 
 export default function Page() {
   const Symbols = [
-    { symbol: "/Summoning.svg" },
-    { symbol: "/Grimoire.svg" },
-    { symbol: "/Binding.svg" },
+    { symbol: "/Summoning.svg", section: "About" },
+    { symbol: "/Grimoire.svg", section: "Education"  },
+    { symbol: "/Binding.svg", section: "Interests"  },
   ];
   const [activeSection, setActiveSection] = useState(0);
 
@@ -39,6 +39,7 @@ export default function Page() {
               key={index}
               symbol={symbol.symbol}
               onClick={() => setActiveSection(index)}
+              section={symbol.section}
             />
           ))}
         </div>

@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./styles.css";
+import TerminalWindow from "../terminal-window/TerminalWindow";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -16,22 +17,25 @@ const Navbar = () => {
     <nav className="flex flex-1 md:gap-16 items-center py-4 px-5 justify-between md:justify-start">
       <Link
         href="/about"
-        className={`link-styles ${isActive("/about") ? "active-link" : ""}`}
+        className={`link-styles weathered-effect ${isActive("/about") ? "active-link" : ""}`}
       >
         // About
       </Link>
       <Link
         href="/projects"
-        className={`link-styles ${isActive("/projects") ? "active-link" : ""}`}
+        className={`link-styles weathered-effect ${isActive("/projects") ? "active-link" : ""}`}
       >
         // Projects
       </Link>
       <Link
         href="/contact"
-        className={`link-styles ${isActive("/contact") ? "active-link" : ""}`}
+        className={`link-styles weathered-effect ${isActive("/contact") ? "active-link" : ""}`}
       >
         // Contact
       </Link>
+      {/* <div className="flex flex-1 justify-end">
+        <TerminalWindow />
+      </div> */}
     </nav>
   );
 };

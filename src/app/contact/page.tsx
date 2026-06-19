@@ -12,8 +12,10 @@ export default function Page() {
       </div>
       <div className="w-1/2 flex flex-col">
         <h1 className="weathered-effect text-6xl md:text-8xl">CONTACT INFO</h1>
-        <a href="https://www.linkedin.com/in/davidjamesadam/">LinkedIn</a>
-        <a href="https://github.com/DavidJamesAdam">GitHub</a>
+        <div className="flex flex-col">
+          <a href="https://www.linkedin.com/in/davidjamesadam/">LinkedIn</a>
+          <a href="https://github.com/DavidJamesAdam">GitHub</a>
+        </div>
       </div>
     </div>
   );
