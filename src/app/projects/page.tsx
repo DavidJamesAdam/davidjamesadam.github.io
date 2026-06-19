@@ -54,7 +54,7 @@ export default function Page() {
       <h1 className="weathered-effect text-6xl md:text-8xl my-5">
         SOME RECENT <span className="text-[#52f83c]">CONJURATIONS</span>
       </h1>
-      <div className="flex flex-col weathered-effect flex-1 gap-6">
+      <div className="flex flex-col flex-1 gap-6">
         <div className="flex-1 flex items-center justify-center">
           <Card
             key={activeSection}

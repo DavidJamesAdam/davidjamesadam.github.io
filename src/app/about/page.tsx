@@ -1,6 +1,6 @@
 "use client";
 
-import TerminalWindow from "../components/terminal-window/TerminalWindow";
+// import TerminalWindow from "../components/terminal-window/TerminalWindow";
 import SideBar from "../components/side-bar/SideBar";
 import { useState } from "react";
 import AboutMe from "../components/about-sections/AboutMe";
@@ -23,9 +23,9 @@ export default function Page() {
           <br />
           OF THE <span className="text-[#faf60c]">UNKNOWN</span>
         </h1>
-        <div className="py-5">
+        {/* <div className="py-5">
           <TerminalWindow />
-        </div>
+        </div> */}
       </div>
       <main className="flex flex-col gap-8 md:flex-1 md:min-h-0 md:justify-between">
         <div className="md:flex-1 md:min-h-0 md:overflow-y-auto">
