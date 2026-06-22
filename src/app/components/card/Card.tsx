@@ -24,11 +24,11 @@ export default function Card({ picture, video, title, link, description }: CardP
         <div className="flex flex-col px-5 justify-between">
           <div>
             <h3 className="text-3xl">Description</h3>
-            <div className="weathered-effect">{description}</div>
+            <div>{description}</div>
           </div>
           <div>
             <h3 className="text-3xl">What I learnt</h3>
-            <div className="weathered-effect">What I learnt</div>
+            <div>What I learnt</div>
           </div>
           <div>
             <h3 className="text-3xl">Link to Repo</h3>
