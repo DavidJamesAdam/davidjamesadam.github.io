@@ -19,7 +19,7 @@ export default function Page() {
       description: "Recipe, home inventory, and grocery tracker",
     },
     {
-      picture: "/Placeholder.svg",
+      video: "/RED_V1_demo.mp4",
       title: "RED - Retro Entertainment Device",
       link: "https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-",
       description: "Project",
@@ -59,6 +59,7 @@ export default function Page() {
           <Card
             key={activeSection}
             picture={activeProject.picture}
+            video={activeProject.video}
             title={activeProject.title}
             link={activeProject.link}
             description={activeProject.description}
