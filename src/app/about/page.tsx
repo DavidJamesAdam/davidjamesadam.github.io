@@ -10,14 +10,14 @@ import Interests from "../components/about-sections/Interests";
 export default function Page() {
   const Symbols = [
     { symbol: "/Summoning.svg", section: "About" },
-    { symbol: "/Grimoire.svg", section: "Education"  },
+    { symbol: "/Grimoire.svg", section: "Education & Skills"  },
     { symbol: "/Binding.svg", section: "Interests"  },
   ];
   const [activeSection, setActiveSection] = useState(0);
 
   return (
     <div className="flex md:flex-row flex-col flex-1 min-h-0 py-5 md:overflow-hidden">
-      <div className="flex flex-col md:w-1/2 w-full shrink-0">
+      <div className="flex flex-col md:w-1/3 w-full shrink-0">
         <h1 className="weathered-effect text-6xl md:text-8xl pb-5">
           EXPLORING THE INTERFACE
           <br />

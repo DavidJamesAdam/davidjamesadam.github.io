@@ -6,11 +6,11 @@ import "./styles.css";
 export default function AboutMe() {
   return (
     <div className="flex flex-1 min-h-0 flex-col">
-      <div className="shrink-0 text-center mb-5">
-        <h2 className="weathered-effect text-3xl">// About Me</h2>
+      <div className="shrink-0 mb-5">
+        <h2 className="weathered-effect text-5xl">// About Me</h2>
       </div>
       <div className="flex-1 min-h-0">
-        <div className="pr-4">
+        <div className="pr-4 md:text-lg">
           <Image
             src="/profilePicture2.jpg"
             alt="Profile Picture"
@@ -19,56 +19,35 @@ export default function AboutMe() {
             className="rounded-xl object-contain shrink-0 w-auto h-auto md:max-h-[36vh] max-h-[24vh] float-right ml-5 mb-5"
             priority
           />
-          <p>
-            I recently completed my BSc in Computer Science from the University
-            of Calgary, building on a previous BA in Digital Audio Arts from the
-            University of Lethbridge. My background is somewhat unconventional,
-            combining creative and technical disciplines, but a consistent theme
-            throughout has been problem solving, systems thinking, and working
-            in fast-paced environments.
+          <p className="indent-[2em]">
+            Hi, I&apos;m David. I recently completed my BSc in Computer Science
+            from the University of Calgary, building on a previous BA in Digital
+            Audio Arts from the University of Lethbridge. After graduating from
+            the U of L, I started a career in the corporate audio/visual
+            industry, where I worked on large-scale events such as conferences
+            and conventions. However, I discovered the A/V industry wasn&apos;t
+            for me and I needed a change. So, after discovering a passion for
+            programming and taking the steps I needed to to allow myself to
+            enroll in the Computer Science program at the University of Calgary,
+            I started my first semester in September of 2021.
           </p>
-          <p>
-            After graduating from my first degree in 2015, I spent time
-            traveling before moving into the corporate audio/visual industry,
-            where I worked on large-scale events such as conferences and
-            conventions. This experience was foundational in developing strong
-            technical troubleshooting skills, adaptability under pressure, and
-            the ability to communicate effectively with both technical teams and
-            non-technical clients. Working in live environments meant quickly
-            diagnosing issues and implementing solutions in real time to ensure
-            seamless execution.
-          </p>
-          <p>
-            Over time, I realized I wanted to pursue a more deeply technical and
-            growth-oriented career path. Through self-directed learning, I
-            became increasingly interested in programming and software
-            development, drawn by the complexity of the problems and the breadth
-            of possibilities in the field. In 2020, I returned to school to
-            study computer science.
-          </p>
-          <p>
+          <p className="indent-[2em]">
             During my degree, I completed an internship with Gigadat Solutions,
             where I gained experience in both quality assurance and software
-            development. I began in QA, working across multiple products, which
-            gave me valuable insight into testing workflows and production
-            environments. I later transitioned into a development role,
-            contributing to backend work as the team migrated from a monolithic
-            architecture to microservices. I developed an email notification
-            microservice using TypeScript and AWS, and also worked on bug fixes
-            and system improvements until the end of my internship, at which
-            point I had to ruefully say farewell to everyone at Gigadat.
+            development. While at Gigadat, I found myself working on a project
+            called <a href="https://unify.health/">unify.health</a>, a health
+            data management system for athletes. I developed an email
+            notification microservice using TypeScript and AWS, and also worked
+            on bug fixes and system improvements until the end of my internship,
+            at which point I had to ruefully say farewell to everyone at
+            Gigadat.
           </p>
-          <p>
+          <p className="indent-[2em]">
             Through my academic and personal projects, I’ve built full-stack
             applications using technologies such as React, FastAPI, PostgreSQL,
             and Docker. I’m particularly interested in backend and full-stack
             development, with a focus on building reliable, maintainable
             systems.
-          </p>
-          <p>
-            Outside of tech, I’m a fitness enthusiast who enjoys obstacle course
-            racing, hiking, strength training, reading, movies, videogames, and
-            hobbyist electronics.
           </p>
         </div>
       </div>
