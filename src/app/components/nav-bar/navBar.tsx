@@ -17,25 +17,25 @@ const Navbar = () => {
         href="/home"
         className={`link-styles weathered-effect ${isActive("/home") ? "active-link" : ""}`}
       >
-        {'// Home'}
+        {"// Home"}
       </Link>
       <Link
         href="/about"
         className={`link-styles weathered-effect ${isActive("/about") ? "active-link" : ""}`}
       >
-        {'// About'}
+        {"// About"}
       </Link>
       <Link
         href="/projects"
         className={`link-styles weathered-effect ${isActive("/projects") ? "active-link" : ""}`}
       >
-        {'// Projects'}
+        {"// Projects"}
       </Link>
       <Link
         href="/contact"
         className={`link-styles weathered-effect ${isActive("/contact") ? "active-link" : ""}`}
       >
-        {'// Contact'}
+        {"// Contact"}
       </Link>
       {/* <div className="flex flex-1 justify-end">
         <TerminalWindow />

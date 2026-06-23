@@ -6,7 +6,6 @@ import ThemeRegistry from "./ThemeRegistry";
 import { usePathname } from "next/navigation";
 import { Toaster } from "sonner";
 import localFont from "next/font/local";
-import Image from "next/image";
 import EyeAnimation from "./components/eyeAnimation/EyeAnimation";
 
 const eldritch = localFont({

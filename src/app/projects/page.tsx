@@ -56,6 +56,7 @@ export default function Page() {
         title={
           <>
             SOME RECENT <span className="text-[#52f83c]">CREATIONS</span>
+            <span className="blinking-text">_</span>
           </>
         }
       />

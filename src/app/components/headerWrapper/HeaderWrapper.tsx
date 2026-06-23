@@ -11,9 +11,9 @@ export default function HeaderWrapper({
   subContent,
 }: HeaderProps) {
   return (
-    <div className="flex flex-col md:w-1/3 w-full shrink-0">
+    <header className="flex flex-col md:w-1/3 w-full shrink-0">
       <h1 className="weathered-effect">{title}</h1>
       {subContent && <div>{subContent}</div>}
-    </div>
+    </header>
   );
 }

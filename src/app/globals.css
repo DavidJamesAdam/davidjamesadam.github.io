@@ -26,11 +26,11 @@ body {
 }
 
 .page-wrapper {
-  @apply flex md:flex-row flex-col flex-1 min-h-0 py-5 md:overflow-hidden
+  @apply flex md:flex-row flex-col flex-1 min-h-0 md:overflow-hidden;
 }
 
 main {
-  @apply flex flex-col gap-8 md:flex-1 md:min-h-0 md:justify-between
+  @apply flex flex-col gap-8 md:flex-1 md:min-h-0 md:justify-between;
 }
 
 @layer base {
@@ -51,7 +51,7 @@ main {
   }
 
   h2 {
-    @apply  md:text-5xl text-2xl
+    @apply md:text-5xl text-2xl;
   }
 }
 
@@ -139,17 +139,23 @@ label {
 }
 
 .blinking-text {
-    animation: blink-animation 1s steps(1, start) infinite;
+  animation: blink-animation 1s steps(1, start) infinite;
 }
 
 @keyframes blink-animation {
-    50% {
-        visibility: hidden;
-    }
+  50% {
+    visibility: hidden;
+  }
 }
 
-.purple{
-  filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg) brightness(94%) contrast(86%);
+.purple {
+  filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg)
+    brightness(94%) contrast(86%);
+}
+
+.orange {
+  filter: invert(45%) sepia(73%) saturate(485%) hue-rotate(340deg)
+    brightness(95%) contrast(98%);
 }
 
 .eldritch-font {

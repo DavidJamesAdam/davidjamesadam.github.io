@@ -1,4 +1,4 @@
-.link-styles{
+.link-styles {
   @apply font-space-grotesk hover:text-[#7b5d82] whitespace-nowrap text-sm md:text-base lg:text-lg xl:text-xl;
 }
 
@@ -6,6 +6,7 @@
   @apply text-[#7b5d82];
 }
 
-.purple{
-  filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg) brightness(94%) contrast(86%);
+.purple {
+  filter: invert(38%) sepia(8%) saturate(4322%) hue-rotate(235deg)
+    brightness(94%) contrast(86%);
 }

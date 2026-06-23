@@ -24,6 +24,7 @@ export default function Page() {
             EXPLORING THE INTERFACE
             <br />
             OF THE <span className="text-[#faf60c]">UNKNOWN</span>
+            <span className="blinking-text">_</span>
           </>
         }
       />
