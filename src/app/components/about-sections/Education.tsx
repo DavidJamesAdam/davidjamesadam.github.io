@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 import Image from "next/image";
 
 export default function Education() {
@@ -51,7 +50,7 @@ export default function Education() {
     <div className="flex flex-1 min-h-0 h-full flex-col justify-between">
       <div className="mb-5">
         <div className="flex-1 mb-5">
-          <h2 className="weathered-effect md:text-5xl text-2xl">// Education</h2>
+          <h2 className="weathered-effect">{'// Education'}</h2>
         </div>
         <div className="text-lg mx-5">
           <div className="flex mb-3 group">
@@ -78,7 +77,7 @@ export default function Education() {
       </div>
       <div className="mb-5">
         <div className="flex-1 mb-5">
-          <h2 className="weathered-effect md:text-5xl text-2xl">// Skills</h2>
+          <h2 className="weathered-effect">{'// Skills'}</h2>
         </div>
         <div className="flex md:flex-row flex-col text-lg">
           {categoryList.map((category, index) => (

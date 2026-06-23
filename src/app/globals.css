@@ -20,24 +20,22 @@
   }
 }
 
-/* html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  height: 100vh;
-} */
-
 body {
   background-color: var(--background-color);
   color: var(--foreground);
 }
 
+.page-wrapper {
+  @apply flex md:flex-row flex-col flex-1 min-h-0 py-5 md:overflow-hidden
+}
+
+main {
+  @apply flex flex-col gap-8 md:flex-1 md:min-h-0 md:justify-between
+}
+
 @layer base {
   h1 {
+    @apply text-6xl md:text-8xl pb-5 text-[#928a91];
     font-family:
       "Big Shoulders Display",
       ui-sans-serif,
@@ -50,9 +48,10 @@ body {
       "Noto Sans",
       "Liberation Sans",
       sans-serif;
-    font-weight: 700;
-    /* line-height: 1.2; */
-    color: #928a91;
+  }
+
+  h2 {
+    @apply  md:text-5xl text-2xl
   }
 }
 

@@ -12,7 +12,7 @@ interface CardProps {
 export default function Card({ picture, video, title, link, description }: CardProps) {
   return (
     <div className="flex flex-col h-full w-full">
-      <h2 className="text-5xl weathered-effect">{title}</h2>
+      <h2 className="weathered-effect">{title}</h2>
       <div className="flex md:flex-row flex-col py-5">
         {video ? <video className="md:w-[30%]" controls><source src={video} type="video/mp4"/></video> : picture && <Image
           src={picture}

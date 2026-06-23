@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 import Link from "next/link";
@@ -13,30 +12,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-1 md:gap-16 items-center py-4 px-5 justify-between md:justify-start">
+    <nav className="flex flex-1 md:gap-16 items-center py-4 md:px-5 justify-between md:justify-start">
       <Link
         href="/home"
         className={`link-styles weathered-effect ${isActive("/home") ? "active-link" : ""}`}
       >
-        // Home
+        {'// Home'}
       </Link>
       <Link
         href="/about"
         className={`link-styles weathered-effect ${isActive("/about") ? "active-link" : ""}`}
       >
-        // About
+        {'// About'}
       </Link>
       <Link
         href="/projects"
         className={`link-styles weathered-effect ${isActive("/projects") ? "active-link" : ""}`}
       >
-        // Projects
+        {'// Projects'}
       </Link>
       <Link
         href="/contact"
         className={`link-styles weathered-effect ${isActive("/contact") ? "active-link" : ""}`}
       >
-        // Contact
+        {'// Contact'}
       </Link>
       {/* <div className="flex flex-1 justify-end">
         <TerminalWindow />

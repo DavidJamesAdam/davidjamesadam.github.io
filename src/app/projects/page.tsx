@@ -2,37 +2,38 @@
 import { useState } from "react";
 import Card from "../components/card/Card";
 import SideBar from "../components/side-bar/SideBar";
+import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState(0);
   const projectInfo = [
     {
       picture: "/Placeholder.svg",
-      title: "Puppli",
+      title: "// Puppli",
       link: "https://github.com/DavidJamesAdam/cpsc513-project-puppli",
       description: "Dog picture voting webapp",
     },
     {
       picture: "/Placeholder.svg",
-      title: "SmartPantry",
+      title: "// SmartPantry",
       link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
       description: "Recipe, home inventory, and grocery tracker",
     },
     {
       video: "/RED_V1_demo.mp4",
-      title: "RED - Retro Entertainment Device",
+      title: "// RED - Retro Entertainment Device",
       link: "https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-",
       description: "Project",
     },
     {
       picture: "/Placeholder.svg",
-      title: "HIC - Hikers Information Companion",
+      title: "// HIC - Hikers Information Companion",
       link: "https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion",
       description: "Project",
     },
     {
       picture: "/Placeholder.svg",
-      title: "Personal Backend Server (CRUD) project",
+      title: "// Personal Backend Server (CRUD) project",
       link: "https://github.com/DavidJamesAdam/myFirstServer",
       description: "Project",
     },
@@ -50,11 +51,15 @@ export default function Page() {
   ];
 
   return (
-    <div className="flex flex-col flex-1">
-      <h1 className="weathered-effect text-6xl md:text-8xl my-5">
-        SOME RECENT <span className="text-[#52f83c]">CREATIONS</span>
-      </h1>
-      <div className="flex flex-col flex-1 gap-6">
+    <div className="page-wrapper">
+      <HeaderWrapper
+        title={
+          <>
+            SOME RECENT <span className="text-[#52f83c]">CREATIONS</span>
+          </>
+        }
+      />
+      <main>
         <div className="flex-1 flex items-center justify-center">
           <Card
             key={activeSection}
@@ -75,7 +80,7 @@ export default function Page() {
             />
           ))}
         </div>
-      </div>
+      </main>
     </div>
   );
 }
