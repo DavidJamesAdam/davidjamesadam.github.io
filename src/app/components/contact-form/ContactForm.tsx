@@ -73,7 +73,7 @@ export default function ContactForm() {
         </div>
         <div className="weathered-effect">
           <button
-            className="bg-black p-3 border-[#894fad] border-2 text-[#894fad] font-bold hover:border-[#bc77e7] hover:text-[#bc77e7] flex flex-row justify-around w-1/2"
+            className="w-1/2"
             type="submit"
           >
             {isPending ? (

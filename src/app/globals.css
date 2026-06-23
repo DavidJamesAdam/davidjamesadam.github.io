@@ -161,3 +161,25 @@ label {
 .eldritch-font {
   font-family: var(--font-eldritch);
 }
+
+button {
+  @apply inline-flex w-fit self-start m-5 items-center rounded-md bg-black p-3 border-[#894fad] border-2 text-[#894fad] font-bold hover:border-[#bc77e7] hover:text-[#bc77e7] flex-row justify-around;
+}
+
+*::-webkit-scrollbar {
+  width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #101214;
+  border-radius: 14px;
+  border: 1px solid #9046a4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1e1921;
+}

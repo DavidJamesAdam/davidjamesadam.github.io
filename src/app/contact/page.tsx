@@ -15,9 +15,15 @@ export default function Page() {
         subContent={<ContactForm />}
       />
       <main>
-        <h2 className="weathered-effect">{"// CONTACT INFO"}</h2>
-        <Socials />
-        <h3>Email: davidjamesadam@gmail.com</h3>
+        <div>
+          <h2 className="weathered-effect">{"// CONTACT INFO & RESOURCES"}</h2>
+          <div className="py-3">
+
+          <h3>Email: davidjamesadam@gmail.com</h3>
+          </div>
+          <h3>You can find me at:</h3>
+          <Socials />
+        </div>
       </main>
     </div>
   );
