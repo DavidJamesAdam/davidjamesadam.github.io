@@ -117,7 +117,7 @@ export default function Page() {
   });
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center weathered-effect typewriter">
+    <div className="w-full min-h-screen flex items-center justify-center text-center weathered-effect">
       <a
         href="/home"
         onClick={(e) => {
@@ -130,7 +130,7 @@ export default function Page() {
         className={
           !isTypingDone
             ? "pointer-events-none inline-block text-4xl wrap"
-            : "inline-block text-4xl wrap"
+            : "inline-block text-4xl wrap typewriter"
         }
       >
         {typedText.split("").map((char, index) => (
