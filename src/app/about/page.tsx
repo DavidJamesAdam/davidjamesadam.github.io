@@ -33,7 +33,7 @@ export default function Page() {
           {activeSection === 1 && <Education />}
           {activeSection === 2 && <Interests />}
         </div>
-        <div className="md:pl-5 pb-5 flex flex-row justify-between md:shrink-0">
+        <div className="md:pl-5 pb-5 flex flex-row justify-around md:shrink-0">
           {Symbols.map((symbol, index) => (
             <SideBar
               key={index}

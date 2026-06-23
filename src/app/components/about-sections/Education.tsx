@@ -48,29 +48,29 @@ export default function Education() {
   ];
 
   return (
-    <div className="flex flex-1 min-h-0 flex-col">
+    <div className="flex flex-1 min-h-0 h-full flex-col justify-between">
       <div className="mb-5">
         <div className="flex-1 mb-5">
-          <h2 className="weathered-effect text-5xl">// Education</h2>
+          <h2 className="weathered-effect md:text-5xl text-2xl">// Education</h2>
         </div>
-        <div className="text-lg">
-          <div className="flex mb-3">
+        <div className="text-lg mx-5">
+          <div className="flex mb-3 group">
             <Image
               src="/Balance.svg"
               alt="Bullet point"
               width={20}
               height={20}
-              className="purple mr-2"
+              className="purple mr-2 group-hover:rotate-90 transition-transform"
             />
             <p>BSc in Computer Science</p>
           </div>
-          <div className="flex mb-3">
+          <div className="flex mb-3 group">
             <Image
               src="/Balance.svg"
               alt="Bullet point"
               width={20}
               height={20}
-              className="purple mr-2"
+              className="purple mr-2 group-hover:rotate-90 transition-transform"
             />
             <p>BMus in Digital Audio Arts</p>
           </div>
@@ -78,21 +78,21 @@ export default function Education() {
       </div>
       <div className="mb-5">
         <div className="flex-1 mb-5">
-          <h2 className="weathered-effect text-5xl">// Skills</h2>
+          <h2 className="weathered-effect md:text-5xl text-2xl">// Skills</h2>
         </div>
-        <div className="flex flex-coltext-lg">
+        <div className="flex md:flex-row flex-col text-lg">
           {categoryList.map((category, index) => (
             <div className="flex flex-col mx-5" key={index}>
               <h3>{category.category}</h3>
               <div>
                 {category.list.map((skill, index) => (
-                  <div className="flex flex-row my-2" key={index}>
+                  <div className="flex flex-row my-2 group" key={index}>
                     <Image
                       src="/Balance.svg"
                       alt="Bullet point"
                       width={20}
                       height={20}
-                      className="purple mr-2 hover:rotate-90 transition-transform"
+                      className="purple mr-2 group-hover:rotate-90 transition-transform"
                     />
                     <p className="skills">{skill.skill}</p>
                   </div>

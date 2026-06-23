@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <div className="flex flex-1 min-h-0 flex-col">
       <div className="shrink-0 mb-5">
-        <h2 className="weathered-effect text-5xl">// About Me</h2>
+        <h2 className="weathered-effect md:text-5xl text-2xl">// About Me</h2>
       </div>
       <div className="flex-1 min-h-0">
         <div className="pr-4 md:text-lg">
