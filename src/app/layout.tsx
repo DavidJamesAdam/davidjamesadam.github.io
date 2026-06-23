@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Toaster } from "sonner";
 import localFont from "next/font/local";
 import Image from "next/image";
+import EyeAnimation from "./components/eyeAnimation/EyeAnimation";
 
 const eldritch = localFont({
   src: "./fonts/Eldritch_font-Regular.ttf",
@@ -36,13 +37,14 @@ export default function RootLayout({
             <div className="flex flex-col px-5 h-full w-full md:overflow-hidden">
               <div className="flex flex-row shrink-0">
                 <div className="weathered-effect">
-                  <Image
+                  {/* <Image
                     src="/The_Watcher.svg"
                     className="purple w-24 py-5"
                     alt="Eldritch eye"
                     width={10}
                     height={10}
-                  />
+                  /> */}
+                  <EyeAnimation />
                 </div>
                 <Navbar />
               </div>

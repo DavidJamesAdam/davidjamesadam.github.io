@@ -119,7 +119,7 @@ export default function Page() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center weathered-effect typewriter">
       <a
-        href="/about"
+        href="/home"
         onClick={(e) => {
           if (!isTypingDone) {
             e.preventDefault();
