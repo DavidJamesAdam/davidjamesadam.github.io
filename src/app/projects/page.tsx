@@ -60,7 +60,7 @@ export default function Page() {
           </>
         }
       />
-      <main>
+      <section>
         <div className="flex-1 flex items-center justify-center">
           <Card
             key={activeSection}
@@ -81,7 +81,7 @@ export default function Page() {
             />
           ))}
         </div>
-      </main>
+      </section>
     </div>
   );
 }

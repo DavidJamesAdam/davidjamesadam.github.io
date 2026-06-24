@@ -12,7 +12,7 @@ type SideBarProps = {
 export default function SideBar({ symbol, onClick, section }: SideBarProps) {
   return (
     <div className="flex flex-row justify-start items-center">
-      <button onClick={onClick} className="weathered-effect flex flex-col items-center border-0 justify-between">
+      <button onClick={onClick} className="weathered-effect flex flex-col items-center border-0 justify-between m-0 p-0">
         <Image
           src={symbol}
           className="purple w-12 hover:light-purple"

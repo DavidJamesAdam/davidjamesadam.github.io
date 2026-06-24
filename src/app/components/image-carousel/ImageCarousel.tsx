@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import Image from "next/image";
-
+// Adapted code from https://learnmodernjavascript.com/build-a-simple-react-image-carousel-a-step-by-step-guide/
 function ImageCarousel() {
   // State to manage the current image index
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -34,6 +34,15 @@ function ImageCarousel() {
       <div className="carousel-controls">
         <button onClick={prevImage}>Previous</button>
         <button onClick={nextImage}>Next</button>
+      </div>
+      <div className="carousel-indicators">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`carousel-indicator ${index === currentImageIndex ? 'active' : ''}`}
+            onClick={() => setCurrentImageIndex(index)}
+          ></span>
+        ))}
       </div>
     </div>
   );

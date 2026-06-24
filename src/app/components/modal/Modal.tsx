@@ -16,7 +16,7 @@ const Modal = ({ isOpen, onClose, children }: ModalProps) => {
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className="z-[1001] flex h-4/5 w-1/3 flex-col items-center rounded-[10px] border-2 border-[var(--primary-text)] bg-black p-4 text-center m-4"
+        className="z-[1001] flex md:h-auto md:w-1/3 flex-col items-center rounded-[10px] border-2 border-[var(--primary-text)] bg-black p-4 text-center m-4"
       >
         {children}
       </div>

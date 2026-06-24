@@ -19,7 +19,7 @@ interface EyeAnimationProps {
 }
 
 export default function EyeAnimation({
-  size = 120,
+  size = 110,
   frameDuration = 60,
 }: EyeAnimationProps) {
   const [isHovered, setIsHovered] = useState(false);
@@ -50,7 +50,7 @@ export default function EyeAnimation({
 
   return (
     <div
-      className="w-fit"
+      className="w-fit h-36"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -66,7 +66,7 @@ export default function EyeAnimation({
             width={size}
             height={size}
             priority
-            className="purple h-36 py-5"
+            className="purple py-5"
           />
         </motion.div>
       </AnimatePresence>

@@ -28,13 +28,13 @@ export default function Page() {
           </>
         }
       />
-      <main>
+      <section>
         <div className="md:flex-1 md:min-h-0 md:overflow-y-auto">
           {activeSection === 0 && <AboutMe />}
           {activeSection === 1 && <Education />}
           {activeSection === 2 && <Interests />}
         </div>
-        <div className="md:pl-5 pb-5 flex flex-row justify-around md:shrink-0">
+        <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0">
           {Symbols.map((symbol, index) => (
             <SideBar
               key={index}
@@ -44,7 +44,7 @@ export default function Page() {
             />
           ))}
         </div>
-      </main>
+      </section>
     </div>
   );
 }

@@ -25,13 +25,18 @@ body {
   color: var(--foreground);
 }
 
+main {
+  @apply flex flex-col gap-8 md:flex-1 md:min-h-0 md:justify-between;
+}
+
+section {
+  @apply flex flex-1 flex-col
+}
+
 .page-wrapper {
   @apply flex md:flex-row flex-col flex-1 min-h-0 md:overflow-hidden;
 }
 
-main {
-  @apply flex flex-col gap-8 md:flex-1 md:min-h-0 md:justify-between;
-}
 
 @layer base {
   h1 {
