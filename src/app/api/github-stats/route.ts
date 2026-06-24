@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export const revalidate = 60 * 30;
+export const revalidate = 1800;
 
 type GitHubUser = {
   public_repos: number;
