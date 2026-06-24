@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import WindowComponent from "react-flexi-window";
+// import WindowComponent from "react-flexi-window";
 import { useRef, useState } from "react";
 import "./styles.css";
 import GithubStats from "../about-sections/GithubStats";
 
 export default function TerminalWindow() {
-  const defaultWidth = 460;
-  const defaultHeight = 320;
-  const minimizedHeight = 52;
+  // const defaultWidth = 460;
+  // const defaultHeight = 320;
+  // const minimizedHeight = 52;
   const windowContainerRef = useRef<HTMLDivElement | null>(null);
 
   // const [coordinates, setCoordinates] = useState<{
@@ -22,11 +22,11 @@ export default function TerminalWindow() {
   // const [error, setError] = useState<string | null>(null);
   // const [loading, setLoading] = useState(false);
   const [minimize, setMinimize] = useState(false);
-  const [windowPosition, setWindowPosition] = useState({ x: 50, y: 50 });
-  const [windowSize, setWindowSize] = useState({
-    width: defaultWidth,
-    height: defaultHeight,
-  });
+  // const [windowPosition, setWindowPosition] = useState({ x: 50, y: 50 });
+  // const [windowSize, setWindowSize] = useState({
+  //   width: defaultWidth,
+  //   height: defaultHeight,
+  // });
 
   const captureWindowState = () => {
     const windowElement =
@@ -36,10 +36,10 @@ export default function TerminalWindow() {
       return;
     }
 
-    const { width, height } = windowElement.getBoundingClientRect();
-    if (!minimize) {
-      setWindowSize({ width, height });
-    }
+    // const { width, height } = windowElement.getBoundingClientRect();
+    // // if (!minimize) {
+    // //   setWindowSize({ width, height });
+    // // }
 
     const transform = window.getComputedStyle(windowElement).transform;
 
@@ -47,8 +47,8 @@ export default function TerminalWindow() {
       return;
     }
 
-    const matrix = new DOMMatrixReadOnly(transform);
-    setWindowPosition({ x: matrix.m41, y: matrix.m42 });
+    // const matrix = new DOMMatrixReadOnly(transform);
+    // setWindowPosition({ x: matrix.m41, y: matrix.m42 });
   };
 
   const handleMinimize = () => {

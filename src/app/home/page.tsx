@@ -1,7 +1,6 @@
 import Image from "next/image";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 import Socials from "../components/socials/Socials";
-import GithubStats from "../components/about-sections/GithubStats";
 import TerminalWindow from "../components/terminal-window/TerminalWindow";
 
 export default function Page() {
