@@ -127,7 +127,7 @@ label {
   white-space: nowrap;
 }
 
-.typewriter .wrap {
+.typewriter.wrap {
   display: inline-block;
   border-right: 0.08em solid #fff;
   animation: blink-caret 0.75s step-end infinite;
