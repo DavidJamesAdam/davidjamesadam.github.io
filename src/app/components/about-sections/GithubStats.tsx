@@ -101,7 +101,7 @@ export default function GithubStats() {
   const firstTopRepo = stats.topRepos[0];
 
   return (
-    <div className="flex flex-col h-full text-lg">
+    <div className="flex md:flex-row flex-col h-full justify-around text-lg">
       <div className="">
         <p>Public Repos: {stats.publicRepos}</p>
         <p>Followers: {stats.followers}</p>
@@ -148,9 +148,8 @@ export default function GithubStats() {
         {firstTopRepo ? (
           <div className="px-5">
             {" "}
-            <a href={firstTopRepo.url} target="_blank" rel="noreferrer">
-              {" "}
-              {firstTopRepo.name}{" "}
+            <a href={firstTopRepo.url} target="_blank" rel="noreferrer" className="hover:text-[var(--primary-text)]">
+              <u> {firstTopRepo.name} </u>
             </a>{" "}
             <p>{firstTopRepo.description ?? "No description"}</p>{" "}
             <p>Language: {firstTopRepo.language ?? "Unknown"}</p>{" "}

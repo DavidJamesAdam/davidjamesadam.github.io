@@ -46,7 +46,6 @@ export default function Page() {
               homelab.
             </p>
           </div>
-          <h3>Github Activity</h3>
           <div className="flex flex-col m-5">
             <TerminalWindow />
             <div className="md:w-2/3">

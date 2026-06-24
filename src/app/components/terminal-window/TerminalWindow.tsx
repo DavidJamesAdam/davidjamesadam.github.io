@@ -130,7 +130,7 @@ export default function TerminalWindow() {
     //     </div>
     //   </WindowComponent>
     // </div>
-    <div className="flex h-1/3 w-full flex-col bg-black/80 overflow-hidden">
+    <div className="flex h-2/3 w-full flex-col bg-black/80 overflow-hidden">
       <div className="flex flex-row justify-between border px-5 py-2">
         <p className="my-1 indent-0">SYSTEM STATUS</p>
         <button onClick={handleMinimize} className="border-0 m-0 p-0">
@@ -148,9 +148,9 @@ export default function TerminalWindow() {
           minimize ? "h-0 overflow-hidden" : "flex-1 overflow-y-auto border p-5"
         }
       >
-        <p className="indent-0">
+        {/* <p className="indent-0">
           CONNECTION: <span className="blinking-text">STABLE</span>
-        </p>
+        </p> */}
         <p className="indent-0">
           {/* LOCATION:{" "}
               {coordinates.latitude && coordinates.longitude
