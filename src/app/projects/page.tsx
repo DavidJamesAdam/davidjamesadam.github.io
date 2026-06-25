@@ -10,14 +10,14 @@ export default function Page() {
     {
       picture: "/Placeholder.svg",
       title: "// Puppli",
-      techStack: ["React Router", "Material UI", "Fastify", "Firebase"],
+      techStack: ["Typescript", "React Router", "Material UI", "FastAPI", "Firebase"],
       link: "https://github.com/DavidJamesAdam/cpsc513-project-puppli",
       description: "Dog picture voting webapp",
     },
     {
       picture: "/Placeholder.svg",
       title: "// SmartPantry",
-      techStack: ["Next.js", "Fastify", "PostgreSQL"],
+      techStack: ["Typescript", "Next.js", "FastAPI", "PostgreSQL"],
       link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
       description: "Recipe, home inventory, and grocery tracker",
     },
@@ -38,7 +38,7 @@ export default function Page() {
     {
       picture: "/Placeholder.svg",
       title: "// Personal Backend Server (CRUD) project",
-      techStack: [],
+      techStack: ["Typescript", "Node Express"],
       link: "https://github.com/DavidJamesAdam/myFirstServer",
       description: "Project",
     },
