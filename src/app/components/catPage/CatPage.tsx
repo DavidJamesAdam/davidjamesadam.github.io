@@ -17,7 +17,7 @@ export default function CatPage() {
 
   return (
     <div>
-      <button onClick={handleOpen} className="border-0">
+      <button onClick={handleOpen} className="border-0 p-0 m-0">
         <Image
           src="/cat_path1.svg"
           alt="Cat symbol"

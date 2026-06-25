@@ -1,4 +1,4 @@
-import CatPage from "../catPage/CatPage";
+
 
 export default function Interests() {
   return (
@@ -6,7 +6,6 @@ export default function Interests() {
         <div className="flex-1 mb-5">
           <h2 className="weathered-effect">{'// Interests'}</h2>
         </div>
-        <CatPage/>
     </div>
   );
 }

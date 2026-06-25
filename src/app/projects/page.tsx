@@ -10,30 +10,35 @@ export default function Page() {
     {
       picture: "/Placeholder.svg",
       title: "// Puppli",
+      techStack: ["React Router", "Material UI", "Fastify", "Firebase"],
       link: "https://github.com/DavidJamesAdam/cpsc513-project-puppli",
       description: "Dog picture voting webapp",
     },
     {
       picture: "/Placeholder.svg",
       title: "// SmartPantry",
+      techStack: ["Next.js", "Fastify", "PostgreSQL"],
       link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
       description: "Recipe, home inventory, and grocery tracker",
     },
     {
       video: "/RED_V1_demo.mp4",
       title: "// RED - Retro Entertainment Device",
+      techStack: ["Raspberry Pi 4b", "Python"],
       link: "https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-",
       description: "Project",
     },
     {
       picture: "/Placeholder.svg",
       title: "// HIC - Hikers Information Companion",
+      techStack: ["Raspberry Pi Pico", "BME280", "Circuit Python"],
       link: "https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion",
       description: "Project",
     },
     {
       picture: "/Placeholder.svg",
       title: "// Personal Backend Server (CRUD) project",
+      techStack: [],
       link: "https://github.com/DavidJamesAdam/myFirstServer",
       description: "Project",
     },
@@ -67,6 +72,7 @@ export default function Page() {
             picture={activeProject.picture}
             video={activeProject.video}
             title={activeProject.title}
+            techStack={activeProject.techStack}
             link={activeProject.link}
             description={activeProject.description}
           />

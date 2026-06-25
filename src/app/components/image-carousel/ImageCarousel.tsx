@@ -31,11 +31,7 @@ function ImageCarousel() {
           className="object-contain rounded-md"
         />
       </div>
-      <div className="carousel-controls">
-        <button onClick={prevImage}>Previous</button>
-        <button onClick={nextImage}>Next</button>
-      </div>
-      <div className="carousel-indicators">
+      <div className="carousel-indicators mt-1">
         {images.map((_, index) => (
           <span
             key={index}
@@ -43,6 +39,10 @@ function ImageCarousel() {
             onClick={() => setCurrentImageIndex(index)}
           ></span>
         ))}
+      </div>
+      <div className="carousel-controls">
+        <button onClick={prevImage}>Previous</button>
+        <button onClick={nextImage}>Next</button>
       </div>
     </div>
   );
