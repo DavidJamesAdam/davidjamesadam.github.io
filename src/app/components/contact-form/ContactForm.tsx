@@ -37,7 +37,7 @@ export default function ContactForm() {
   return (
     <>
       <Form
-        className="flex flex-col py-4 mt-4 gap-5 md:w-1/2"
+        className="flex flex-col py-4 mt-4 gap-5 md:w-2/3"
         action={formAction}
       >
         <div className="weathered-effect w-full">
@@ -71,9 +71,9 @@ export default function ContactForm() {
             required
           />
         </div>
-        <div className="weathered-effect">
+        <div className="flex flex-row md:justify-normal justify-center weathered-effect">
           <button
-            className="w-1/2"
+            className="w-1/2 md:m-0"
             type="submit"
           >
             {isPending ? (

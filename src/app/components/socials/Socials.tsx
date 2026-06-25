@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Socials() {
   const iconDim = 40;
   return (
-    <div className="weathered-effect flex flex-row flex-1">
+    <div className="weathered-effect flex flex-row flex-1 md:justify-normal justify-center">
       <button>
         <Image
           src="/linkedin.svg"
