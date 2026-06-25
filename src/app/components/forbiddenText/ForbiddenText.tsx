@@ -10,7 +10,7 @@ type ForbiddenTextProps = {
 
 export default function ForbiddenText({
   orientation = "vertical",
-  text = "ACTIVATE",
+  text = "CLIKHERE",
 }: ForbiddenTextProps) {
   const container = useRef<HTMLElement | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
