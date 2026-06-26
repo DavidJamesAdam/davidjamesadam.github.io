@@ -9,9 +9,21 @@ export default function Page() {
   const [activeSection, setActiveSection] = useState(0);
   const projectInfo = [
     {
-      picture: "/Placeholder.svg",
+      picture: "/Puppli_screenshot.png",
       //spell-checker:disable
       title: "// Puppli",
+      description: (
+        <>
+          <p className="indent-[2em]">
+            This is a website I helped work on in a web development class in my
+            last year of school. PUPPLI is a social media platform where a user
+            can create an account, create subprofiles for their dogs, create
+            post that include pictures of their dogs, and vote on other
+            user&apos;s dog pictures they like more. The group project had no restrictions in terms of what we could do, so we thought we would have fun with the idea. I primarily worked on the frontend with a bit of contribution on the backend. I also worked on the docker files (a requirement for the project). This was honestly a supper fun first website and I continued working on it after the class was over. I am not sure what my plans are for deployment yet, but it would be a fun thing to see people use.
+          </p>
+        </>
+      ),
+      learnt: <p className="indent-[2em]">Thanks to my internship, which was primarily web development, I was fairly familiar on how to get the environment set up. However, this was my first real exposure to React, as I was primarily on the backend during my internship. I got to learn and strengthen my understanding of React fundementals such as compnents and state management. Since I also helped with the backend, I got to learn how FastAPI worked and how we comunicated with the Firebase database.</p>,
       techStack: [
         "Typescript",
         "React Router",
@@ -20,14 +32,14 @@ export default function Page() {
         "Firebase",
       ],
       link: "https://github.com/DavidJamesAdam/cpsc513-project-puppli",
-      description: "Dog picture voting webapp",
     },
     {
-      picture: "/Placeholder.svg",
+      picture: "/SmartPantry_screenshot.png",
       title: "// SmartPantry",
+      description: "Recipe, home inventory, and grocery tracker",
+      learnt: <p className="indent-[2em]"></p>,
       techStack: ["Typescript", "Next.js", "FastAPI", "PostgreSQL"],
       link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
-      description: "Recipe, home inventory, and grocery tracker",
     },
     {
       video: "/HIC_demo.mp4",
@@ -44,7 +56,9 @@ export default function Page() {
             Application, which taught us how to use the Arduino Uno to create
             devices for musical application. I remember having so much fun with
             that music class and exploring more electronics projects was always
-            in the back of my mind. So during the Reading Break of that
+            in the back of my mind. The HIC is meant to read atmospheric data
+            (such as temperature, humidity, and pressure), and display it in a
+            graphical form on a screen. So during the Reading Break of that
             semester, I ordered a few parts and got to work.
           </p>
           <p className="indent-[2em]">
@@ -91,8 +105,9 @@ export default function Page() {
             &quot;itch&quot; for electronics at this point. I had a touch screen
             designed to be used by the Raspberry Pi sitting around that I was
             having trouble thinking of things to do with. Eventually, I figured
-            making my own gaming device would be a super fun idea. After a bit
-            of research, I became inspired by{" "}
+            making my own gaming device would be a super fun idea to allow me to
+            play retro games on the go. After a bit of research, I became
+            inspired by{" "}
             <Link href="https://www.youtube.com/watch?v=gkook0l_gsM&t=1s">
               <u>Leandro Linares own game console project</u>
             </Link>
@@ -131,13 +146,13 @@ export default function Page() {
       techStack: ["Raspberry Pi 4b", "Linux", "Retro Pi", "Python"],
       link: "https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-",
     },
-    {
-      picture: "/Placeholder.svg",
-      title: "// Personal Backend Server (CRUD) project",
-      techStack: ["Typescript", "Node Express"],
-      link: "https://github.com/DavidJamesAdam/myFirstServer",
-      description: "Project",
-    },
+    // {
+    //   picture: "/Placeholder.svg",
+    //   title: "// Personal Backend Server (CRUD) project",
+    //   techStack: ["Typescript", "Node Express"],
+    //   link: "https://github.com/DavidJamesAdam/myFirstServer",
+    //   description: "Project",
+    // },
     // {title: "Family History website", link: "https://github.com/DavidJamesAdam/family-history", description: "Project"},
   ];
 
@@ -148,7 +163,7 @@ export default function Page() {
     { symbol: "/SmartPantry.svg", section: "SmartPantry" },
     { symbol: "/HIC.svg", section: "HIC" },
     { symbol: "/RED.svg", section: "RED" },
-    { symbol: "/SERVER.svg", section: "Express API" },
+    // { symbol: "/SERVER.svg", section: "Express API" },
   ];
 
   return (
@@ -162,7 +177,7 @@ export default function Page() {
         }
       />
       <section className="flex flex-col flex-1 min-h-0">
-        <div className="flex-1 min-h-0 flex items-start justify-center overflow-y-auto">
+        <div className="flex-1 min-h-0 flex items-start justify-center md:overflow-y-auto">
           <Card
             key={activeSection}
             picture={activeProject.picture}
