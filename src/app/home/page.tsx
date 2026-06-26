@@ -46,13 +46,14 @@ export default function Page() {
               homelab.
             </p>
           </div>
-          <div className="flex flex-col m-5">
+          <div className="flex flex-1 md:flex-row flex-col md:m-5">
             <TerminalWindow />
             <div className="md:w-2/3">
+              <h3 className="md:mt-0 mt-5 mb-2">Github Contributions</h3>
               <Image
                 src="https://ghchart.rshah.org/davidjamesadam"
                 alt="GitHub Contributions Chart for GitHub user"
-                className="w-full h-auto rounded bg-[#101214] my-2"
+                className="w-full h-auto rounded bg-[#101214]"
                 loading="lazy"
                 height={10}
                 width={10}

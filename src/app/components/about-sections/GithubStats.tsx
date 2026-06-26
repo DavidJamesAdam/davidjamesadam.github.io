@@ -48,12 +48,68 @@ type GitHubStats = {
   pinnedRepos: PinnedRepo[];
 };
 
-export default function GithubStats() {
+export function GeneralInfo({ stats }: { stats: GitHubStats }) {
+  return (
+    <div className="">
+      <p>Public Repos: {stats.publicRepos}</p>
+      <p>Followers: {stats.followers}</p>
+      <p>Following: {stats.following}</p>
+      <p>Total Stars: {stats.totalStars}</p>
+      <p>Total Forks: {stats.totalForks}</p>
+    </div>
+  );
+}
+
+export function TopRepoInfo({ firstTopRepo }: { firstTopRepo: TopRepo }) {
+  return (
+    <div>
+      {" "}
+      <h3>Top Repository</h3>{" "}
+      {firstTopRepo ? (
+        <div className="px-5">
+          {" "}
+          <a
+            href={firstTopRepo.url}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-[var(--primary-text)]"
+          >
+            <u> {firstTopRepo.name} </u>
+          </a>{" "}
+          <p>{firstTopRepo.description ?? "No description"}</p>{" "}
+          <p>Language: {firstTopRepo.language ?? "Unknown"}</p>{" "}
+          <p>
+            Stars: {firstTopRepo.stars} | Forks: {firstTopRepo.forks}
+          </p>{" "}
+        </div>
+      ) : (
+        <p>No repositories found.</p>
+      )}{" "}
+    </div>
+  );
+}
+
+export function LanguagesInfo({ stats }: { stats: GitHubStats }) {
+  return (
+    <div>
+      <h3>Languages</h3>
+      <ul>
+        {stats.languages.map((language) => (
+          <li className="px-5" key={language.name}>
+            {language.name}: {language.count} repos
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export function useGithubStats() {
   const [stats, setStats] = useState<GitHubStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
+    useEffect(() => {
     let active = true;
 
     async function loadStats() {
@@ -85,6 +141,11 @@ export default function GithubStats() {
       active = false;
     };
   }, []);
+  return { stats, loading, error };
+}
+
+export default function GithubStats() {
+  const { stats, loading, error } = useGithubStats();
 
   if (loading) {
     return <p>Loading GitHub stats...</p>;
@@ -101,77 +162,88 @@ export default function GithubStats() {
   const firstTopRepo = stats.topRepos[0];
 
   return (
-    <div className="flex md:flex-row flex-col h-full justify-around text-lg">
-      <div className="">
-        <p>Public Repos: {stats.publicRepos}</p>
-        <p>Followers: {stats.followers}</p>
-        <p>Following: {stats.following}</p>
-        <p>Total Stars: {stats.totalStars}</p>
-        <p>Total Forks: {stats.totalForks}</p>
-      </div>
-
-      {/* <div>
-    <h3>Pinned Repositories</h3>
-    <ul>
-      {stats.pinnedRepos.map((repo) => (
-        <li className="border" key={repo.id}>
-          <a href={repo.url} target="_blank" rel="noreferrer">
-            {repo.name}
-          </a>
-          <p>{repo.description ?? "No description"}</p>
-          <p>Language: {repo.language ?? "Unknown"}</p>
-          <p>Stars: {repo.stars} | Forks: {repo.forks}</p>
-        </li>
-      ))}
-    </ul>
-  </div> */}
+    <>
+      <GeneralInfo stats={stats} />
+      <TopRepoInfo firstTopRepo={firstTopRepo} />
+      <LanguagesInfo stats={stats} />
       {/*
-  <div>
-    <h3>Top Repositories</h3>
-    <ul>
-      {stats.topRepos.map((repo) => (
-        <li className="border" key={repo.name}>
-          <a href={repo.url} target="_blank" rel="noreferrer">
-            {repo.name}
-          </a>
-          <p>{repo.description ?? "No description"}</p>
-          <p>Language: {repo.language ?? "Unknown"}</p>
-          <p>Stars: {repo.stars} | Forks: {repo.forks}</p>
-        </li>
-      ))}
-    </ul>
-  </div> */}
+      <div className="flex md:flex-row flex-col h-full justify-around text-lg">
+        <div className="">
+          <p>Public Repos: {stats.publicRepos}</p>
+          <p>Followers: {stats.followers}</p>
+          <p>Following: {stats.following}</p>
+          <p>Total Stars: {stats.totalStars}</p>
+          <p>Total Forks: {stats.totalForks}</p>
+        </div>
 
       <div>
-        {" "}
-        <h3>Top Repository</h3>{" "}
-        {firstTopRepo ? (
-          <div className="px-5">
-            {" "}
-            <a href={firstTopRepo.url} target="_blank" rel="noreferrer" className="hover:text-[var(--primary-text)]">
-              <u> {firstTopRepo.name} </u>
-            </a>{" "}
-            <p>{firstTopRepo.description ?? "No description"}</p>{" "}
-            <p>Language: {firstTopRepo.language ?? "Unknown"}</p>{" "}
-            <p>
-              Stars: {firstTopRepo.stars} | Forks: {firstTopRepo.forks}
-            </p>{" "}
-          </div>
-        ) : (
-          <p>No repositories found.</p>
-        )}{" "}
-      </div>
-
-      <div>
-        <h3>Languages</h3>
-        <ul>
-          {stats.languages.map((language) => (
-            <li className="px-5" key={language.name}>
-              {language.name}: {language.count} repos
-            </li>
-          ))}
-        </ul>
-      </div>
+      <h3>Pinned Repositories</h3>
+      <ul>
+        {stats.pinnedRepos.map((repo) => (
+          <li className="border" key={repo.id}>
+            <a href={repo.url} target="_blank" rel="noreferrer">
+              {repo.name}
+            </a>
+            <p>{repo.description ?? "No description"}</p>
+            <p>Language: {repo.language ?? "Unknown"}</p>
+            <p>Stars: {repo.stars} | Forks: {repo.forks}</p>
+          </li>
+        ))}
+      </ul>
     </div>
+
+    <div>
+      <h3>Top Repositories</h3>
+      <ul>
+        {stats.topRepos.map((repo) => (
+          <li className="border" key={repo.name}>
+            <a href={repo.url} target="_blank" rel="noreferrer">
+              {repo.name}
+            </a>
+            <p>{repo.description ?? "No description"}</p>
+            <p>Language: {repo.language ?? "Unknown"}</p>
+            <p>Stars: {repo.stars} | Forks: {repo.forks}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+         <div>
+          {" "}
+          <h3>Top Repository</h3>{" "}
+          {firstTopRepo ? (
+            <div className="px-5">
+              {" "}
+              <a
+                href={firstTopRepo.url}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[var(--primary-text)]"
+              >
+                <u> {firstTopRepo.name} </u>
+              </a>{" "}
+              <p>{firstTopRepo.description ?? "No description"}</p>{" "}
+              <p>Language: {firstTopRepo.language ?? "Unknown"}</p>{" "}
+              <p>
+                Stars: {firstTopRepo.stars} | Forks: {firstTopRepo.forks}
+              </p>{" "}
+            </div>
+          ) : (
+            <p>No repositories found.</p>
+          )}{" "}
+        </div>
+
+        <div>
+          <h3>Languages</h3>
+          <ul>
+            {stats.languages.map((language) => (
+              <li className="px-5" key={language.name}>
+                {language.name}: {language.count} repos
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div> */}
+    </>
   );
 }

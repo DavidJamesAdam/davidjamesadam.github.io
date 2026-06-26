@@ -4,13 +4,21 @@ import Image from "next/image";
 // import WindowComponent from "react-flexi-window";
 import { useRef, useState } from "react";
 import "./styles.css";
-import GithubStats from "../about-sections/GithubStats";
+import {
+  useGithubStats,
+  GeneralInfo,
+  TopRepoInfo,
+  LanguagesInfo,
+} from "../about-sections/GithubStats";
 
 export default function TerminalWindow() {
   // const defaultWidth = 460;
   // const defaultHeight = 320;
   // const minimizedHeight = 52;
   const windowContainerRef = useRef<HTMLDivElement | null>(null);
+  const [activeSection, setActiveSection] = useState(0);
+  const { stats, loading, error } = useGithubStats();
+  const info = ["General", "TopRepo", "Languages"];
 
   // const [coordinates, setCoordinates] = useState<{
   //   latitude: number | null;
@@ -100,7 +108,7 @@ export default function TerminalWindow() {
     //         <button onClick={handleMinimize} className="border-0 m-0 p-0">
     //           <Image
     //             src="/minimize.svg"
-    //             alt="Minimise button"
+    //             alt="Minimize button"
     //             className="white w-5"
     //             width={10}
     //             height={10}
@@ -130,13 +138,22 @@ export default function TerminalWindow() {
     //     </div>
     //   </WindowComponent>
     // </div>
-    <div className="flex h-2/3 w-full flex-col bg-black/80 overflow-hidden">
-      <div className="flex flex-row justify-between border px-5 py-2">
-        <p className="my-1 indent-0">SYSTEM STATUS</p>
-        <button onClick={handleMinimize} className="border-0 m-0 p-0">
+    <div className="flex h-2/3 md:mx-5 md:w-1/3 w-full flex-col bg-black/80 overflow-hidden">
+      <div className="flex flex-row justify-between border p-2">
+        {info.map((section, index) => (
+          <div key={index}>
+            <button
+              onClick={() => setActiveSection(index)}
+              className="btn-reset"
+            >
+              {section}
+            </button>
+          </div>
+        ))}
+        <button onClick={handleMinimize} className="btn-reset">
           <Image
             src="/minimize.svg"
-            alt="Minimise button"
+            alt="Minimize button"
             className="white w-5"
             width={10}
             height={10}
@@ -157,7 +174,15 @@ export default function TerminalWindow() {
                 ? `${coordinates.latitude}, ${coordinates.longitude}`
                 : "Not available"} */}
         </p>
-        <GithubStats />
+        {activeSection === 0 && (
+          <div>{stats && <GeneralInfo stats={stats} />}</div>
+        )}
+        {activeSection === 1 && (
+          <div>{stats && <TopRepoInfo firstTopRepo={stats.topRepos[0]} />}</div>
+        )}
+        {activeSection === 2 && (
+          <div>{stats && <LanguagesInfo stats={stats} />}</div>
+        )}
       </div>
     </div>
   );
