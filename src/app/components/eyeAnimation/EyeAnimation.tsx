@@ -82,7 +82,7 @@ export default function EyeAnimation({
     }
 
     function scheduleNextBlink() {
-      const delay = randomIntFromInterval(100, 10000);
+      const delay = randomIntFromInterval(100, 7000);
       idleTimeoutRef.current = setTimeout(() => {
         openEye(() => closeEye(() => scheduleNextBlink()));
       }, delay);

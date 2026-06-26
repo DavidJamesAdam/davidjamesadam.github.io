@@ -41,7 +41,7 @@ export default function CatPage() {
           <ImageCarousel/>
           <p className="shrink-0">
             Congratulations! You have found a little secret page dedicated to my
-            cat Karl. Enjoy a few photos of him.
+            cat Karl. Enjoy a few photos of him. Click/tap outside of this window to close it.
           </p>
         </div>
       </Modal>

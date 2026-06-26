@@ -10,12 +10,12 @@ type ForbiddenTextProps = {
 
 export default function ForbiddenText({
   orientation = "vertical",
-  text = "CLIKHERE",
+  text = "CLIKTHIS",
 }: ForbiddenTextProps) {
   const container = useRef<HTMLElement | null>(null);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [play, { stop }] = useSound("/Karl_meow1.wav", { volume: 0.5 });
+  const [play, { stop }] = useSound("/Karl_meow.wav", { volume: 4.5 });
   const { contextSafe } = useGSAP({ scope: container });
 
   const playMeow = contextSafe(() => {
