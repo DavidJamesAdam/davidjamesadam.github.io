@@ -3,6 +3,7 @@ import { useState } from "react";
 import Card from "../components/card/Card";
 import SideBar from "../components/side-bar/SideBar";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
+import Link from "next/link";
 
 export default function Page() {
   const [activeSection, setActiveSection] = useState(0);
@@ -72,15 +73,63 @@ export default function Page() {
         </p>
       ),
       // spell-checker:disable
-      techStack: ["Raspberry Pi Pico", "BME280", "LC079203 Fuel Gauge", "Circuit Python"],
+      techStack: [
+        "Raspberry Pi Pico",
+        "BME280",
+        "LC079203 Fuel Gauge",
+        "Circuit Python",
+      ],
       link: "https://github.com/DavidJamesAdam/HIC---The-Hiker-s-Information-Companion",
     },
     {
       video: "/RED_V1_demo.mp4",
       title: "// RED - Retro Entertainment Device",
-      techStack: ["Raspberry Pi 4b", "Python"],
+      description: (
+        <>
+          <p className="indent-[2em]">
+            This was a bit of a follow-up to my HIC. I had developed the
+            &quot;itch&quot; for electronics at this point. I had a touch screen
+            designed to be used by the Raspberry Pi sitting around that I was
+            having trouble thinking of things to do with. Eventually, I figured
+            making my own gaming device would be a super fun idea. After a bit
+            of research, I became inspired by{" "}
+            <Link href="https://www.youtube.com/watch?v=gkook0l_gsM&t=1s">
+              <u>Leandro Linares own game console project</u>
+            </Link>
+            . The way he was able to design his system to be incredibly sleek
+            and functional really gave me the drive to see if I could figure
+            this out on my own.
+          </p>
+          <p className="indent-[2em]">
+            During winter break between semesters, I plunged down the rabbit
+            hole to start my journey on creating something that would become one
+            of my most proudest projects. It was far more challening than the
+            HIC, namely due to discovering the Pi only accepts digital input. I
+            had wanted to implement a analog joystick, so I needed to use an
+            Analog to Digital Converter (ADC) in order for the Raspberry Pi to
+            read signal from the joystick. This was definitely one of the
+            hardest challenges coding wise. The other challenge was teaching
+            myself Fusion 360 to design and print the enclosure. Right now, I
+            have it deconstructed and have added a second joystick. I plan on
+            redesigning the case to accomodate this new addition, and to improve
+            on the erganomics of the enclosure itself.
+          </p>
+        </>
+      ),
+      learnt: (
+        <p className="indent-[2em]">
+          This was ended up being a more challenging project than I had
+          initially expected, but it taught me so much. This my first real
+          exposure to Linux and programming on a Linux machine. This was also
+          the first time I used SSH using the Remote Explorer extension in
+          VSCode to help write the script to allow the Pi to read input from the
+          buttons. Additionally, I taught myself Fusion 360 to design the
+          enclosure and learnt how to use a 3D printer to help print the
+          enclosure.
+        </p>
+      ),
+      techStack: ["Raspberry Pi 4b", "Linux", "Retro Pi", "Python"],
       link: "https://github.com/DavidJamesAdam/RED-Retro-Entertainment-Device-",
-      description: "Project",
     },
     {
       picture: "/Placeholder.svg",
@@ -113,7 +162,7 @@ export default function Page() {
         }
       />
       <section className="flex flex-col flex-1 min-h-0">
-          <div className="flex-1 min-h-0 flex items-start justify-center overflow-y-auto">
+        <div className="flex-1 min-h-0 flex items-start justify-center overflow-y-auto">
           <Card
             key={activeSection}
             picture={activeProject.picture}
