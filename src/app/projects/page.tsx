@@ -19,11 +19,28 @@ export default function Page() {
             last year of school. PUPPLI is a social media platform where a user
             can create an account, create subprofiles for their dogs, create
             post that include pictures of their dogs, and vote on other
-            user&apos;s dog pictures they like more. The group project had no restrictions in terms of what we could do, so we thought we would have fun with the idea. I primarily worked on the frontend with a bit of contribution on the backend. I also worked on the docker files (a requirement for the project). This was honestly a supper fun first website and I continued working on it after the class was over. I am not sure what my plans are for deployment yet, but it would be a fun thing to see people use.
+            user&apos;s dog pictures they like more. The group project had no
+            restrictions in terms of what we could do, so we thought we would
+            have fun with the idea. I primarily worked on the frontend with a
+            bit of contribution on the backend. I also worked on the docker
+            files (a requirement for the project). This was honestly a supper
+            fun first website and I continued working on it after the class was
+            over. I am not sure what my plans are for deployment yet, but it
+            would be a fun thing to see people use.
           </p>
         </>
       ),
-      learnt: <p className="indent-[2em]">Thanks to my internship, which was primarily web development, I was fairly familiar on how to get the environment set up. However, this was my first real exposure to React, as I was primarily on the backend during my internship. I got to learn and strengthen my understanding of React fundementals such as compnents and state management. Since I also helped with the backend, I got to learn how FastAPI worked and how we comunicated with the Firebase database.</p>,
+      learnt: (
+        <p className="indent-[2em]">
+          Thanks to my internship, which was primarily web development, I was
+          fairly familiar on how to get the environment set up. However, this
+          was my first real exposure to React, as I was primarily on the backend
+          during my internship. I got to learn and strengthen my understanding
+          of React fundementals such as compnents and state management. Since I
+          also helped with the backend, I got to learn how FastAPI worked and
+          how we comunicated with the Firebase database.
+        </p>
+      ),
       techStack: [
         "Typescript",
         "React Router",
@@ -36,8 +53,41 @@ export default function Page() {
     {
       picture: "/SmartPantry_screenshot.png",
       title: "// SmartPantry",
-      description: "Recipe, home inventory, and grocery tracker",
-      learnt: <p className="indent-[2em]"></p>,
+      description: (
+        <>
+          <p className="indent-[2em]">
+            This was the group project for my database class. Tracking recipes
+            and ingredients compared to what someone might actually have can be
+            tough to manage. SmartPantry helps to solve this by tracking all
+            that for you including building grocery lists based on what
+            ingredients you need for the recipes you would like to cook. I was
+            primarily backend on this project with some contributions to the
+            frontend near the end of the semester.
+          </p>
+        </>
+      ),
+      learnt: (
+        <p className="indent-[2em]">
+          Thanks to the principles we learnt in this database class, it was my
+          first time creating a database from scratch. Creating the EERD and RM
+          was not too difficult, however the database itself went through a few
+          different iterations as I discovered what relations were actually
+          needed and what made sense in practice. This project was nearly
+          identical to my web development class, but this time I was primarily
+          backend and there was more of a focus on building a robust database.
+          Thanks to that web development class, I was pretty familiar with how
+          FastAPI worked. However, since this database class focused on SQL, we
+          were required to use SQL or PostgreSQL in our project. I decided to
+          use{" "}
+          <Link href="https://neon.com/">
+            <u>Neon</u>
+          </Link>{" "}
+          for our database since it was free and easy to set up. Setting up the
+          models in FastAPI and how to implement them in the end points was the
+          biggest challenge. Thankfully, the documentation for FastAPI and
+          Pydantic was detailed.
+        </p>
+      ),
       techStack: ["Typescript", "Next.js", "FastAPI", "PostgreSQL"],
       link: "https://github.com/DavidJamesAdam/cpsc471-project-SmartPantry",
     },
