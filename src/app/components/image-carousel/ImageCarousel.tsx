@@ -7,7 +7,7 @@ function ImageCarousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Array of image sources
-  const images = ["/Karl.jpg", "/Karl2.jpg", "/Karl3.jpg"];
+  const images = ["/Karl.jpg", "/Karl2.jpg", "/Karl3.jpg", "/Karl4.jpg", "/Karl5.jpg"];
 
   // Function to go to the next image
   const nextImage = () => {
