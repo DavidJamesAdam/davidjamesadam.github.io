@@ -117,31 +117,33 @@ export default function Page() {
   });
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center text-center weathered-effect">
-      <a
-        href="/home"
-        onClick={(e) => {
-          if (!isTypingDone) {
-            e.preventDefault();
+    <div className="flex w-screen h-full justify-center items-center">
+      <div className="w-full text-center md:w-fit h-fit weathered-effect">
+        <a
+          href="/home"
+          onClick={(e) => {
+            if (!isTypingDone) {
+              e.preventDefault();
+            }
+          }}
+          onMouseEnter={startEnterAnimation}
+          onMouseLeave={startLeaveAnimation}
+          className={
+            !isTypingDone
+              ? "pointer-events-none inline-block text-4xl wrap"
+              : "inline-block text-4xl wrap typewriter"
           }
-        }}
-        onMouseEnter={startEnterAnimation}
-        onMouseLeave={startLeaveAnimation}
-        className={
-          !isTypingDone
-            ? "pointer-events-none inline-block text-4xl wrap"
-            : "inline-block text-4xl wrap typewriter"
-        }
-      >
-        {typedText.split("").map((char, index) => (
-          <span
-            key={index}
-            className={converted[index] ? "normal-font" : "eldritch-font"}
-          >
-            {char}
-          </span>
-        ))}
-      </a>
+        >
+          {typedText.split("").map((char, index) => (
+            <span
+              key={index}
+              className={converted[index] ? "normal-font" : "eldritch-font md:text-4xl text-3xl"}
+            >
+              {char}
+            </span>
+          ))}
+        </a>
+      </div>
     </div>
   );
 }

@@ -217,7 +217,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="page-wrapper">
+    <>
       <HeaderWrapper
         title={
           <>
@@ -250,6 +250,6 @@ export default function Page() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 }

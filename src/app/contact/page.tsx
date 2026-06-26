@@ -4,7 +4,7 @@ import Socials from "../components/socials/Socials";
 
 export default function Page() {
   return (
-    <div className="page-wrapper">
+    <>
       <HeaderWrapper
         title={
           <>
@@ -22,6 +22,6 @@ export default function Page() {
         <h3>You can find me at:</h3>
         <Socials />
       </section>
-    </div>
+    </>
   );
 }

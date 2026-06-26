@@ -41,7 +41,7 @@ export default function RootLayout({
               <Navbar />
             </header>
             <main className="w-full px-5 md:flex-row md:flex-1 md:min-h-0 md:overflow-hidden">
-              {children}
+              <div className="page-wrapper">{children}</div>
               <div className="ml-auto hidden shrink-0 md:flex">
                 <ForbiddenText orientation="vertical" />
               </div>

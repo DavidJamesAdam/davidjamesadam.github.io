@@ -17,7 +17,7 @@ export default function Page() {
   const [activeSection, setActiveSection] = useState(0);
 
   return (
-    <div className="page-wrapper">
+    <>
       <HeaderWrapper
         title={
           <>
@@ -45,6 +45,6 @@ export default function Page() {
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 }

@@ -5,7 +5,7 @@ import TerminalWindow from "../components/terminal-window/TerminalWindow";
 
 export default function Page() {
   return (
-    <div className="page-wrapper">
+    <>
       <HeaderWrapper
         title={
           <>
@@ -62,6 +62,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
