@@ -4,8 +4,34 @@ import ConditionalLayout from "./components/Pathname";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "David Adam | Portfolio",
-  description: "...",
+  title: {
+    default: "David Adam | Full Stack Developer",
+    template: "%s | David Adam",
+  },
+  description:
+    "Portfolio of David Adam, a full stack developer specializing in React and FastAPI",
+  authors: [{ name: "David Adam" }],
+  creator: "David Adam",
+  keywords: [
+    "David Adam",
+    "full stack developer",
+    "Next.js",
+    "React",
+    "FastAPI",
+    "RESTful",
+    "portfolio",
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://voidprotocol.dev",
+    title: "David Adam | Full Stack Developer",
+    description: "...", //TODO
+    siteName: "David Adam Portfolio",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }], //TODO
+  },
+  alternates: {
+  canonical: "https://voidprotocol.dev",
+},
 };
 
 const eldritch = localFont({

@@ -2,6 +2,10 @@ import Image from "next/image";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 import Socials from "../components/socials/Socials";
 import TerminalWindow from "../components/terminal-window/TerminalWindow";
+import { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Home" };
+
 
 export default function Page() {
   return (

@@ -2,6 +2,10 @@ import ContactForm from "../components/contact-form/ContactForm";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 import Socials from "../components/socials/Socials";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Contact" };
+
 export default function Page() {
   return (
     <>
