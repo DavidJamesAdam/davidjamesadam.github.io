@@ -29,7 +29,7 @@ export default function ForbiddenText({
   if (orientation === "horizontal") {
     return (
       <div className="relative w-full flex items-center justify-center eldritch-font text-3xl tracking-[0.35em] md:text-4xl">
-        <div onClick={() =>{handleRevealedButton(); playMeow();}}>{text}</div>
+        <div onClick={() =>{handleRevealedButton(); playMeow();}} role="button" tabIndex={0}>{text}</div>
         <div className="absolute right-2 inset-y-0 flex items-center scale-75">
           {isRevealed && <CatPage />}
         </div>
@@ -38,7 +38,7 @@ export default function ForbiddenText({
   }
 
   return (
-    <div className="flex relative flex-col items-center justify-center gap-3">
+    <div className="flex relative flex-col items-center justify-center gap-3 hover:cursor-default" role="button" tabIndex={0} onKeyDown={() =>{handleRevealedButton(); playMeow();}}>
       {text.split("").map((letter, i) => (
         <div
           className="eldritch-font text-6xl"
