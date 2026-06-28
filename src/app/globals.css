@@ -40,19 +40,8 @@ section {
 
 @layer base {
   h1 {
-    @apply text-6xl md:text-8xl pb-5 text-[#928a91];
-    font-family:
-      "Big Shoulders Display",
-      ui-sans-serif,
-      system-ui,
-      -apple-system,
-      "Segoe UI",
-      Roboto,
-      "Helvetica Neue",
-      Arial,
-      "Noto Sans",
-      "Liberation Sans",
-      sans-serif;
+    @apply text-5xl md:text-7xl pb-5 text-[#928a91] ;
+    font-family: var(--font-orbitron);
   }
 
   h2 {
@@ -165,6 +154,10 @@ label {
 
 .eldritch-font {
   font-family: var(--font-eldritch);
+}
+
+.orbitron-font {
+  font-family: var(--font-orbitron);
 }
 
 *::-webkit-scrollbar {

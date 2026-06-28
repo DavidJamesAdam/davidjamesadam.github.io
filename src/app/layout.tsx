@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import ConditionalLayout from "./components/Pathname";
 import { Metadata } from "next";
+import { Orbitron } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
@@ -47,6 +48,11 @@ const eldritch = localFont({
   variable: "--font-eldritch",
 });
 
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -54,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${eldritch.variable} flex flex-col w-full h-screen`}>
+      <body className={`${eldritch.variable} ${orbitron.variable} flex flex-col w-full h-screen`}>
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
