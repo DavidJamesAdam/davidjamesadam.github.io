@@ -29,7 +29,7 @@ export default function Page() {
           <Socials />
         </div>
         <div className="py-3">
-          <Link href="/David_Adam_resume.pdf" target="_blank">
+          <Link href="/David_Adam_Resume.pdf" target="_blank">
             My resume
           </Link>
         </div>
