@@ -1,10 +1,12 @@
 import Image from "next/image";
+import "./styles.css";
 
 export default function Socials() {
   const iconDim = 40;
   return (
     <div className="weathered-effect flex flex-row flex-1 md:justify-normal justify-center">
-      <button>
+      <a href="https://www.linkedin.com/in/davidjamesadam/" className="link">
+        {" "}
         <Image
           src="/linkedin.svg"
           alt="LinkedIn icon"
@@ -12,9 +14,10 @@ export default function Socials() {
           height={iconDim}
           className="purple m-1"
         />
-        <a href="https://www.linkedin.com/in/davidjamesadam/" className="m-1">LinkedIn</a>
-      </button>
-      <button>
+        LinkedIn
+      </a>
+      <a href="https://github.com/DavidJamesAdam" className="link">
+        {" "}
         <Image
           src="/github-142.svg"
           alt="Github icon"
@@ -22,8 +25,8 @@ export default function Socials() {
           height={iconDim}
           className="purple m-1"
         />
-        <a href="https://github.com/DavidJamesAdam" className="m-1">GitHub</a>
-      </button>
+        GitHub
+      </a>
     </div>
   );
 }
