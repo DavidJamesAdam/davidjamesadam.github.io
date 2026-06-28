@@ -43,6 +43,7 @@ export default function ContactForm() {
         <div className="weathered-effect w-full">
           <label htmlFor="fullname">Full Name</label>
           <input
+            id="fullname"
             type="text"
             name="username"
             placeholder="Your name"
@@ -54,6 +55,7 @@ export default function ContactForm() {
         <div className="weathered-effect w-full">
           <label htmlFor="email">Email</label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="email@example.com"
@@ -65,6 +67,7 @@ export default function ContactForm() {
         <div className="weathered-effect w-full">
           <label htmlFor="message">Your Message</label>
           <textarea
+            id="message"
             className="h-32 p-3 border-[#565d639a] border-2"
             name="message"
             placeholder="Type your message here..."
