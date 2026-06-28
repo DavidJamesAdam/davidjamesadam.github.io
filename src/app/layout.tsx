@@ -25,13 +25,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://voidprotocol.dev",
     title: "David Adam | Full Stack Developer",
-    description: "...", //TODO
+    description:
+      "Portfolio of David Adam, a full stack developer specializing in React and FastAPI",
     siteName: "David Adam Portfolio",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }], //TODO
+    images: [{ url: "https://voidprotocol.dev/og_image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "David Adam | Full Stack Developer",
+    description:
+      "Portfolio of David Adam, a full stack developer specializing in React and FastAPI",
+    images: ["/og_image.png"],
   },
   alternates: {
-  canonical: "https://voidprotocol.dev",
-},
+    canonical: "https://voidprotocol.dev",
+  },
 };
 
 const eldritch = localFont({
@@ -46,9 +54,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* For inline script information: https://nextjs.org/docs/messages/inline-script-id */}
-      </head>
       <body className={`${eldritch.variable} flex flex-col w-full h-screen`}>
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
