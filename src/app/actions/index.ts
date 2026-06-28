@@ -1,7 +1,7 @@
 "use server";
 import "../envConfig";
 
-export const sendDiscordMessage = async (_prevState: unknown, formData: Iterable<readonly [PropertyKey]>) => {
+export const sendDiscordMessage = async (_prevState: unknown, formData: FormData) => {
   try {
     const rawFormEntries = Object.fromEntries(formData);
 

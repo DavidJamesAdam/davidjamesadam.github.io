@@ -39,6 +39,7 @@ export default function Card({
                 width={800}
                 height={450}
                 className="rounded-xl object-contain shrink-0 md:w-[40%] md:max-h-[36vh] max-h-[24vh] float-left mr-5"
+                loading="lazy"
               />
             )
           )}

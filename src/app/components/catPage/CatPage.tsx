@@ -29,19 +29,11 @@ export default function CatPage() {
       <Modal isOpen={open} onClose={handleClose}>
         <div className="flex h-full w-full min-h-0 flex-col gap-3">
           <h1 className="weathered-effect shrink-0">The Cat of Ulthar</h1>
-          {/* <div className="relative flex-1 min-h-0 w-full">
-            <Image
-              src="/Karl.jpg"
-              alt="Picture of Karl, my cat"
-              fill
-              sizes="100vw"
-              className="object-contain rounded-md"
-            />
-          </div> */}
-          <ImageCarousel/>
+          <ImageCarousel />
           <p className="shrink-0">
             Congratulations! You have found a little secret page dedicated to my
-            cat Karl. Enjoy a few photos of him. Click/tap outside of this window to close it.
+            cat Karl. Enjoy a few photos of him. Click/tap outside of this
+            window to close it.
           </p>
         </div>
       </Modal>

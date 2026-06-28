@@ -14,8 +14,8 @@ export default function AboutMe() {
             alt="Profile Picture"
             width={500}
             height={500}
+            loading="lazy"
             className="rounded-xl object-contain shrink-0 w-auto h-auto md:max-h-[36vh] max-h-[24vh] float-right ml-5 mb-5"
-            priority
           />
           <p className="indent-[2em]">
             Hi, I&apos;m David. I recently completed my BSc in Computer Science

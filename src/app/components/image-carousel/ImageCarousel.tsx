@@ -29,6 +29,7 @@ function ImageCarousel() {
           alt="Picture of Karl, my cat"
           fill
           className="object-contain rounded-md"
+          loading="lazy"
         />
       </div>
       <div className="carousel-indicators mt-1">
