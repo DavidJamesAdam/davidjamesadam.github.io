@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ContactForm from "../components/contact-form/ContactForm";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 import Socials from "../components/socials/Socials";
@@ -23,8 +24,15 @@ export default function Page() {
         <div className="py-3">
           <h3>Email: davidjamesadam@gmail.com</h3>
         </div>
-        <h3>You can find me at:</h3>
-        <Socials />
+        <div>
+          <h3>You can find me at:</h3>
+          <Socials />
+        </div>
+        <div className="py-3">
+          <Link href="/David_Adam_resume.pdf" target="_blank">
+            My resume
+          </Link>
+        </div>
       </section>
     </>
   );
