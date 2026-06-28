@@ -33,13 +33,14 @@ export default function AboutContent() {
           {activeSection === 1 && <Education />}
           {activeSection === 2 && <Interests />}
         </div>
-        <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0">
+        <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0 relative">
           {Symbols.map((symbol, index) => (
             <SideBar
               key={index}
               symbol={symbol.symbol}
               onClick={() => setActiveSection(index)}
               section={symbol.section}
+              isActive={index === activeSection}
             />
           ))}
         </div>

@@ -76,7 +76,7 @@ export default function ContactForm() {
         </div>
         <div className="flex flex-row md:justify-normal justify-center weathered-effect">
           <button
-            className="w-1/2 md:m-0"
+            className="w-1/2 md:m-0 inline-flex self-start m-5 items-center rounded-md bg-black p-3 border-[#894fad] border-2 text-[#894fad] font-bold hover:border-[#bc77e7] hover:text-[#bc77e7] flex-row justify-around"
             type="submit"
           >
             {isPending ? (

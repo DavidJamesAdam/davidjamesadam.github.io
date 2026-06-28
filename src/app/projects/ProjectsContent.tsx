@@ -246,6 +246,7 @@ export default function ProjectsContent() {
               symbol={symbol.symbol}
               onClick={() => setActiveSection(index)}
               section={symbol.section}
+              isActive={index === activeSection}
             />
           ))}
         </div>

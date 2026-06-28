@@ -167,14 +167,6 @@ label {
   font-family: var(--font-eldritch);
 }
 
-button {
-  @apply inline-flex w-fit self-start m-5 items-center rounded-md bg-black p-3 border-[#894fad] border-2 text-[#894fad] font-bold hover:border-[#bc77e7] hover:text-[#bc77e7] flex-row justify-around;
-}
-
-.btn-reset {
-  @apply m-0 p-0 border-0 bg-transparent w-fit rounded-none font-normal self-auto text-white;
-}
-
 *::-webkit-scrollbar {
   width: 17px;
 }

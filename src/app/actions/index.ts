@@ -1,7 +1,7 @@
 "use server";
-import "../envConfig.ts";
+import "../envConfig";
 
-export const sendDiscordMessage = async (prevState, formData) => {
+export const sendDiscordMessage = async (_prevState: unknown, formData: Iterable<readonly [PropertyKey]>) => {
   try {
     const rawFormEntries = Object.fromEntries(formData);
 
@@ -53,9 +53,10 @@ export const sendDiscordMessage = async (prevState, formData) => {
       message: `Your message has been successfully sent.`,
     };
   } catch (err) {
+    const errorMessage = err instanceof Error ? err.message : String(err);
     return {
       success: false,
-      message: `Problem sending message ${err.message}`,
+      message: `Problem sending message ${errorMessage}`,
     };
   }
 };
