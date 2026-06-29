@@ -5,6 +5,7 @@ import Card from "../components/card/Card";
 import SideBar from "../components/side-bar/SideBar";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 import Link from "next/link";
+import ContentSection from "../components/contentSection/ContentSection";
 
 export default function ProjectsContent() {
   const [activeSection, setActiveSection] = useState(0);
@@ -226,31 +227,35 @@ export default function ProjectsContent() {
           </>
         }
       />
-      <section className="flex flex-col flex-1 min-h-0">
-        <div className="flex-1 min-h-0 flex items-start justify-center md:overflow-y-auto">
-          <Card
-            key={activeSection}
-            picture={activeProject.picture}
-            video={activeProject.video}
-            title={activeProject.title}
-            description={activeProject.description}
-            learnt={activeProject.learnt}
-            techStack={activeProject.techStack}
-            link={activeProject.link}
-          />
-        </div>
-        <div className="flex flex-row py-5 justify-around md:shrink-0">
-          {Symbols.map((symbol, index) => (
-            <SideBar
-              key={index}
-              symbol={symbol.symbol}
-              onClick={() => setActiveSection(index)}
-              section={symbol.section}
-              isActive={index === activeSection}
-            />
-          ))}
-        </div>
-      </section>
+      <ContentSection
+        content={
+          <>
+            <div className="flex-1 min-h-0 flex items-start justify-center md:overflow-y-auto">
+              <Card
+                key={activeSection}
+                picture={activeProject.picture}
+                video={activeProject.video}
+                title={activeProject.title}
+                description={activeProject.description}
+                learnt={activeProject.learnt}
+                techStack={activeProject.techStack}
+                link={activeProject.link}
+              />
+            </div>
+            <div className="flex flex-row py-5 justify-around md:shrink-0">
+              {Symbols.map((symbol, index) => (
+                <SideBar
+                  key={index}
+                  symbol={symbol.symbol}
+                  onClick={() => setActiveSection(index)}
+                  section={symbol.section}
+                  isActive={index === activeSection}
+                />
+              ))}
+            </div>
+          </>
+        }
+      />
     </>
   );
 }

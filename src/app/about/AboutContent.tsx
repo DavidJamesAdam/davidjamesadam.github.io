@@ -6,6 +6,7 @@ import AboutMe from "../components/about-sections/AboutMe";
 import Education from "../components/about-sections/Education";
 import Interests from "../components/about-sections/Interests";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
+import ContentSection from "../components/contentSection/ContentSection";
 
 export default function AboutContent() {
   const Symbols = [
@@ -27,24 +28,28 @@ export default function AboutContent() {
           </>
         }
       />
-      <section>
-        <div className="md:flex-1 md:min-h-0 md:overflow-y-auto">
-          {activeSection === 0 && <AboutMe />}
-          {activeSection === 1 && <Education />}
-          {activeSection === 2 && <Interests />}
-        </div>
-        <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0 relative">
-          {Symbols.map((symbol, index) => (
-            <SideBar
-              key={index}
-              symbol={symbol.symbol}
-              onClick={() => setActiveSection(index)}
-              section={symbol.section}
-              isActive={index === activeSection}
-            />
-          ))}
-        </div>
-      </section>
+      <ContentSection
+        content={
+          <>
+            <div className="md:flex-1 md:min-h-0 md:overflow-y-auto">
+              {activeSection === 0 && <AboutMe />}
+              {activeSection === 1 && <Education />}
+              {activeSection === 2 && <Interests />}
+            </div>
+            <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0 relative">
+              {Symbols.map((symbol, index) => (
+                <SideBar
+                  key={index}
+                  symbol={symbol.symbol}
+                  onClick={() => setActiveSection(index)}
+                  section={symbol.section}
+                  isActive={index === activeSection}
+                />
+              ))}
+            </div>
+          </>
+        }
+      />
     </>
   );
 }
