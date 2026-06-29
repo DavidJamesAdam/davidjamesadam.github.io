@@ -50,12 +50,13 @@ type GitHubStats = {
 
 export function GeneralInfo({ stats }: { stats: GitHubStats }) {
   return (
-    <div className="">
-      <p>Public Repos: {stats.publicRepos}</p>
-      <p>Followers: {stats.followers}</p>
-      <p>Following: {stats.following}</p>
-      <p>Total Stars: {stats.totalStars}</p>
-      <p>Total Forks: {stats.totalForks}</p>
+    <div>
+      <p className="mb-1">&gt; cat ./generalInfo.txt</p>
+      <p className="px-5">Public Repos: {stats.publicRepos}</p>
+      <p className="px-5">Followers: {stats.followers}</p>
+      <p className="px-5">Following: {stats.following}</p>
+      <p className="px-5">Total Stars: {stats.totalStars}</p>
+      <p className="px-5">Total Forks: {stats.totalForks}</p>
     </div>
   );
 }
@@ -63,11 +64,9 @@ export function GeneralInfo({ stats }: { stats: GitHubStats }) {
 export function TopRepoInfo({ firstTopRepo }: { firstTopRepo: TopRepo }) {
   return (
     <div>
-      {" "}
-      <h3>Top Repository</h3>{" "}
+      <p className="mb-1">&gt; cat ./topRepository.txt</p>
       {firstTopRepo ? (
         <div className="px-5">
-          {" "}
           <a
             href={firstTopRepo.url}
             target="_blank"
@@ -92,14 +91,13 @@ export function TopRepoInfo({ firstTopRepo }: { firstTopRepo: TopRepo }) {
 export function LanguagesInfo({ stats }: { stats: GitHubStats }) {
   return (
     <div>
-      <h3>Languages</h3>
-      <ul>
-        {stats.languages.map((language) => (
-          <li className="px-5" key={language.name}>
-            {language.name}: {language.count} repos
-          </li>
-        ))}
-      </ul>
+      <p className="mb-1">&gt; cat ./languages.txt</p>
+
+      {stats.languages.map((language) => (
+        <p className="px-5" key={language.name}>
+          {language.name}: {language.count} repos
+        </p>
+      ))}
     </div>
   );
 }
@@ -109,7 +107,7 @@ export function useGithubStats() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
+  useEffect(() => {
     let active = true;
 
     async function loadStats() {

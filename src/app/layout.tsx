@@ -2,7 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import ConditionalLayout from "./components/Pathname";
 import { Metadata } from "next";
-import { Orbitron, Big_Shoulders, Space_Grotesk } from "next/font/google";
+import { Orbitron, Space_Grotesk } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
@@ -53,10 +53,6 @@ const orbitron = Orbitron({
   variable: "--font-orbitron",
 });
 
-const bigShoulders = Big_Shoulders({
-  subsets: ["latin"],
-  variable: "--font-bigShoulders",
-});
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -70,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${eldritch.variable} ${orbitron.variable} ${bigShoulders.variable} ${spaceGrotesk.variable} flex flex-col w-full h-screen`}>
+      <body className={`${eldritch.variable} ${orbitron.variable} ${spaceGrotesk.variable} flex flex-col w-full h-screen`}>
         <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>

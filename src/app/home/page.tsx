@@ -53,13 +53,16 @@ export default function Page() {
                 </p>
               </div>
               <div className="flex flex-1 md:flex-row flex-col md:m-5">
-                <TerminalWindow />
-                <div className="md:w-2/3">
+                <div className="flex flex-1 flex-col w-fit">
+                  <h3>Github stats</h3>
+                  <TerminalWindow />
+                </div>
+                <div className="w-2/3 ml-5">
                   <h3 className="md:mt-0 mt-5 mb-2">Github Contributions</h3>
                   <Image
                     src="https://ghchart.rshah.org/davidjamesadam"
                     alt="GitHub Contributions Chart for GitHub user"
-                    className="w-full h-auto rounded bg-[#101214]"
+                    className="w-full h-auto rounded bg-[#101214] mt-5"
                     loading="lazy"
                     height={10}
                     width={10}

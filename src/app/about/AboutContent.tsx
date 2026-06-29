@@ -36,7 +36,7 @@ export default function AboutContent() {
               {activeSection === 1 && <Education />}
               {activeSection === 2 && <Interests />}
             </div>
-            <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0 relative">
+            <div className="md:pl-5 p-5 flex flex-row justify-around md:shrink-0">
               {Symbols.map((symbol, index) => (
                 <SideBar
                   key={index}

@@ -17,7 +17,6 @@ export default function TerminalWindow() {
   const info = ["General", "TopRepo", "Languages"];
   const [minimize, setMinimize] = useState(false);
 
-
   const captureWindowState = () => {
     const windowElement =
       windowContainerRef.current?.querySelector('[role="dialog"]');
@@ -38,21 +37,22 @@ export default function TerminalWindow() {
     setMinimize(!minimize);
   };
 
-
   return (
-    <div className="flex h-2/3 md:mx-5 md:w-1/3 w-full flex-col bg-black/80 overflow-hidden">
+    <div className="flex flex-col bg-black/80 overflow-hidden my-5">
       <div className="flex flex-row justify-between border p-2">
         {info.map((section, index) => (
           <div key={index}>
             <button
+              className={`hover:text-[var(--primary-text)] ${
+                index === activeSection ? "text-[#bc77e7]" : ""
+              }`}
               onClick={() => setActiveSection(index)}
-              className="btn-reset"
             >
-              {section}
+              <h3>{section}</h3>
             </button>
           </div>
         ))}
-        <button onClick={handleMinimize} className="btn-reset">
+        <button onClick={handleMinimize}>
           <Image
             src="/minimize.svg"
             alt="Minimize button"
@@ -68,13 +68,30 @@ export default function TerminalWindow() {
         }
       >
         {activeSection === 0 && (
-          <div>{stats && <GeneralInfo stats={stats} />}</div>
+          <>
+            <div>{stats && <GeneralInfo stats={stats} />}</div>
+            <p>
+              &gt; <span className="blinking-text">|</span>
+            </p>
+          </>
         )}
         {activeSection === 1 && (
-          <div>{stats && <TopRepoInfo firstTopRepo={stats.topRepos[0]} />}</div>
+          <>
+            <div>
+              {stats && <TopRepoInfo firstTopRepo={stats.topRepos[0]} />}
+            </div>
+            <p>
+              &gt; <span className="blinking-text">|</span>
+            </p>
+          </>
         )}
         {activeSection === 2 && (
-          <div>{stats && <LanguagesInfo stats={stats} />}</div>
+          <>
+            <div>{stats && <LanguagesInfo stats={stats} />}</div>
+            <p>
+              &gt; <span className="blinking-text">|</span>
+            </p>
+          </>
         )}
       </div>
     </div>

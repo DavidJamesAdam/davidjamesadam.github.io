@@ -81,7 +81,7 @@ export default function Education() {
         </div>
         <div className="flex md:flex-row flex-col text-lg">
           {categoryList.map((category, index) => (
-            <div className="flex flex-col mx-5" key={index}>
+            <div className="flex flex-col mx-3" key={index}>
               <div className="flex mb-3 group">
                 {/* <Image
                   src="/Balance.svg"
@@ -103,8 +103,8 @@ export default function Education() {
                       className="purple mr-2 group-hover:rotate-90 transition-transform"
                     />
                     <p className="skills">{skill.skill}</p> */}
-                    <span className="rounded-full border border-purple-800 bg-[var(--secondary-text)] px-3 py-1 m-1 transition-transform duration-200 ease-in-out hover:scale-110">
-                      {skill.skill}
+                    <span className="rounded-md border border-purple-800 bg-[var(--secondary-text)] px-3 py-1 m-1 transition-transform duration-200 ease-in-out hover:scale-110">
+                      <p>{skill.skill}</p>
                     </span>
                   </div>
                 ))}

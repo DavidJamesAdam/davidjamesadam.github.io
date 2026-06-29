@@ -13,15 +13,6 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        "big-shoulders": [
-          "'Big Shoulders Display'",
-          "ui-sans-serif",
-          "system-ui",
-          "-apple-system",
-          '"Segoe UI"',
-          "Roboto",
-          "sans-serif",
-        ],
         "space-grotesk": [
           "'Space Grotesk'",
           "ui-sans-serif",

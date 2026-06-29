@@ -19,7 +19,7 @@ export default function ContactForm() {
       toast.success(formState.message, {
         style: {
           background: "#000000",
-          border: "#44494ed7",
+          border: "solid #894fad",
           color: "#894fad",
         },
       });
@@ -27,7 +27,7 @@ export default function ContactForm() {
       toast.error(formState.message, {
         style: {
           background: "#000000",
-          border: "#44494ed7",
+          border: "solid #44494ed7",
           color: "#960000",
         },
       });
@@ -47,7 +47,6 @@ export default function ContactForm() {
             type="text"
             name="username"
             placeholder="Your name"
-            className="border-[#44494ed7] border-2 p-3"
             required
           />
         </div>
@@ -59,7 +58,6 @@ export default function ContactForm() {
             type="email"
             name="email"
             placeholder="email@example.com"
-            className="border-[#44494ed7] border-2 p-3"
             required
           />
         </div>
@@ -68,7 +66,7 @@ export default function ContactForm() {
           <label htmlFor="message">Your Message</label>
           <textarea
             id="message"
-            className="h-32 p-3 border-[#565d639a] border-2"
+            className="h-32"
             name="message"
             placeholder="Type your message here..."
             required

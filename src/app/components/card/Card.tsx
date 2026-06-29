@@ -57,9 +57,9 @@ export default function Card({
           {techStack.map((tech, index) => (
             <div
               key={index}
-              className="rounded-full border border-purple-800 bg-[var(--secondary-text)] px-3 py-1 m-1 transition-transform duration-200 ease-in-out hover:scale-110"
+              className="rounded-md border border-purple-800 bg-[var(--secondary-text)] px-3 py-1 m-1 transition-transform duration-200 ease-in-out hover:scale-110"
             >
-              {tech}
+              <p>{tech}</p>
             </div>
           ))}
         </div>

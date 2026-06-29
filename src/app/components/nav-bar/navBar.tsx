@@ -5,6 +5,12 @@ import { usePathname } from "next/navigation";
 import "./styles.css";
 
 const Navbar = () => {
+  const pages = [
+    { href: "/home", title: "// Home" },
+    { href: "/about", title: "// About" },
+    { href: "/projects", title: "// Projects" },
+    { href: "/contact", title: "// Contact" },
+  ];
   const pathname = usePathname();
 
   const isActive = (href: string) => {
@@ -13,33 +19,15 @@ const Navbar = () => {
 
   return (
     <nav className="flex flex-1 md:gap-16 items-center py-4 md:px-5 justify-around md:justify-start bg-black">
-      <Link
-        href="/home"
-        className={`link-styles weathered-effect ${isActive("/home") ? "active-link" : ""}`}
-      >
-        {"// Home"}
-      </Link>
-      <Link
-        href="/about"
-        className={`link-styles weathered-effect ${isActive("/about") ? "active-link" : ""}`}
-      >
-        {"// About"}
-      </Link>
-      <Link
-        href="/projects"
-        className={`link-styles weathered-effect ${isActive("/projects") ? "active-link" : ""}`}
-      >
-        {"// Projects"}
-      </Link>
-      <Link
-        href="/contact"
-        className={`link-styles weathered-effect ${isActive("/contact") ? "active-link" : ""}`}
-      >
-        {"// Contact"}
-      </Link>
-      {/* <div className="flex flex-1 justify-end">
-        <TerminalWindow />
-      </div> */}
+      {pages.map((page, index) => (
+        <Link
+          href={page.href}
+          key={index}
+          className={`link-styles weathered-effect ${isActive(page.href) ? "active-link" : ""}`}
+        >
+          <p>{page.title}</p>
+        </Link>
+      ))}
     </nav>
   );
 };

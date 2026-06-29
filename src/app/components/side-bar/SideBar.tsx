@@ -30,7 +30,7 @@ export default function SideBar({
           width={10}
           height={10}
         />
-        {section}
+        <p>{section}</p>
       </button>
     </div>
   );

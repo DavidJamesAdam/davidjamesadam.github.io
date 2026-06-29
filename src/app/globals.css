@@ -26,7 +26,7 @@ main {
 }
 
 section {
-  @apply flex flex-1 flex-col relative min-h-0
+  @apply flex flex-1 flex-col relative min-h-0;
 }
 
 .page-wrapper {
@@ -48,6 +48,10 @@ section {
   h3 {
     font-family: var(--font-orbitron);
   }
+
+  p,li {
+    font-family: var(--font-spaceGrotesk)
+  }
 }
 
 form > div {
@@ -56,7 +60,7 @@ form > div {
 
 input,
 textarea {
-  @apply px-6 py-2 bg-black border-gray-500;
+  @apply px-3 py-3 border-2 bg-black border-[#44494ed7] focus:border-gray-400 focus:outline-none;
 }
 
 label {
@@ -90,27 +94,6 @@ label {
   pointer-events: none;
   opacity: 0.9;
 }
-
-/* .typewriter {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.typewriter .wrap {
-  border-right: 0.08em solid #fff;
-  animation: blink-caret 0.75s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #928a91;
-  }
-} */
 
 .typewriter {
   display: inline-block;
