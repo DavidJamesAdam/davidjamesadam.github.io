@@ -7,6 +7,7 @@ import Navbar from "./nav-bar/navBar";
 import EyeAnimation from "./eyeAnimation/EyeAnimation";
 import ForbiddenText from "./forbiddenText/ForbiddenText";
 import { Toaster } from "sonner";
+import Image from "next/image";
 
 export default function ConditionalLayout({
   children,
@@ -31,11 +32,13 @@ export default function ConditionalLayout({
         <div className="page-wrapper">{children}</div>
         <div className="ml-auto hidden shrink-0 md:flex">
           <ForbiddenText orientation="vertical" />
+          {/* <Image src="/Vertical_script.svg" alt="Techno eldritch text" width={86} height={679}/> */}
         </div>
       </main>
       <footer className="text-center p-2">
         <div className="mt-2 flex justify-center md:hidden">
           <ForbiddenText orientation="horizontal" />
+          {/* <Image src="/Horizontal_script.svg" alt="Techno eldritch text" width={679} height={86} className="scale-75"/> */}
         </div>
         <Toaster />
       </footer>
