@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import ContactForm from "../components/contact-form/ContactForm";
 import HeaderWrapper from "../components/headerWrapper/HeaderWrapper";
 import Socials from "../components/socials/Socials";

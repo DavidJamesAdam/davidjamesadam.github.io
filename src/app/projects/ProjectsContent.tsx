@@ -230,7 +230,7 @@ export default function ProjectsContent() {
       <ContentSection
         content={
           <>
-            <div className="flex-1 min-h-0 flex items-start justify-center md:overflow-y-auto">
+            <div className="flex-1 min-h-0 flex items-start justify-center">
               <Card
                 key={activeSection}
                 picture={activeProject.picture}
