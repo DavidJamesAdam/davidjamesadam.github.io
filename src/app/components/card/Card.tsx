@@ -46,13 +46,13 @@ export default function Card({
           )
         )}
 
-        <h3 className="text-3xl">Description</h3>
+        <h3 className="text-3xl">&gt; Description</h3>
         <div className="card-section">{description}</div>
 
-        <h3 className="text-3xl">What I learnt</h3>
+        <h3 className="text-3xl">&gt; What I learnt</h3>
         <div className="card-section">{learnt}</div>
 
-        <h3 className="text-3xl">Tech Stack</h3>
+        <h3 className="text-3xl">&gt; Tech Stack</h3>
         <div className="flex flex-wrap card-section">
           {techStack.map((tech, index) => (
             <div
@@ -64,7 +64,7 @@ export default function Card({
           ))}
         </div>
 
-        <h3 className="text-3xl">Link to Repo</h3>
+        <h3 className="text-3xl">&gt; Link to Repo</h3>
         <div className="flex flex-row text-[#52f83c] justify-between weathered-effect card-section">
           <Link href={link} target="_blank">
             Repo

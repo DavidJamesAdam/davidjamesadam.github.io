@@ -20,23 +20,28 @@ export default function Page() {
         }
         subContent={<ContactForm />}
       />
-      <ContentSection content={
-        <>
-          <h2 className="weathered-effect">{"// CONTACT INFO & RESOURCES"}</h2>
-          <div className="py-3">
-            <h3>Email: davidjamesadam@gmail.com</h3>
-          </div>
-          <div>
-            <h3>You can find me at:</h3>
-            <Socials />
-          </div>
-          <div className="py-3">
-            <Link href="/David_Adam_Resume.pdf" target="_blank">
-              My resume
-            </Link>
-          </div>
-        </>
-      }/>
+      <ContentSection
+        content={
+          <>
+            <h2 className="weathered-effect">
+              {"// CONTACT INFO & RESOURCES"}
+            </h2>
+            <div className="py-3">
+              <h3>&gt; Email:</h3>
+              <p>davidjamesadam@gmail.com</p>
+            </div>
+            <div>
+              <h3>&gt; You can find me at:</h3>
+              <Socials />
+            </div>
+            <div className="py-3">
+              <Link href="/David_Adam_Resume.pdf" target="_blank">
+                <u>My resume</u>
+              </Link>
+            </div>
+          </>
+        }
+      />
     </>
   );
 }

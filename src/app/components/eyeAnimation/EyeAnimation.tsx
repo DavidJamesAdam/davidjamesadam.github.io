@@ -5,12 +5,12 @@ import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const eyeFrames = [
-  "/eye/eye_path36.svg",
-  "/eye/eye_path35.svg",
-  "/eye/eye_path34.svg",
-  "/eye/eye_path33.svg",
-  "/eye/eye_path32.svg",
-  "/eye/eye_path31.svg",
+  "/eye/Frame_1.svg",
+  "/eye/Frame_2.svg",
+  "/eye/Frame_3.svg",
+  "/eye/Frame_4.svg",
+  "/eye/Frame_5.svg",
+  "/eye/Frame_6.svg",
 ];
 
 interface EyeAnimationProps {
@@ -114,7 +114,7 @@ export default function EyeAnimation({
             width={size}
             height={size}
             priority
-            className="purple py-5"
+            className="py-5"
           />
         </motion.div>
       </AnimatePresence>
