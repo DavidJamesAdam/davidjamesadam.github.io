@@ -28,6 +28,7 @@ export default function Card({
         <h2 className="weathered-effect mb-5">{title}</h2>
       </div>
       <div className="flex flex-col my-5 mr-2 flex-1 min-h-0 md:overflow-y-auto">
+        <div>
         {video ? (
           <video className="md:w-[40%] float-left mr-5 rounded-xl" controls>
             <source src={video} type="video/mp4" />
@@ -68,6 +69,7 @@ export default function Card({
           <Link href={link} target="_blank">
             Repo
           </Link>
+        </div>
         </div>
       </div>
     </div>

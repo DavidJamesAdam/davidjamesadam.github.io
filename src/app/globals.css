@@ -42,6 +42,11 @@ section {
 
   h2 {
     @apply md:text-5xl text-2xl;
+    font-family: var(--font-orbitron);
+  }
+
+  h3 {
+    font-family: var(--font-orbitron);
   }
 }
 
