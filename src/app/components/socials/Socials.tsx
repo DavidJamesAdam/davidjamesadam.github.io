@@ -4,7 +4,7 @@ import "./styles.css";
 export default function Socials() {
   const iconDim = 40;
   return (
-    <div className="weathered-effect flex flex-row flex-1 md:justify-normal justify-center">
+    <div className="weathered-effect flex flex-row flex-1 md:justify-normal justify-center my-5">
       <a href="https://www.linkedin.com/in/davidjamesadam/" className="link">
         {" "}
         <Image
@@ -16,6 +16,7 @@ export default function Socials() {
         />
         LinkedIn
       </a>
+
       <a href="https://github.com/DavidJamesAdam" className="link">
         {" "}
         <Image

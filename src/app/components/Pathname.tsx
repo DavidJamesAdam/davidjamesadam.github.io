@@ -21,7 +21,7 @@ export default function ConditionalLayout({
 
   return (
     <ThemeRegistry>
-      <header className="flex flex-row shrink-0">
+      <header className="flex flex-row shrink-0 sticky top-0 z-50">
         <div className="flex items-center weathered-effect">
           <EyeAnimation />
         </div>

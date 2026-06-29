@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-1 md:gap-16 items-center py-4 md:px-5 justify-around md:justify-start">
+    <nav className="flex flex-1 md:gap-16 items-center py-4 md:px-5 justify-around md:justify-start bg-black">
       <Link
         href="/home"
         className={`link-styles weathered-effect ${isActive("/home") ? "active-link" : ""}`}

@@ -98,7 +98,7 @@ export default function EyeAnimation({
 
   return (
     <div
-      className="w-fit h-36"
+      className="w-fit h-36 bg-black"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
