@@ -9,6 +9,7 @@ import {
   TopRepoInfo,
   LanguagesInfo,
 } from "../about-sections/GithubStats";
+import useTypewriter from "@/app/utils/TypedText";
 
 export default function TerminalWindow() {
   const windowContainerRef = useRef<HTMLDivElement | null>(null);
