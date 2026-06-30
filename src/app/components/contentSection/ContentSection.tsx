@@ -21,7 +21,7 @@ export default function ContentSection({ children }: ContentSectionProps) {
         alt="Border svg"
         width={100}
         height={100}
-        className="absolute right-1 bottom-1"
+        className="absolute right-1 bottom-1 pointer-events-none"
       />
     </section>
   );

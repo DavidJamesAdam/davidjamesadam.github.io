@@ -48,39 +48,32 @@ export default function ForbiddenText({
   }
 
   return (
-    <div
-      className="flex relative flex-col items-center justify-center gap-3 hover:cursor-default"
-      role="button"
+<>
+
+      <div
+        className="eldritch-font text-6xl relative md:h-5/6 w-12 md:w-20"
+        onClick={() => {
+          handleRevealedButton();
+          playMeow();
+        }}
+              role="button"
       tabIndex={0}
       onKeyDown={() => {
         handleRevealedButton();
         playMeow();
       }}
-    >
-      {/* {text.split("").map((letter, i) => (
-        <div
-          className="eldritch-font text-6xl"
-          key={i}
-          onClick={() =>{handleRevealedButton(); playMeow();}}
-        >
-          {letter}
-        </div>
-      ))} */}
-      <div
-        className="eldritch-font text-6xl scale-90"
-        onClick={() => {
-          handleRevealedButton();
-          playMeow();
-        }}
       >
         <Image
           src="/Vertical_script.svg"
           alt="Techno eldritch text"
-          width={86}
-          height={679}
+          fill
+          className="object-contain"
         />
       </div>
-      <div className="absolute -bottom-1 scale-90">{isRevealed && <CatPage />}</div>
-    </div>
+      <div className="absolute bottom-2 right-8">
+        {isRevealed && <CatPage />}
+      </div>
+</>
+
   );
 }
