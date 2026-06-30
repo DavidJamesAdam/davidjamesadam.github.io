@@ -53,7 +53,7 @@ export default function TerminalWindow() {
     [currentText],
   );
 
-  const typedText = useTypewriter(words, 2000);
+  const typedText = useTypewriter(words, 2000, 130);
 
   const captureWindowState = () => {
     const windowElement =
@@ -105,10 +105,11 @@ export default function TerminalWindow() {
           minimize ? "h-0 overflow-hidden" : "flex-1 overflow-y-auto border p-5"
         }
       >
+        {/* <p className="whitespace-pre-wrap">&gt; {typedText}</p> */}
         {activeSection === 0 && (
           <>
             <div>
-              <p className="typewriter wrap">
+              <p className="whitespace-pre-wrap">
                 {" "}
                 &gt;{" "}
                 {typedText.split("").map((char, index) => (

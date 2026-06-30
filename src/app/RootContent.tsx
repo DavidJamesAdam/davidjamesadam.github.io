@@ -36,7 +36,7 @@ const words = ["Enter the Dreamquest"];
 // }
 
 export default function RootContent() {
-  const typedText = useTypewriter(words, 2000);
+  const typedText = useTypewriter(words, 2000, 200);
   const [converted, setConverted] = useState<boolean[]>([]);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const isTypingDone = typedText.length === words[0].length;

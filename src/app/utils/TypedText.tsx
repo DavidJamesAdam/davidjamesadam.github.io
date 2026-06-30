@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function useTypewriter(texts: string[], period = 2000) {
+function useTypewriter(texts: string[], period = 2000, speed: number) {
   const [text, setText] = useState("");
   const textRef = useRef("");
   const loopNum = useRef(0);
@@ -21,7 +21,7 @@ function useTypewriter(texts: string[], period = 2000) {
       textRef.current = updatedText;
       setText(updatedText);
 
-      const delay = 150 - Math.random() * 100;
+      const delay = speed - Math.random() * 100;
       timeoutId = window.setTimeout(tick, delay);
     };
 
@@ -37,7 +37,7 @@ function useTypewriter(texts: string[], period = 2000) {
       active = false;
       clearTimeout(timeoutId);
     };
-  }, [period, texts]);
+  }, [period, texts, speed]);
 
   return text;
 }
