@@ -22,7 +22,6 @@ export default function Page() {
             <span className="text-[var(--primary-text)]">
               Digital Realities
             </span>
-            <span className="blinking-text">_</span>
           </>
         }
         subContent={

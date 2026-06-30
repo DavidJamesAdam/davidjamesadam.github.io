@@ -223,7 +223,6 @@ export default function ProjectsContent() {
         title={
           <>
             SOME RECENT <span className="text-[#52f83c]">CREATIONS</span>
-            <span className="blinking-text">_</span>
           </>
         }
       />

@@ -16,7 +16,6 @@ export default function Page() {
         title={
           <>
             SUMMON <br /> A <span className="text-[#0cbffa]">DIALOGUE</span>
-            <span className="blinking-text">_</span>
           </>
         }
         subContent={<ContactForm />}
