@@ -6,9 +6,12 @@ function useTypewriter(texts: string[], period = 2000) {
   const loopNum = useRef(0);
 
   useEffect(() => {
+    textRef.current = "";
     let timeoutId: number;
+    let active = true;
 
     const tick = () => {
+      if (!active) return;
       const i = loopNum.current % texts.length;
       const fullText = texts[i];
       const currentText = textRef.current;
@@ -18,13 +21,22 @@ function useTypewriter(texts: string[], period = 2000) {
       textRef.current = updatedText;
       setText(updatedText);
 
-      const delay = 200 - Math.random() * 100;
-
+      const delay = 150 - Math.random() * 100;
       timeoutId = window.setTimeout(tick, delay);
     };
 
-    timeoutId = window.setTimeout(tick, 2000);
-    return () => clearTimeout(timeoutId);
+    timeoutId = window.setTimeout(() => {
+      if (!active) return;
+      setText("");
+      if (texts.length > 0) {
+        timeoutId = window.setTimeout(tick, period);
+      }
+    }, 0);
+
+    return () => {
+      active = false;
+      clearTimeout(timeoutId);
+    };
   }, [period, texts]);
 
   return text;

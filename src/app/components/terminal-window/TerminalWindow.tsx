@@ -1,14 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import "./styles.css";
-import {
-  useGithubStats,
-  GeneralInfo,
-  TopRepoInfo,
-  LanguagesInfo,
-} from "../about-sections/GithubStats";
+import { useGithubStats } from "../about-sections/GithubStats";
 import useTypewriter from "@/app/utils/TypedText";
 
 export default function TerminalWindow() {
@@ -17,6 +12,48 @@ export default function TerminalWindow() {
   const { stats, loading, error } = useGithubStats();
   const info = ["General", "TopRepo", "Languages"];
   const [minimize, setMinimize] = useState(false);
+
+  const generalInfoText =
+    !loading && stats
+      ? [
+          "cat ./generalInfo.txt",
+          `Public Repos: ${stats.publicRepos}`,
+          `  Followers: ${stats.followers}`,
+          `  Following: ${stats.following}`,
+          `  Total Stars: ${stats.totalStars}`,
+          `  Total Forks: ${stats.totalForks}`,
+          '> '
+        ].join("\n")
+      : "";
+
+  const topRepoText =
+    !loading && stats?.topRepos[0]
+      ? [
+          "cat ./topRepository.txt",
+          `  ${stats.topRepos[0].name}`,
+          `  ${stats.topRepos[0].description ?? "No description"}`,
+          `  Language: ${stats.topRepos[0].language ?? "Unknown"}`,
+          `  Stars: ${stats.topRepos[0].stars} | Forks: ${stats.topRepos[0].forks}`,
+          '> '
+        ].join("\n")
+      : "";
+
+  const languagesText =
+    !loading && stats
+      ? [
+          "cat ./languages.txt",
+          ...stats.languages.map((l) => `  ${l.name}: ${l.count} repos`),
+          '> '
+        ].join("\n")
+      : "";
+  const textsBySection = [generalInfoText, topRepoText, languagesText];
+  const currentText = textsBySection[activeSection];
+  const words = useMemo(
+    () => (currentText ? [currentText] : []),
+    [currentText],
+  );
+
+  const typedText = useTypewriter(words, 2000);
 
   const captureWindowState = () => {
     const windowElement =
@@ -70,27 +107,36 @@ export default function TerminalWindow() {
       >
         {activeSection === 0 && (
           <>
-            <div>{stats && <GeneralInfo stats={stats} />}</div>
-            <p>
-              &gt; <span className="blinking-text">|</span>
-            </p>
+            <div>
+              <p className="typewriter wrap">
+                {" "}
+                &gt;{" "}
+                {typedText.split("").map((char, index) => (
+                  <span key={index}>{char}</span>
+                ))}
+              </p>
+            </div>
           </>
         )}
         {activeSection === 1 && (
           <>
-            <div>
-              {stats && <TopRepoInfo firstTopRepo={stats.topRepos[0]} />}
-            </div>
-            <p>
-              &gt; <span className="blinking-text">|</span>
+            <p className="typewriter wrap">
+              {" "}
+              &gt;{" "}
+              {typedText.split("").map((char, index) => (
+                <span key={index}>{char}</span>
+              ))}
             </p>
           </>
         )}
         {activeSection === 2 && (
           <>
-            <div>{stats && <LanguagesInfo stats={stats} />}</div>
-            <p>
-              &gt; <span className="blinking-text">|</span>
+            <p className="typewriter wrap">
+              {" "}
+              &gt;{" "}
+              {typedText.split("").map((char, index) => (
+                <span key={index}>{char}</span>
+              ))}
             </p>
           </>
         )}

@@ -51,7 +51,7 @@ type GitHubStats = {
 export function GeneralInfo({ stats }: { stats: GitHubStats }) {
   return (
     <div>
-      <p className="mb-1">&gt; cat ./generalInfo.txt</p>
+      <p className="mb-1">cat ./generalInfo.txt</p>
       <p className="px-5">Public Repos: {stats.publicRepos}</p>
       <p className="px-5">Followers: {stats.followers}</p>
       <p className="px-5">Following: {stats.following}</p>
