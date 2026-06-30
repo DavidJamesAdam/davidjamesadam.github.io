@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 import Image from "next/image";
 
 interface ContentSectionProps {
-  content: ReactNode;
+  children: ReactNode;
 }
 
-export default function ContentSection({ content }: ContentSectionProps) {
+export default function ContentSection({ children }: ContentSectionProps) {
   return (
     <section>
       <Image
@@ -15,7 +15,7 @@ export default function ContentSection({ content }: ContentSectionProps) {
         height={100}
         className="absolute"
       />
-      <div className="flex flex-col justify-between h-full m-8 md:overflow-y-auto">{content}</div>
+      <div className="flex flex-col justify-between h-full w-fit m-8 md:overflow-y-auto">{children}</div>
       <Image
         src="/lower_right_border.svg"
         alt="Border svg"

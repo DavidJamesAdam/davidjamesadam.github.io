@@ -67,7 +67,7 @@ export default function TerminalWindow() {
 
   useEffect(() => {
     if (!isCommandDone) return;
-    const id = setTimeout(() => setShowContent(true), 600);
+    const id = setTimeout(() => setShowContent(true), 1100);
     return () => clearTimeout(id);
   }, [isCommandDone]);
 
@@ -92,7 +92,7 @@ export default function TerminalWindow() {
   };
 
   return (
-    <div className="flex flex-col bg-black/80 overflow-hidden my-5">
+    <div className="flex flex-col bg-black/80 overflow-hidden my-5 w-full h-full">
       <div className="flex flex-row justify-between border p-2">
         {info.map((section, index) => (
           <div key={index}>

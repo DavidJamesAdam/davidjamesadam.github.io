@@ -20,10 +20,8 @@ export default function Page() {
         }
         subContent={<ContactForm />}
       />
-      <ContentSection
-        content={
-          <>
-            <h2 className="weathered-effect">
+      <ContentSection>
+          <h2 className="weathered-effect">
               {"// CONTACT INFO & RESOURCES"}
             </h2>
             <div className="my-5">
@@ -36,7 +34,7 @@ export default function Page() {
                 <Socials />
               </div>
               <div className="my-5">
-                <h3>Preview my resume:</h3>
+                <h3>&gt; Preview my resume:</h3>
                 <div className="weathered-effect">
                   <Link
                     href="/David_Adam_Resume.pdf"
@@ -55,9 +53,8 @@ export default function Page() {
                 </div>
               </div>
             </div>
-          </>
-        }
-      />
+              <div className="flex flex-1"></div>
+      </ContentSection>
     </>
   );
 }

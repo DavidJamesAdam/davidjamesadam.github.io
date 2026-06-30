@@ -226,35 +226,31 @@ export default function ProjectsContent() {
           </>
         }
       />
-      <ContentSection
-        content={
-          <>
-            <div className="flex-1 min-h-0 flex items-start justify-center">
-              <Card
-                key={activeSection}
-                picture={activeProject.picture}
-                video={activeProject.video}
-                title={activeProject.title}
-                description={activeProject.description}
-                learnt={activeProject.learnt}
-                techStack={activeProject.techStack}
-                link={activeProject.link}
-              />
-            </div>
-            <div className="flex flex-row py-5 justify-around md:shrink-0">
-              {Symbols.map((symbol, index) => (
-                <SideBar
-                  key={index}
-                  symbol={symbol.symbol}
-                  onClick={() => setActiveSection(index)}
-                  section={symbol.section}
-                  isActive={index === activeSection}
-                />
-              ))}
-            </div>
-          </>
-        }
-      />
+      <ContentSection>
+        <div className="flex-1 min-h-0 flex items-start justify-center">
+          <Card
+            key={activeSection}
+            picture={activeProject.picture}
+            video={activeProject.video}
+            title={activeProject.title}
+            description={activeProject.description}
+            learnt={activeProject.learnt}
+            techStack={activeProject.techStack}
+            link={activeProject.link}
+          />
+        </div>
+        <div className="flex flex-row py-5 justify-around md:shrink-0">
+          {Symbols.map((symbol, index) => (
+            <SideBar
+              key={index}
+              symbol={symbol.symbol}
+              onClick={() => setActiveSection(index)}
+              section={symbol.section}
+              isActive={index === activeSection}
+            />
+          ))}
+        </div>
+      </ContentSection>
     </>
   );
 }
