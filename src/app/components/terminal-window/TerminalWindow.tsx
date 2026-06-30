@@ -17,7 +17,7 @@ export default function TerminalWindow() {
     !loading && stats
       ? [
           "cat ./generalInfo.txt",
-          `Public Repos: ${stats.publicRepos}`,
+          `  Public Repos: ${stats.publicRepos}`,
           `  Followers: ${stats.followers}`,
           `  Following: ${stats.following}`,
           `  Total Stars: ${stats.totalStars}`,
@@ -110,34 +110,37 @@ export default function TerminalWindow() {
           <>
             <div>
               <p className="whitespace-pre-wrap">
-                {" "}
+
                 &gt;{" "}
                 {typedText.split("").map((char, index) => (
                   <span key={index}>{char}</span>
                 ))}
+                <span className="blinking-text">|</span>
               </p>
             </div>
           </>
         )}
         {activeSection === 1 && (
           <>
-            <p className="typewriter wrap">
-              {" "}
+            <p className="whitespace-pre-wrap">
+
               &gt;{" "}
               {typedText.split("").map((char, index) => (
                 <span key={index}>{char}</span>
               ))}
+              <span className="blinking-text">|</span>
             </p>
           </>
         )}
         {activeSection === 2 && (
           <>
-            <p className="typewriter wrap">
-              {" "}
+            <p className="whitespace-pre-wrap">
+
               &gt;{" "}
               {typedText.split("").map((char, index) => (
                 <span key={index}>{char}</span>
               ))}
+              <span className="blinking-text">|</span>
             </p>
           </>
         )}
