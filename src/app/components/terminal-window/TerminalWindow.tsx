@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./styles.css";
 import { useGithubStats } from "../about-sections/GithubStats";
 import useTypewriter from "@/app/utils/TypedText";
@@ -22,7 +22,7 @@ export default function TerminalWindow() {
           `  Following: ${stats.following}`,
           `  Total Stars: ${stats.totalStars}`,
           `  Total Forks: ${stats.totalForks}`,
-          '> '
+          "> ",
         ].join("\n")
       : "";
 
@@ -34,7 +34,7 @@ export default function TerminalWindow() {
           `  ${stats.topRepos[0].description ?? "No description"}`,
           `  Language: ${stats.topRepos[0].language ?? "Unknown"}`,
           `  Stars: ${stats.topRepos[0].stars} | Forks: ${stats.topRepos[0].forks}`,
-          '> '
+          "> ",
         ].join("\n")
       : "";
 
@@ -43,17 +43,33 @@ export default function TerminalWindow() {
       ? [
           "cat ./languages.txt",
           ...stats.languages.map((l) => `  ${l.name}: ${l.count} repos`),
-          '> '
+          "> ",
         ].join("\n")
       : "";
   const textsBySection = [generalInfoText, topRepoText, languagesText];
   const currentText = textsBySection[activeSection];
-  const words = useMemo(
-    () => (currentText ? [currentText] : []),
-    [currentText],
-  );
 
-  const typedText = useTypewriter(words, 2000, 130);
+  const [command, ...contentLines] = currentText.split("\n");
+  const content = contentLines.join("\n");
+
+  const words = useMemo(() => (command ? [command] : []), [command]);
+  const typedCommand = useTypewriter(words, 2000, 130);
+  const isCommandDone =
+    typedCommand.length === command.length && command.length > 0;
+
+  const [showContent, setShowContent] = useState(false);
+  const [prevCommand, setPrevCommand] = useState(command);
+
+  if (prevCommand !== command) {
+    setPrevCommand(command);
+    setShowContent(false);
+  }
+
+  useEffect(() => {
+    if (!isCommandDone) return;
+    const id = setTimeout(() => setShowContent(true), 600);
+    return () => clearTimeout(id);
+  }, [isCommandDone]);
 
   const captureWindowState = () => {
     const windowElement =
@@ -105,16 +121,12 @@ export default function TerminalWindow() {
           minimize ? "h-0 overflow-hidden" : "flex-1 overflow-y-auto border p-5"
         }
       >
-        {/* <p className="whitespace-pre-wrap">&gt; {typedText}</p> */}
         {activeSection === 0 && (
           <>
             <div>
               <p className="whitespace-pre-wrap">
-
-                &gt;{" "}
-                {typedText.split("").map((char, index) => (
-                  <span key={index}>{char}</span>
-                ))}
+                &gt; {typedCommand}
+                {showContent && "\n" + content}
                 <span className="blinking-text">|</span>
               </p>
             </div>
@@ -123,11 +135,8 @@ export default function TerminalWindow() {
         {activeSection === 1 && (
           <>
             <p className="whitespace-pre-wrap">
-
-              &gt;{" "}
-              {typedText.split("").map((char, index) => (
-                <span key={index}>{char}</span>
-              ))}
+              &gt; {typedCommand}
+              {showContent && "\n" + content}
               <span className="blinking-text">|</span>
             </p>
           </>
@@ -135,11 +144,8 @@ export default function TerminalWindow() {
         {activeSection === 2 && (
           <>
             <p className="whitespace-pre-wrap">
-
-              &gt;{" "}
-              {typedText.split("").map((char, index) => (
-                <span key={index}>{char}</span>
-              ))}
+              &gt; {typedCommand}
+              {showContent && "\n" + content}
               <span className="blinking-text">|</span>
             </p>
           </>
