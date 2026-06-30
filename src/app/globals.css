@@ -36,7 +36,7 @@ section {
 
 @layer base {
   h1 {
-    @apply text-5xl md:text-7xl pb-5 text-[#928a91];
+    @apply pb-5 text-[#928a91] text-[clamp(2rem,3vw,4.5rem)];
     font-family: var(--font-orbitron);
   }
 

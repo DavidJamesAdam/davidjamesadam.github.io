@@ -23,7 +23,7 @@ function ImageCarousel() {
 
   return (
     <div className="carousel-container">
-      <div className="carousel-image-container relative w-full aspect-[4/3]">
+      <div className="relative h-full w-full aspect-[4/3]">
         <Image
           src={images[currentImageIndex]}
           alt="Picture of Karl, my cat"

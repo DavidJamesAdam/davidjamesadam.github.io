@@ -27,10 +27,14 @@ export default function CatPage() {
         />
       </button>
       <Modal isOpen={open} onClose={handleClose}>
-        <div className="flex h-full w-full min-h-0 flex-col gap-3">
-          <h1 className="weathered-effect shrink-0">The Cat of Ulthar</h1>
-          <ImageCarousel />
-          <p className="shrink-0">
+        <div className="mb-5">
+          <h2 className="flex weathered-effect shrink-0 text-[clamp(2.25rem,3vw,4.5rem)]">
+            The Cat of Ulthar
+          </h2>
+        </div>
+        <ImageCarousel />
+        <div className="shrink-0">
+          <p>
             Congratulations! You have found a little secret page dedicated to my
             cat Karl. Enjoy a few photos of him. Click/tap outside of this
             window to close it.

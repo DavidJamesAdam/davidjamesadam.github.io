@@ -48,20 +48,19 @@ export default function ForbiddenText({
   }
 
   return (
-<>
-
+    <>
       <div
         className="eldritch-font text-6xl relative md:h-5/6 w-12 md:w-20"
         onClick={() => {
           handleRevealedButton();
           playMeow();
         }}
-              role="button"
-      tabIndex={0}
-      onKeyDown={() => {
-        handleRevealedButton();
-        playMeow();
-      }}
+        role="button"
+        tabIndex={0}
+        onKeyDown={() => {
+          handleRevealedButton();
+          playMeow();
+        }}
       >
         <Image
           src="/Vertical_script.svg"
@@ -73,7 +72,6 @@ export default function ForbiddenText({
       <div className="absolute bottom-2 right-8">
         {isRevealed && <CatPage />}
       </div>
-</>
-
+    </>
   );
 }
