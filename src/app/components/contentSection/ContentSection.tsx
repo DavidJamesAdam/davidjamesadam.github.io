@@ -15,7 +15,7 @@ export default function ContentSection({ children }: ContentSectionProps) {
         height={100}
         className="absolute"
       />
-      <div className="flex flex-col justify-between h-full w-fit m-8 md:overflow-y-auto">{children}</div>
+      <div className="flex flex-col flex-1 min-h-0 m-8 md:overflow-y-auto">{children}</div>
       <Image
         src="/Lower_right_border.svg"
         alt="Border svg"

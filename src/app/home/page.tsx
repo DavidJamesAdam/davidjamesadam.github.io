@@ -35,8 +35,8 @@ export default function Page() {
       />
       <ContentSection>
         <h2 className="weathered-effect">{"// Summary"}</h2>
-        <div className="flex flex-1 flex-col w-fit">
-          <div className="m-5  md:text-lg">
+        <div className="flex flex-1 flex-col w-fit h-full">
+          <div className="m-5 md:text-lg">
             <p className="indent-[2em]">
               I&apos;m a fullstack developer and recent Computer Science
               graduate from the University of Calgary. During my degree, I
@@ -49,7 +49,7 @@ export default function Page() {
               homelab.
             </p>
           </div>
-          <div className="flex flex-1 md:flex-row flex-col md:m-auto w-full h-full">
+          <div className="flex flex-1 md:flex-row flex-col md:m-auto w-full h-1/3">
             <div className="flex flex-1 flex-col w-full h-full">
               <h3>Github stats</h3>
               <TerminalWindow />

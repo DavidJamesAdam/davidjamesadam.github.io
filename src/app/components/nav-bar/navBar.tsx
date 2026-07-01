@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "./styles.css";
 
 const Navbar = () => {
   const pages = [
@@ -23,7 +22,7 @@ const Navbar = () => {
         <Link
           href={page.href}
           key={index}
-          className={`link-styles weathered-effect ${isActive(page.href) ? "active-link" : ""}`}
+          className={`font-space-grotesk hover:text-[#bc77e7] whitespace-nowrap text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl 3xl:text-3xl weathered-effect ${isActive(page.href) ? "text-[#bc77e7]" : ""}`}
         >
           <p>{page.title}</p>
         </Link>

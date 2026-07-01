@@ -11,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #0a0a0a;
+    --background-color: #000000;
     --foreground: #ededed;
   }
 }
@@ -26,22 +26,17 @@ main {
 }
 
 section {
-  @apply flex flex-1 flex-col w-fit relative min-h-0;
+  @apply flex flex-1 flex-col relative min-h-0;
 }
-
-.page-wrapper {
-  @apply flex md:flex-row flex-col flex-1 w-fit min-h-0 md:overflow-hidden;
-}
-
 
 @layer base {
   h1 {
-    @apply pb-5 text-[#928a91] text-[clamp(2rem,3vw,4.5rem)];
+    @apply pb-5 text-[#928a91] text-[clamp(2rem,3vw,10.5rem)];
     font-family: var(--font-orbitron);
   }
 
   h2 {
-    @apply md:text-4xl text-2xl;
+    @apply text-lg xl:text-xl 2xl:text-2xl;
     font-family: var(--font-orbitron);
   }
 
@@ -50,7 +45,8 @@ section {
   }
 
   p,li {
-    font-family: var(--font-spaceGrotesk)
+    font-family: var(--font-spaceGrotesk);
+    @apply xl:text-base;
   }
 }
 
@@ -160,4 +156,8 @@ label {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #1e1921;
+}
+
+.sidebar-style {
+  @apply md:pl-5 p-5 flex flex-row justify-around md:shrink-0
 }

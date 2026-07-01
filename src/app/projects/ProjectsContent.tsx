@@ -239,7 +239,7 @@ export default function ProjectsContent() {
             link={activeProject.link}
           />
         </div>
-        <div className="flex flex-row h-1/6 py-5 justify-around md:shrink-0">
+        <div className="sidebar-style">
           {Symbols.map((symbol, index) => (
             <SideBar
               key={index}

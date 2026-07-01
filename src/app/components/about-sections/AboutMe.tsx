@@ -33,7 +33,7 @@ export default function AboutMe() {
             During my degree, I completed an internship with Gigadat Solutions,
             where I gained experience in both quality assurance and software
             development. While at Gigadat, I found myself working on a project
-            called <a href="https://unify.health/">unify.health</a>, a health
+            called <u><a href="https://unify.health/" className="hover:text-[#bc77e7]" target="_blank">unify.health</a></u>, a health
             data management system for athletes. I developed an email
             notification microservice using TypeScript and AWS, and also worked
             on bug fixes and system improvements until the end of my internship,

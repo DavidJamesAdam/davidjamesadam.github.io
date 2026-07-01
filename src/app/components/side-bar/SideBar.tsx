@@ -24,8 +24,8 @@ export default function SideBar({
       <Image
         src={symbol}
         alt={section}
-        width={70}
-        height={70}
+        width={50}
+        height={50}
         className="purple"
       />
 

@@ -28,7 +28,7 @@ export default function ConditionalLayout({
         <Navbar />
       </header>
       <main className="w-full px-5 md:flex-row md:flex-1 md:min-h-0 md:overflow-hidden">
-        <div className="page-wrapper">{children}</div>
+        <div className="flex md:flex-row flex-col flex-1 w-fit min-h-0 md:overflow-hidden">{children}</div>
         <div className="ml-auto hidden shrink-0 md:flex">
           <ForbiddenText orientation="vertical" />
         </div>

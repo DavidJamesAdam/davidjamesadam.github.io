@@ -1,3 +1,3 @@
 .link {
-  @apply inline-flex w-fit self-start mx-5 items-center rounded-md bg-black p-3 border-[#894fad] border-2 text-[#894fad] font-bold hover:border-[#bc77e7] hover:text-[#bc77e7] flex-row justify-center
+  @apply flex w-full md:w-fit items-center justify-center gap-2 rounded-md bg-black p-3 border-2 border-[#894fad] text-[#894fad] font-bold hover:border-[#bc77e7] hover:text-[#bc77e7] mx-5;
 }
