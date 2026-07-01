@@ -50,7 +50,7 @@ export default function ForbiddenText({
   return (
     <>
       <div
-        className="eldritch-font text-6xl relative md:h-5/6 w-12 md:w-20"
+        className="eldritch-font text-6xl relative md:h-5/6 w-12 md:w-20 hover:cursor-default"
         onClick={() => {
           handleRevealedButton();
           playMeow();
