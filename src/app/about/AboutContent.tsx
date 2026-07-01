@@ -30,7 +30,7 @@ export default function AboutContent() {
       <ContentSection>
         <div className="md:flex-1 md:min-h-0 md:overflow-y-auto w-full">
           {activeSection === 0 && (
-            <AboutCards title="About me">
+            <AboutCards title="// About me">
               <div className="pr-4 md:text-lg">
                 <Image
                   src="/profilePicture2.jpg"
@@ -85,7 +85,7 @@ export default function AboutContent() {
           )}
           {activeSection === 1 && <Education />}
           {activeSection === 2 && (
-            <AboutCards title="Interests">
+            <AboutCards title="// Interests">
               <div className="pr-4 md:text-lg">
                 <Image
                   src="/David_and_Sauron_cropped.jpg"
