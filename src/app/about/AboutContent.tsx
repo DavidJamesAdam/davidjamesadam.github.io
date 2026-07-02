@@ -86,54 +86,26 @@ export default function AboutContent() {
           {activeSection === 1 && <Education />}
           {activeSection === 2 && (
             <AboutCards title="// Interests">
-              <div className="pr-4 md:text-lg">
+              <div className="flex flex-col md:block pr-4 md:text-lg">
                 <Image
                   src="/David_and_Sauron_cropped.jpg"
                   alt="David and Sauron at Comic Expo"
                   width={500}
                   height={500}
                   loading="lazy"
-                  className="rounded-xl object-contain shrink-0 w-auto h-auto md:max-h-[36vh] max-h-[24vh] float-right ml-5 mb-5"
+                  className="rounded-xl md:object-contain object-cover shrink-0 w-auto h-auto md:max-h-[36vh] max-h-[24vh] float-right ml-5 mb-5"
                 />
                 <p className="indent-[2em]">
-                  I&apos;ve been called a very multi-faceted person with a wide
-                  variety of interests I&apos;d definitely consider myself a
-                  huge nerd first and foremost. Anything from video games, to
-                  books, to movies, to technology. I have been playing video
-                  games since I was very young and have not stopped. I believe
-                  they are an incredible interactive art form that not a lot of
-                  people seem to (or want to) understand. I&apos;m also a big
-                  bookworm. I primarily gravitate towards Sci-fi and Fantasy.
-                  Anything from the classics like Tolkien, to Orwell, to modern
-                  writers such as Brandon Sanderson and Tamsyn Muir.
+                  I&apos;ve been described as a multi-faceted person with a wide range of interests, though at my core I&apos;m a bit of a nerd. Whether it&apos;s video games, books, movies, or technology, I enjoy anything that sparks curiosity. I&apos;ve been playing video games since I was a kid and still see them as one of the most compelling forms of interactive art. I&apos;m also an avid reader, primarily drawn to science fiction and fantasy, from Tolkien and Orwell to modern authors like Brandon Sanderson and Tamsyn Muir.
                 </p>
                 <p className="indent-[2em]">
-                  My interests are not completely devoid of technology either.
-                  I&apos;ve developed a habit over the years of wanting to build
-                  my own technology; gadgets that serve a purpose. I love
-                  working with microcontrollers such as the Raspberry Pi Pico
-                  and the ESP 32. This really hits home my inclination to build
-                  technology for practical purposes. When creating with
-                  technology, I believe that someone is only limited to their
-                  imagination and the technology available to them.
+                  That curiosity naturally extends into technology. I enjoy building practical gadgets with microcontrollers like the Raspberry Pi Pico and ESP32, and I find a lot of satisfaction in turning ideas into something tangible. For me, the only real limits are imagination and the tools available.
                 </p>
                 <p className="indent-[2em]">
-                  I also have a passion for fitness and activity. The gym is
-                  typically my &quot;bread and butter&quot; so to speak,
-                  something that will easily scratch that &quot;I gotta get
-                  out&quot; itch. There&apos;s something about throwing on some
-                  of my favourite music and lifting heavy circles that I find so
-                  meditative. Beyond that I also love hiking. Living in Calgary
-                  has its benefit of being so close to the Rockies, allowing for
-                  a quick jaunt out to some of my favourite trailheads.
+                  Outside of technology, fitness is a big part of my life. Weightlifting is my go-to way to unwind, and there&apos;s something surprisingly meditative about putting on good music and moving heavy weights. I also enjoy hiking, and living in Calgary means the Rockies are never far away when I need to get outside.
                 </p>
                 <p className="indent-[2em]">
-                  And lastly, I&apos;m a music lover and musician at heart. I
-                  loved my time studying music at the University of Lethbridge,
-                  but music as a career choice was not something for me. With
-                  that being said, music will always be a part of who I am.
-                  I&apos;ve been playing guitar since I was a teenager and I
-                  used to play in a local metal band called{" "}
+                  Music has been a lifelong passion as well. I studied music at the University of Lethbridge and have played guitar since I was a teenager, including several years in the local metal band{" "}
                   <u>
                     <a
                       href="https://www.balrogath.ca/"
@@ -142,13 +114,8 @@ export default function AboutContent() {
                     >
                       Balrogoth
                     </a>
-                  </u>{" "}
-                  (who are still going strong and playing lots of shows!). I
-                  believe music (along with many, many other art mediums) is the
-                  closest thing we have to real world magic. The plethora of
-                  emotions that music can evoke is something I&apos;ve always
-                  found fascinating and I&apos;m so greatful music has had such
-                  a positive impact on my life and who I am.
+                  </u>.{" "}
+                  While I chose not to pursue music professionally, it&apos;s still a defining part of who I am. Few things can match music&apos;s ability to evoke emotion, and I believe it&apos;s one of humanity&apos;s greatest forms of artistic expression.
                 </p>
               </div>
             </AboutCards>

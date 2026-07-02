@@ -33,8 +33,8 @@ export default function ConditionalLayout({
           <ForbiddenText orientation="vertical" />
         </div>
       </main>
-      <footer className="text-center p-2">
-        <div className="mt-2 flex justify-center md:hidden">
+      <footer className="flex shrink-0 p-2 md:h-auto h-28">
+        <div className="flex w-full md:hidden">
           <ForbiddenText orientation="horizontal" />
         </div>
         <Toaster />

@@ -29,8 +29,9 @@ export default function ForbiddenText({
   };
   if (orientation === "horizontal") {
     return (
-      <div className="relative w-full flex items-center justify-center eldritch-font text-3xl tracking-[0.35em] md:text-4xl">
+      <>
         <div
+        className="relative h-3/4 w-full hover:cursor-default"
           onClick={() => {
             handleRevealedButton();
             playMeow();
@@ -38,19 +39,24 @@ export default function ForbiddenText({
           role="button"
           tabIndex={0}
         >
-          {text}
+          <Image
+            src="/Horizontal_script.svg"
+            alt="Techno eldritch text"
+            fill
+            className="object-contain"
+          />
         </div>
-        <div className="absolute right-2 inset-y-0 flex items-center scale-75">
+        <div className="absolute right-2 scale-75">
           {isRevealed && <CatPage />}
         </div>
-      </div>
+      </>
     );
   }
 
   return (
     <>
       <div
-        className="eldritch-font text-6xl relative md:h-5/6 w-12 md:w-20 hover:cursor-default"
+        className="relative md:h-5/6 w-12 md:w-20 hover:cursor-default"
         onClick={() => {
           handleRevealedButton();
           playMeow();
